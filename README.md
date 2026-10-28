@@ -4,6 +4,8 @@ EquWord converts supported LaTeX into editable native Word equations and applies
 
 Version **0.9.27** is prepared here for the first EquWord public release. The repository is [PsycheMatrica/EquWord](https://github.com/PsycheMatrica/EquWord). The first GitHub release and Zenodo publication are pending; no Zenodo DOI has been assigned.
 
+**Release status:** the first GitHub release is a draft. Publication and Zenodo archival require the author's explicit final confirmation of the prepared release.
+
 ## Get started
 
 The planned download asset is **EquWord.zip**. The unpacked distribution is in [package/](package/):

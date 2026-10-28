@@ -26,3 +26,15 @@ This is the public distribution repository for **EquWord: Equation Conversion an
 - Refresh a Dropbox Publish copy only from a known commit or verified release. Treat it as a dated snapshot, not a second checkout to edit or merge.
 
 See [WORKFLOW.md](WORKFLOW.md) for the cross-platform setup and routine.
+
+## Mandatory final release confirmation
+
+Before publishing any GitHub release or triggering its Zenodo archive, present
+the exact version, target commit, artifact filenames and SHA-256 checksums,
+release notes, and actual verification results to the user. Obtain the user's
+explicit final confirmation for that concrete prepared release. Earlier general
+instructions to prepare or distribute software, ordinary commit/push approval,
+and authorization to connect Zenodo are not final publication approval.
+Draft preparation may proceed within the authorized task; publication must wait.
+Do not infer approval from silence, elapsed time, or approval of account access.
+This rule applies to every release, including the first release and later updates.

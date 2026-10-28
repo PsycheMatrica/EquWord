@@ -39,7 +39,7 @@ SSH authentication may use `git@github.com:PsycheMatrica/EquWord.git` instead. K
 5. Commit and push the completed public changes under the established task authorization. If the task is a local preview, leave it local. If a push is rejected, retain the commit and resolve the state with the user; never force push or rewrite history automatically.
 6. Confirm the final status and report the commit and checks. Start the next computer's session by pulling before editing.
 
-A request to change the repository does not automatically authorize a GitHub release, a release-asset upload, a Zenodo publication, or installation of a template into Word. Perform those only when explicitly requested.
+A request to change the repository does not automatically authorize a GitHub release, a release-asset upload, a Zenodo publication, or installation of a template into Word. Perform those only when explicitly requested. Before publishing any release, show its exact files, checksums, commit and release notes and obtain the author's explicit final confirmation. This is required every time, even after a general request to prepare a release or authorize Zenodo.
 
 ## What belongs where
 
