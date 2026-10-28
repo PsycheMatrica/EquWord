@@ -9,11 +9,11 @@ type: software
 authors:
   - family-names: Cho
     given-names: Gyeongcheol
-version: 0.9.27
+version: 1.0.0
 license: CC-BY-NC-SA-4.0
 url: "https://github.com/PsycheMatrica/EquWord"
 abstract: >-
   A Microsoft Word VBA template for converting supported LaTeX to editable
   native equations and applying document-specific notation and equation-layout
-  choices. The tested 0.9.27 template retains its legacy Research Equation
-  Formatter filename and macro names.
+  choices. The template retains its legacy Research Equation Formatter filename
+  and macro names. Version 1.0.0 is being prepared for its first public release.

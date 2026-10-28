@@ -52,13 +52,15 @@ A request to change the repository does not automatically authorize a GitHub rel
 
 Do not synchronize an active `.git` folder with Dropbox. Do not edit a Publish snapshot and then copy it wholesale over the checkout. Review and transfer only the files explicitly intended for a public update. The public practice DOCX stays in the repository; private test documents do not.
 
-The checked v0.9.27 template remains `package/ResearchEquationFormatter.dotm`, with SHA-256:
+The current 1.0.0 candidate is `package/ResearchEquationFormatter.dotm`, with SHA-256:
 
 ```text
-70ca15d170dc48f93b3ea13b99bff3bd0f19728456c8927138ba6c416de3b35e
+60f3ccc2182b3d8a570796eb535ced40fb94946304233b57c9f9bec1491c4755
 ```
 
-Keep the existing license, quick-start PDF, practice DOCX, and template bytes unchanged unless the task specifically authorizes replacing them. Retain the template's existing safety guards. Git ignores do not protect already tracked files; always review the actual staged contents.
+Windows rechecks of this exact candidate passed on the recorded fixtures; its Mac recheck is pending. Read `RELEASE_MANIFEST.json` for the current evidence and do not describe a pending platform as passed. The earlier V5 binary remains preserved in the 0.9.27 preparation history.
+
+Keep the license, operating-system Quick Start PDFs, practice DOCX, and template bytes unchanged unless the task specifically authorizes replacing them. Retain the template's existing safety guards. Git ignores do not protect already tracked files; always review the actual staged contents.
 
 ## Reuse for other public software
 

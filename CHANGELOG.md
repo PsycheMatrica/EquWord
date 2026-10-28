@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.0 — release candidate
+
+- Prepare the first EquWord public release with an internal display version of 1.0.0. Preserve the V5 processing logic and all mathematical/field/bookmark guards; independently compare the native-built source against the baseline.
+- Split the Quick Start into Windows and Mac PDFs. Add author, document version/date, Word environment, repository and license to their opening pages. Remove the misleading “Word for Windows 0.9.27” subtitle.
+- Update the practice document and platform-specific keyboard instructions while preserving native equations, fields and bookmarks.
+- Record new-candidate verification explicitly. Windows rechecks passed on the recorded build with seven processing runs, saved native edits, preservation and restart checks. The exact-candidate Mac recheck remains pending; earlier 0.9.27 tests are baseline evidence.
+- Configure the original Zenodo account connection. Obtain and verify the first DOI only after the approved release; no DOI is fabricated or preassigned.
+- Keep the release unpublished until both platform checks and the author's final review are complete.
+
+
 ## 0.9.27 — first EquWord public release preparation
 
 - Adopted **EquWord: Equation Conversion and Formatting for Microsoft Word** as the public-facing title. The tested template, macro names and in-app Research Equation Formatter name remain unchanged.

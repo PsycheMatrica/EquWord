@@ -1,49 +1,58 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "title": "EquWord: Equation Conversion and Formatting for Microsoft Word",
-  "version": "0.9.27",
+  "version": "1.0.0",
   "license": "CC-BY-NC-SA-4.0",
   "zip_timestamp": [
     2026,
     10,
-    27,
+    28,
     0,
     0,
     0
   ],
   "verified_template": {
     "filename": "ResearchEquationFormatter.dotm",
-    "version": "0.9.27",
-    "candidate_label": "V5",
-    "sha256": "70ca15d170dc48f93b3ea13b99bff3bd0f19728456c8927138ba6c416de3b35e"
+    "version": "1.0.0",
+    "candidate_label": "1.0.0 version update built in native Word",
+    "sha256": "60f3ccc2182b3d8a570796eb535ced40fb94946304233b57c9f9bec1491c4755",
+    "meaning": "Candidate byte identity; native verification status is recorded separately."
   },
   "files": {
     "CITATION.cff": {
-      "bytes": 852,
-      "sha256": "97a78b94b1c4be7fdcaa4db97c0674b0f253eb7ce305c5e4a15f457d3f8ed6cd"
+      "bytes": 899,
+      "sha256": "0d40ed1e8e55b51e530faa504a3f5da53066428479c56ac2b3c7e319fce109f0"
     },
     "LICENSE.txt": {
       "bytes": 21976,
       "sha256": "2423ecdb6d3448eb2589131c3bfe9d89c94d7252a293e51db1d8b1fb08dca068"
     },
     "README.txt": {
-      "bytes": 7750,
-      "sha256": "b9f43ff35a649aa52b59415e1bba51f91f8e1172df19aea156265b788c1c0dea"
+      "bytes": 8796,
+      "sha256": "81757c9fc545c10101b6b3eb32141e04d26e7f155728c8c3af0c72b410ebb477"
     },
     "ResearchEquationFormatter.dotm": {
-      "bytes": 569406,
-      "sha256": "70ca15d170dc48f93b3ea13b99bff3bd0f19728456c8927138ba6c416de3b35e"
+      "bytes": 542178,
+      "sha256": "60f3ccc2182b3d8a570796eb535ced40fb94946304233b57c9f9bec1491c4755"
+    },
+    "Tutorial/EquWord_Quick_Start_Mac.pdf": {
+      "bytes": 108949,
+      "sha256": "fa4412da3c34183d349e40a3375387cfad9409b80f90d2dd369f5d783096bf1f"
+    },
+    "Tutorial/EquWord_Quick_Start_Windows.pdf": {
+      "bytes": 437980,
+      "sha256": "bd43c0346f821bbf92be77484cea0877844f7e4a6113a29790f919da8fe5fa96"
     },
     "Tutorial/REF_Practice.docx": {
-      "bytes": 39522,
-      "sha256": "eb6e8d123d92faba4d58c4526b0e1343f22a7ef9ce9986dacdd7c09f1430a574"
-    },
-    "Tutorial/Research_Equation_Formatter_Quick_Start.pdf": {
-      "bytes": 435409,
-      "sha256": "566ca5ba96317f9553114ff681696b4a19c3be9547773bd9423df72e650587d4"
+      "bytes": 39531,
+      "sha256": "2a64124d71f59067c61fbb09458c05788f1ef099f93a86e026335ce2b1818c6b"
     }
   },
-  "native_test_summary": {
+  "manifest_update_policy": "Deliberately update accepted file hashes and actual native evidence. Draft packaging does not establish native compatibility. Both platform PASS results for this exact hash/version and final author approval are required before publication.",
+  "baseline_native_test_summary": {
+    "version": "0.9.27",
+    "candidate_label": "V5",
+    "sha256": "70ca15d170dc48f93b3ea13b99bff3bd0f19728456c8927138ba6c416de3b35e",
     "mac": {
       "environment": "Word 16.113.4 (16.113.26100421), macOS 26.7.2, Apple silicon",
       "scope": "Supplied selection and whole-body LaTeX conversion fixtures, native fractions/Greek symbols/inner brackets, eligible multiline merge, saved mathematical/field/bookmark preservation, save/reopen formatting, reload and About after Word restart."
@@ -58,5 +67,44 @@
       "Large-document performance and forced over-height/page-boundary stress cases remain unverified."
     ]
   },
-  "manifest_update_policy": "After native tests accept a future candidate, deliberately update the version, file hashes/sizes and test summary. This builder only verifies accepted bytes; it does not run native tests or regenerate this manifest."
+  "release_readiness": {
+    "status": "draft",
+    "requires_final_author_approval": true,
+    "native_tests": {
+      "windows": {
+        "status": "PASS",
+        "version": "1.0.0",
+        "template_sha256": "60f3ccc2182b3d8a570796eb535ced40fb94946304233b57c9f9bec1491c4755",
+        "evidence": [
+          "Actual Word for Windows recheck 2026-10-28: seven processing runs and two About executions across two fresh Word processes.",
+          "Private Windows_Test_Summary_1.0.0.json SHA256 13d045dbca123e236886f812800e947e3fcd3eb5aa34588621f4b47339eaa5d0",
+          "58 saved-file/XML preservation support checks; 37 frozen source and installed-template files unchanged."
+        ],
+        "environment": {
+          "Windows": "Microsoft Windows 11 Home",
+          "OSVersion": "10.0.26300",
+          "OSBuild": "26300",
+          "OSArchitecture": "64-bit",
+          "WordVersion": "16.0",
+          "WordBuild": "16.0.20430",
+          "WordFileVersion": "16.0.20430.20180",
+          "WordBitness": "64-bit"
+        },
+        "processing_runs": 7
+      },
+      "mac": {
+        "status": "PENDING",
+        "version": "1.0.0",
+        "template_sha256": "60f3ccc2182b3d8a570796eb535ced40fb94946304233b57c9f9bec1491c4755",
+        "evidence": []
+      }
+    }
+  },
+  "source_review": {
+    "processing_logic": "Visible executable source matches V5 except REF_VERSION; main version comment also updated.",
+    "native_rebuild_deltas": "Word regenerated the form VB_Base GUIDs/project identifier and omitted an explicit default BackColor property. Initial strict byte audit and supplementary review are preserved privately.",
+    "acceptance": "Actual selective-form behavior and saved choices must be checked on both platforms; Mac pending.",
+    "windows_form_runtime": "PASS: both selective commands, control events, accepted choices, reload and remembered choices after Word restart.",
+    "mac_form_runtime": "PENDING; native host-generated identifier portability is not inferred as a Mac runtime pass."
+  }
 }
