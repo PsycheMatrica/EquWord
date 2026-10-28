@@ -145,6 +145,33 @@ or equations. Citation in a manuscript is appreciated, but is not required
 merely for using the tool. CITATION.cff contains citation information.
 Attribution when sharing the software remains subject to the license.
 
+SUGGESTED ACKNOWLEDGMENTS
+
+If EquWord contributed to equation preparation in your manuscript, please
+consider citing the software in the Acknowledgments or another appropriate
+section. Cite the version you actually used.
+
+  Equations were prepared in Microsoft Word using EquWord
+  (Version 1.0.0; Cho, 2026).
+
+Use the following combined example only if you also used ChatGPT for drafting
+and revision:
+
+  ChatGPT (OpenAI) assisted with drafting and revision. The authors reviewed
+  the AI-assisted content and take responsibility for the final manuscript.
+  Equations were prepared in Microsoft Word using EquWord
+  (Version 1.0.0; Cho, 2026).
+
+Use only statements that reflect your actual use. Adjust the tools, tasks,
+software version, and singular or plural author wording as needed.
+
+SUGGESTED REFERENCE
+
+Cho, G. (2026). EquWord: Equation conversion and formatting for Microsoft Word
+(Version 1.0.0) [Computer software]. https://github.com/PsycheMatrica/EquWord
+
+Use the released version's DOI when available.
+
 This is a 1.0.0 candidate for the first EquWord public release.
 The candidate is not ready for final approval until both platform rechecks pass. The repository
 is https://github.com/PsycheMatrica/EquWord. The first GitHub release and Zenodo

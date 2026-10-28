@@ -49,6 +49,24 @@ The license does not automatically apply to your own manuscripts or equations. C
 
 The citation title is **EquWord: Equation Conversion and Formatting for Microsoft Word**. The GitHub integration cannot reserve a DOI before its first release. After the author-approved first release, the actual version DOI will be checked and added to current citation metadata. A Concept DOI can identify the software across versions. The archived tag and released ZIP will be preserved; any later guide revision will be identified explicitly.
 
+### Acknowledgment examples
+
+If EquWord contributed to equation preparation in your manuscript, please consider citing the software in the Acknowledgments or another appropriate section. Cite the version you actually used.
+
+> Equations were prepared in Microsoft Word using EquWord (Version 1.0.0; Cho, 2026).
+
+If you also used ChatGPT for drafting and revision, this optional combined example may be appropriate:
+
+> ChatGPT (OpenAI) assisted with drafting and revision. The authors reviewed the AI-assisted content and take responsibility for the final manuscript. Equations were prepared in Microsoft Word using EquWord (Version 1.0.0; Cho, 2026).
+
+Use only statements that reflect your actual use. Adjust the tools, tasks, software version, and singular or plural author wording as needed.
+
+### Suggested reference
+
+Cho, G. (2026). *EquWord: Equation conversion and formatting for Microsoft Word* (Version 1.0.0) [Computer software]. https://github.com/PsycheMatrica/EquWord
+
+Use the released version's DOI when available.
+
 Microsoft interface elements and product names in screenshots remain the property of Microsoft.
 
 ## Release procedure
