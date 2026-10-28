@@ -1,0 +1,4 @@
+# Release-manifest verification depends on exact bytes on Windows and Mac.
+/package/** -text
+/CITATION.cff -text
+/LICENSE.txt -text

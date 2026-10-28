@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "title": "EquWord: Equation Conversion and Formatting for Microsoft Word",
+  "version": "0.9.27",
+  "license": "CC-BY-NC-SA-4.0",
+  "zip_timestamp": [
+    2026,
+    10,
+    27,
+    0,
+    0,
+    0
+  ],
+  "verified_template": {
+    "filename": "ResearchEquationFormatter.dotm",
+    "version": "0.9.27",
+    "candidate_label": "V5",
+    "sha256": "70ca15d170dc48f93b3ea13b99bff3bd0f19728456c8927138ba6c416de3b35e"
+  },
+  "files": {
+    "CITATION.cff": {
+      "bytes": 852,
+      "sha256": "97a78b94b1c4be7fdcaa4db97c0674b0f253eb7ce305c5e4a15f457d3f8ed6cd"
+    },
+    "LICENSE.txt": {
+      "bytes": 21976,
+      "sha256": "2423ecdb6d3448eb2589131c3bfe9d89c94d7252a293e51db1d8b1fb08dca068"
+    },
+    "README.txt": {
+      "bytes": 7750,
+      "sha256": "b9f43ff35a649aa52b59415e1bba51f91f8e1172df19aea156265b788c1c0dea"
+    },
+    "ResearchEquationFormatter.dotm": {
+      "bytes": 569406,
+      "sha256": "70ca15d170dc48f93b3ea13b99bff3bd0f19728456c8927138ba6c416de3b35e"
+    },
+    "Tutorial/REF_Practice.docx": {
+      "bytes": 39522,
+      "sha256": "eb6e8d123d92faba4d58c4526b0e1343f22a7ef9ce9986dacdd7c09f1430a574"
+    },
+    "Tutorial/Research_Equation_Formatter_Quick_Start.pdf": {
+      "bytes": 435409,
+      "sha256": "566ca5ba96317f9553114ff681696b4a19c3be9547773bd9423df72e650587d4"
+    }
+  },
+  "native_test_summary": {
+    "mac": {
+      "environment": "Word 16.113.4 (16.113.26100421), macOS 26.7.2, Apple silicon",
+      "scope": "Supplied selection and whole-body LaTeX conversion fixtures, native fractions/Greek symbols/inner brackets, eligible multiline merge, saved mathematical/field/bookmark preservation, save/reopen formatting, reload and About after Word restart."
+    },
+    "windows": {
+      "environment": "Word 16.0.20430.20180, 64-bit, Windows 11 build 26300",
+      "scope": "Supplied conversion, native format and selective-reformat fixtures; saved native equation edit, document-specific settings, preservation, save/reopen and repeat formatting after test Word-process restart."
+    },
+    "limits": [
+      "Exact binary, supplied fixtures and recorded installations only.",
+      "Every Word build, manuscript, notation/geometry option and Mac command was not exhaustively tested.",
+      "Large-document performance and forced over-height/page-boundary stress cases remain unverified."
+    ]
+  },
+  "manifest_update_policy": "After native tests accept a future candidate, deliberately update the version, file hashes/sizes and test summary. This builder only verifies accepted bytes; it does not run native tests or regenerate this manifest."
+}

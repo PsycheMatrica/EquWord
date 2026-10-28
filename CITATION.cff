@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: >-
+  Please cite EquWord when referring to this software. Citation in a manuscript
+  is appreciated but is not required merely for using the tool. Sharing the
+  licensed software remains subject to the attribution conditions of
+  CC BY-NC-SA 4.0; see LICENSE.txt. A version DOI will be added when available.
+title: "EquWord: Equation Conversion and Formatting for Microsoft Word"
+type: software
+authors:
+  - family-names: Cho
+    given-names: Gyeongcheol
+version: 0.9.27
+license: CC-BY-NC-SA-4.0
+url: "https://github.com/PsycheMatrica/EquWord"
+abstract: >-
+  A Microsoft Word VBA template for converting supported LaTeX to editable
+  native equations and applying document-specific notation and equation-layout
+  choices. The tested 0.9.27 template retains its legacy Research Equation
+  Formatter filename and macro names.

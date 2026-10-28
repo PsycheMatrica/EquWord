@@ -1,0 +1,35 @@
+# Private development material must stay outside this public repository.
+*.bas
+*.cls
+*.frm
+*.frx
+private/
+Private/
+development/
+Development/
+source_exports/
+manuscripts/
+test_handoffs/
+test_logs/
+Publish/
+
+# Word/Office owner files, recovery files, and temporary copies.
+~$*
+*.asd
+*.wbk
+*.tmp
+*.temp
+*.bak
+*.log
+
+# Local Python and operating-system files.
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Deliberately do not ignore *.docx: the public practice document is required.
+
+# Reproducible release build output.
+/dist/
