@@ -1,21 +1,20 @@
 # Changelog
 
-## 1.0.0 — release candidate
+## 1.0.0 - prepared for author review
 
-- Prepare the first EquWord public release with an internal display version of 1.0.0. Preserve the V5 processing logic and all mathematical/field/bookmark guards; independently compare the native-built source against the baseline.
-- Split the Quick Start into Windows and Mac PDFs. Add author, document version/date, Word environment, repository and license to their opening pages. Remove the misleading “Word for Windows 0.9.27” subtitle.
-- Update the practice document and platform-specific keyboard instructions while preserving native equations, fields and bookmarks.
-- Add concise, optional manuscript acknowledgment examples and a software reference to the README and both Quick Starts. Keep the ChatGPT example conditional on actual AI use. Remove the previous-version test-history sentence from the Mac guide cover. This documentation revision does not change the tested template or frozen Mac handoff.
-- Record new-candidate verification explicitly. Windows rechecks passed on the recorded build with seven processing runs, saved native edits, preservation and restart checks. The exact-candidate Mac recheck remains pending; earlier 0.9.27 tests are baseline evidence.
-- Configure the original Zenodo account connection. Obtain and verify the first DOI only after the approved release; no DOI is fabricated or preassigned.
-- Add one line of space after guide titles and section headings. Simplify the Windows cover to match the Mac guide, retaining author, version, date and Word environment information. Group procedural steps in single-cell tables. Use compact bold Notes labels without heading gaps, and 1.5-line spacing for procedure boxes and Notes. Keep other body text double-spaced. Use 0.75-inch margins in the guides only to keep full-size screenshots near their explanations, and retain the running head with native page-number fields on every page. Software, practice files and frozen test packets are unchanged.
-- Keep the release unpublished until both platform checks and the author's final review are complete.
+No public release date or DOI is assigned by this preparation.
 
+- Use EquWord branding for the template, interface and eight public commands. Package `EquWord.dotm` and `EquWord_Practice.docx` with separate Windows/Mac Quick Starts, README, license and citation metadata.
+- Preserve editable native equations and mathematical-structure, number-field and bookmark guards. Support eligible multiline merging/alignment, 1.5-line default internal spacing, body-following equation paragraphs, default 12 pt number offset and six-category Selective Reformat with remembered choices.
+- Make Startup automatic loading the primary installation route; retain current-session loading as an alternative. Keep manuscript files as DOCX without separate source imports.
+- Record exact-candidate native evidence for template `3e876985b016db8e0bb242b57a2036aeb80ebc720201410e0e32698ece583a13`: Windows seven settings/processing cases with save/close/reopen and About in the native UI; Mac focused Selection/All Selective Reformat, merge/spacing/preservation/save/close/reopen, reference navigation and Startup/About/Settings.
+- State that four other Mac processing commands were listed, not rerun; separate automatic full-log saving was unavailable, with fallback notes retained. Earlier broader conversion/editing tests remain predecessor evidence, not a full regression suite on the branded binary.
+- Refine the Windows 10-page and Mac 14-page manuals with common structure, Times New Roman 12 pt body text, compact Notes, editable-source examples and three core example illustrations per platform. Anonymize screenshot account identifiers. Use actual native Word result excerpts for the Windows fraction/alpha and merged-number examples without manufacturing editing controls.
+- Update the license product heading to EquWord 1.0.0 while preserving the subsequent CC BY-NC-SA 4.0 legal text. Retain author attribution, GPT-6.1 Sol development acknowledgment and optional software/AI manuscript acknowledgment examples.
+- Keep the seven-member review archive identity explicit and preserve all prior packets. No GitHub/Zenodo publication is authorized by preparation; final author confirmation remains required.
 
-## 0.9.27 — first EquWord public release preparation
+## Earlier 0.9.27 V5 preparation history
 
-- Adopted **EquWord: Equation Conversion and Formatting for Microsoft Word** as the public-facing title. The tested template, macro names and in-app Research Equation Formatter name remain unchanged.
-- Selected the exact V5 template tested in Word 16.113.4 on macOS 26.7.2 (Apple silicon) and Word 16.0.20430.20180 (64-bit) on Windows 11 build 26300.
-- Verified supported selection/whole-body LaTeX conversion on supplied fixtures, including native fractions, Greek symbols, intentional inner brackets and an eligible multiline merge. Saved-file checks covered mathematical content, fields and bookmarks. Windows tests also exercised format/selective commands and saved native edits. Test coverage is limited to the recorded builds and fixtures.
-- Updated installation and citation text for EquWord and the recorded cross-platform tests. Retained the tested V5 binary, Quick Start PDF, practice DOCX and CC BY-NC-SA 4.0 license without altering their bytes.
-- Prepared `EquWord.zip` as the stable download filename. The first GitHub release and Zenodo publication remain pending; no DOI or publication date is asserted here.
+The earlier V5 template was tested on supplied fixtures in Word for Windows and Mac. Those tests covered supported conversion, fractions/Greek symbols, intentional inner brackets, an eligible merge, preservation, save/reopen and reload behavior. They are historical predecessor evidence, not a claim that every later candidate or setting was retested.
+
+The initial EquWord preparation retained legacy Research Equation Formatter filenames and commands. That historical packaging is superseded by the current branded 1.0.0 candidate. Frozen earlier candidates and evidence remain private; no earlier public release is implied here.

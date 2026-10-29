@@ -1,40 +1,39 @@
-# EquWord working instructions
+# EquWord public working instructions
 
-This is the public distribution repository for **EquWord: Equation Conversion and Formatting for Microsoft Word**. Its canonical remote is `PsycheMatrica/EquWord` on GitHub. Keep its live Git checkout outside Dropbox and other synchronized folders. Dropbox is for private development, test handoffs, and clearly dated Publish copies.
+This is the public distribution repository for **EquWord: Equation Conversion and Formatting for Microsoft Word**. Its canonical remote is `PsycheMatrica/EquWord`. Keep this public checkout outside Dropbox and other synchronized folders.
 
-## Start every work session
+The author's separate private development checkout is `PsycheMatrica/EquWord-Dev`, managed inside `Dropbox/Software_Development/EquWords` by explicit user choice. Work on that private checkout from only one computer at a time and follow its own root `AGENTS.md`. The public helper's Dropbox restriction applies to this public repository; do not extend it into a blanket prohibition on the separately authorized private workflow.
 
-1. Run `git status --short --branch` before editing. If there are staged, modified, or untracked files, stop and ask the user how to preserve or finish that work. Do not overwrite, stash, clean, reset, or discard it.
-2. From the repository root, run `python scripts/start_work.py` on Windows or `python3 scripts/start_work.py` on macOS. The helper requires a clean working tree, no Git operation in progress, branch `main`, upstream `origin/main`, and the expected HTTPS or SSH remote. It fetches and then pulls with `--ff-only`, with automatic stashing disabled.
-3. If validation, fetching, or pulling fails, stop before editing and report the actual state. Do not repair this by rebasing, resetting, force pushing, switching branches, or changing remotes without the user's direction.
-4. Read the task and relevant documentation, then perform the authorized work. Do not use a Dropbox Publish copy as the working checkout.
+## Start a public work session
 
-## Scope and preservation
+1. Read these instructions and run `git status --short --branch` before editing the actual checkout.
+2. If staged, modified or untracked work exists, preserve it and stop to resolve how to finish it. Never overwrite, stash, clean, reset or discard it automatically. Existing work is not permission to replace it wholesale.
+3. From a clean actual checkout, run `python scripts/start_work.py` on Windows or `python3 scripts/start_work.py` on Mac. It validates `main`, upstream `origin/main`, the canonical remote and absence of unfinished Git operations, then fetches and pulls with `--ff-only` and automatic stashing disabled.
+4. If validation, fetch or fast-forward fails, stop before editing. Do not automatically rebase, reset, force-push, change remotes or switch branches.
 
-- This repository contains public distribution files and their documentation. Keep private VBA source exports (`.bas`, `.cls`, `.frm`, `.frx`), development notes, manuscripts, raw fixtures, private test documents, and test logs outside it. `.gitignore` is an extra guard, not a substitute for reviewing every staged file.
-- Keep `package/Tutorial/REF_Practice.docx` public. Do not ignore or remove all Word documents.
-- Preserve the template's existing safety checks and guards, including its selection and native-equation checks. Do not remove a guard to make a test pass.
-- The 1.0.0 candidate is `package/ResearchEquationFormatter.dotm`, SHA-256 `60f3ccc2182b3d8a570796eb535ced40fb94946304233b57c9f9bec1491c4755`. Its internal version was updated from V5 in native Word. Read `RELEASE_MANIFEST.json` for exact platform status; do not call a pending candidate tested on both platforms. Preserve these bytes unless a later task explicitly authorizes a new candidate and its checks. Do not rename internal macro or UI names as part of a display-name or repository-name change.
-- Preserve the existing license, practice DOCX, and quick-start PDF bytes unless their revision is expressly within the task. Keep root and package citation/license metadata consistent.
-- Before committing, review the staged file list and diff, check the applicable package checksums and archive contents, and run checks appropriate to the change. Do not describe unperformed Word or Mac tests as passed.
+A workspace preview without `.git` is not the actual checkout. A request for preview preparation does not authorize promotion, Git mutations or publication.
 
-## Finish an authorized task
+## Public files and protected assets
 
-- Once the user-authorized work and its relevant checks are complete, make a clear commit and push to the validated upstream when that task's authorization includes saving the work to this public repository. For ordinary repository work, the established routine is to commit and push the completed change. If the user requests a local preview or explicitly withholds publishing, keep it local.
-- Check `git status --short --branch` afterward and report what changed, what was checked, and the commit/push result. If pushing is rejected, preserve the local commit and report the reason; do not force push, rebase, or reset.
-- Creating a GitHub release, uploading release assets, publishing to Zenodo, or replacing an installed Word template requires an explicit instruction for that action. A request to edit or commit repository files does not authorize these steps.
-- Refresh a Dropbox Publish copy only from a known commit or verified release. Treat it as a dated snapshot, not a second checkout to edit or merge.
+- Keep exactly the seven approved members in `package/`: `EquWord.dotm`, `README.txt`, `CITATION.cff`, `LICENSE.txt`, `Tutorial/EquWord_Practice.docx` and the Windows/Mac Quick Start PDFs.
+- Keep the root and package citation files identical, and the two license files identical. The current license heading is `EquWord 1.0.0` with CC BY-NC-SA 4.0 terms.
+- The recorded candidate is `package/EquWord.dotm`, SHA-256 `3e876985b016db8e0bb242b57a2036aeb80ebc720201410e0e32698ece583a13`. Preserve it unless a task explicitly authorizes a new candidate and its checks.
+- Preserve all mathematical-structure, number-field, bookmark, selection and native-equation guards. Never remove or relax a guard to make a test pass.
+- Read `RELEASE_MANIFEST.json` for candidate-specific scope. Windows recorded command checks and focused Mac checks passed; this is not a claim of a full branded Mac regression. Mac separate automatic full-log saving remains unavailable and Windows-style Esc polling is not provided there.
+- Preserve guide, practice, license and template bytes when their revision is outside the task. A documentation-only revision does not establish a fresh software runtime pass.
+- Separate BAS/CLS/FRM/FRX exports, prototypes, manuscripts, raw fixtures, unredacted screenshots, editable guide masters and private test logs/results stay outside the public repository. `.gitignore` is a guard, not a substitute for reviewing staged files. Do not ignore all DOCX files: the public practice file is required.
+- Do not copy a whole private review/handoff folder into this checkout. Transfer only explicitly approved public files and sanitized metadata. Private evidence paths and workstation account names do not belong in public metadata.
 
-See [WORKFLOW.md](WORKFLOW.md) for the cross-platform setup and routine.
+## Finish authorized public work
+
+Run appropriate checks, inspect the actual diff and staged file list, and verify package/archive identities. Commit and push only when the task authorizes saving to the public repository. Keep local previews local. If a push fails, preserve the commit and report the cause; do not rewrite history or force-push automatically.
+
+Keep build products in ignored `dist/` or a new external output directory. Existing different assets must not be overwritten. Refresh a dated Publish snapshot only from a known public commit or verified release, and identify review-only copies accurately.
 
 ## Mandatory final release confirmation
 
-Before publishing any GitHub release or triggering its Zenodo archive, present
-the exact version, target commit, artifact filenames and SHA-256 checksums,
-release notes, and actual verification results to the user. Obtain the user's
-explicit final confirmation for that concrete prepared release. Earlier general
-instructions to prepare or distribute software, ordinary commit/push approval,
-and authorization to connect Zenodo are not final publication approval.
-Draft preparation may proceed within the authorized task; publication must wait.
-Do not infer approval from silence, elapsed time, or approval of account access.
-This rule applies to every release, including the first release and later updates.
+Before every GitHub release or Zenodo publication, present the exact version, target commit, artifact filenames and SHA-256 checksums, release notes and actual verification scope. Obtain the author's explicit final confirmation for that concrete release. General preparation instructions, repository commit/push authorization, Zenodo account access and elapsed time are not final publication approval.
+
+Draft preparation may continue, but creating a release, uploading assets, publishing to Zenodo, updating the website as released or replacing an installed Word template requires the relevant explicit authorization. The builder's publication check never grants that authorization.
+
+See [WORKFLOW.md](WORKFLOW.md) and [RELEASING.md](RELEASING.md).

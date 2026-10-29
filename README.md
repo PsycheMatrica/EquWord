@@ -1,57 +1,67 @@
 # EquWord: Equation Conversion and Formatting for Microsoft Word
 
-EquWord converts supported LaTeX into editable native Word equations and applies document-specific notation, font and equation-layout choices. It is a macro-enabled template for desktop Microsoft Word.
+EquWord converts supported LaTeX into editable native Word equations and applies notation, font and equation-layout settings saved with a manuscript. It is a macro-enabled template for desktop Microsoft Word on Windows and Mac.
 
-**1.0.0 release candidate:** this first public release is being prepared. Its template displays 1.0.0 and retains the preceding V5 processing logic. The new Windows recheck passed; the exact-candidate Mac recheck remains pending before final author review. No public release or Zenodo DOI has been created. Connection to Zenodo is configured; it does not itself create a DOI.
+Version **1.0.0** is prepared for final author review. No public release or Zenodo DOI is assigned by this preparation. Every release requires the author's explicit final confirmation of the exact commit, files, checksums, notes and recorded test scope.
 
-## Choose your Quick Start
+## Get started
 
-The planned download is **EquWord.zip**. Its seven distribution files are in [package/](package/).
+1. When the approved release is available, download `EquWord.zip` from [GitHub Releases](https://github.com/PsycheMatrica/EquWord/releases) and extract it.
+2. Read [README.txt](package/README.txt) and choose the [Windows Quick Start](package/Tutorial/EquWord_Quick_Start_Windows.pdf) or [Mac Quick Start](package/Tutorial/EquWord_Quick_Start_Mac.pdf).
+3. Follow that guide to find Word's actual **Startup** folder. Close Word completely and copy only `EquWord.dotm` there. Preserve older formatter templates outside Startup; leave `Normal.dotm` and unrelated add-ins unchanged.
+4. Start Word, run `EquWord_About` and confirm version 1.0.0. Save a working copy of [EquWord_Practice.docx](package/Tutorial/EquWord_Practice.docx), then review its profile with `EquWord_Settings`.
 
-1. Read [the installation and command guide](package/README.txt).
-2. Choose [Quick Start for Windows](package/Tutorial/EquWord_Quick_Start_Windows.pdf) or [Quick Start for Mac](package/Tutorial/EquWord_Quick_Start_Mac.pdf).
-3. Load `ResearchEquationFormatter.dotm` as a global template in desktop Word. No separate VBA source import is required.
-4. Make a working copy of [REF_Practice.docx](package/Tutorial/REF_Practice.docx), run `AboutResearchEquationFormatter`, and confirm version 1.0.0.
+Startup installation makes the commands available automatically when Word starts. Templates and Add-ins remains an optional current-session loading method. No separate BAS, CLS or UserForm import is needed. Use your normal macro policy; do not enable all macros or change VBA-project access settings. Word for the web cannot execute this template.
 
-**Research Equation Formatter is the legacy name inside EquWord.** The template filename and macro names remain the same so existing command shortcuts remain recognizable. Each Quick Start identifies its author, document version and date, relevant Word environment, repository and license on the first page. Windows screenshots and Mac instructions are provided in separate guides.
+## Features and commands
 
-## What it does
+- Convert supported selected LaTeX or supported source throughout the main document body.
+- Format native equations and apply selected categories without repeating every formatting step.
+- Merge eligible adjacent derivation rows, align their main relations and set internal row spacing.
+- Apply equation-number placement and keep eligible numbered blocks together.
+- Check mathematical structure, number fields and bookmarks during processing.
 
-- Converts supported selected LaTeX or supported LaTeX in the main document body.
-- Formats native Word equations using settings saved with the document.
-- Supports eligible multiline merging, relation alignment and internal row spacing.
-- Applies equation-number table placement and selected formatting categories.
-- Checks mathematical structure, number fields and bookmark preservation during processing.
+New profiles use eligible multiline merging, 1.5-line internal spacing and a 12 pt number offset. Equation paragraphs follow body spacing; existing manuscript profiles retain their choices. Selective Reformat offers six categories, Select all/Deselect all and remembered choices. Follow current equation is separate. EquWord does not determine mathematical correctness, perform statistical analysis or support every LaTeX command. Work on copies and review results before saving.
 
-Equations remain editable in Word. The tool does not assess mathematical correctness, perform statistical analysis or implement every LaTeX command. Work on a copy of a manuscript and review the result before saving.
+| Macro | Use |
+| --- | --- |
+| `EquWord_Settings` | Review and save the current manuscript's settings. |
+| `EquWord_About` | Show the loaded version and active settings. |
+| `EquWord_FormatSelection` | Format selected native equations, or one at the cursor. |
+| `EquWord_FormatAll` | Format native equations in the main document body. |
+| `EquWord_ConvertLaTeXSelection` | Convert supported selected source, then format. |
+| `EquWord_ConvertLaTeXAll` | Convert supported main-body source, then format. |
+| `EquWord_SelectiveReformatSelection` | Apply selected categories to the selected equations. |
+| `EquWord_SelectiveReformatAll` | Apply selected categories throughout the main body. |
 
-## Validation status
+## Recorded verification
 
-| Candidate | Environment | Native verification |
+The exact template SHA-256 is `3e876985b016db8e0bb242b57a2036aeb80ebc720201410e0e32698ece583a13`.
+
+| Platform | Recorded environment | Verification of these candidate bytes |
 | --- | --- | --- |
-| 1.0.0 Windows | Word 16.0.20430.20180, 64-bit; Windows 11 build 26300 | PASS on supplied fixtures; seven processing runs |
-| 1.0.0 Mac | Word 16.113.4 (16.113.26100421); macOS 26.7.2; Apple silicon | Pending exact-candidate Mac recheck |
-| Earlier 0.9.27 V5 | Both environments above | Recorded fixture tests passed |
+| Windows | Word 16.0.20430.20180, 64-bit; Windows 11 build 26300 | Seven settings/processing commands completed native runs with save, close and reopen. About was confirmed in the native interface. |
+| Mac | Word 16.114.3 (26102720); macOS 26.7.2 (25G332), Apple silicon | Focused Selection and All Selective Reformat runs with all six categories passed, with merging, 1.5-line spacing, preservation and save/close/reopen. Startup loading after restart, About, Settings and reference navigation were also checked. |
 
-The earlier V5 Mac tests covered selection and whole-body LaTeX conversion, native fractions and Greek symbols, intentional inner brackets, an eligible two-row merge, preservation of supplied mathematical content/fields/bookmarks, save/reopen formatting, and template reload with About in a fresh Word session. Windows tests additionally exercised native format and selective-reformat commands, document-specific remembered choices, a saved native equation edit and repeat formatting after restarting the test Word process.
+The focused Mac runs took 80.9 and 135.5 seconds. The other four processing commands were listed, not rerun in that check. Separate automatic full-log saving was unavailable; all 18/20 pages of fallback review notes were retained privately. Mac does not provide Windows-style Esc polling. No fresh Windows Startup autoload/restart check is claimed for this branded candidate.
 
-Earlier results are baseline evidence, not native execution of the new 1.0.0 binary. Results apply to the supplied fixtures and recorded installations. Compatibility with every Word build or manuscript, every Mac command, large-document performance, and forced over-height/page-boundary stress cases is not established. Word for the web cannot run this VBA template.
+Earlier broader conversion/editing tests are predecessor evidence, not a full regression suite on every later binary. These results cover supplied fixtures and recorded installations; every Word build, manuscript, setting combination, large-document workload and over-height page case has not been tested. See the sanitized [release manifest](RELEASE_MANIFEST.json) for exact identities and scope.
 
-## Files and source packaging
+## Download contents
 
-The download contains the DOTM template, installation guide, license, citation metadata, two operating-system Quick Start PDFs and the practice DOCX. VBA code is embedded in the DOTM. Separate BAS, CLS and FRM exports, private test logs and raw fixtures are not part of this public package.
+The ZIP contains exactly seven files: `EquWord.dotm`, `README.txt`, `LICENSE.txt`, `CITATION.cff`, two operating-system Quick Start PDFs, and `Tutorial/EquWord_Practice.docx`. The guides contain three core example illustrations per platform. Screenshot account names are anonymized; Windows equation examples are native Word document excerpts, not screenshots of editing controls.
+
+VBA remains embedded in the DOTM. Separate source exports, editable guide masters, private test files, raw screenshots and logs are outside this distribution and public repository.
+
+## Development acknowledgment
+
+GPT-6.1 Sol (OpenAI) assisted with developing EquWord and preparing its accompanying manual. The author reviewed the AI-assisted work and takes responsibility for the software and documentation.
 
 ## License and citation
 
-Copyright (c) 2026 Gyeongcheol Cho. The software and accompanying original documentation are licensed under **CC BY-NC-SA 4.0**. See [LICENSE.txt](LICENSE.txt). Its legacy Research Equation Formatter heading identifies the same software; the license terms and attribution are unchanged.
+Copyright (c) 2026 Gyeongcheol Cho. The software and accompanying original documentation are licensed under **CC BY-NC-SA 4.0**; see [LICENSE.txt](LICENSE.txt). Using the tool does not by itself apply that license to your manuscripts or equations. Microsoft interface elements and product names in screenshots retain their existing rights.
 
-The license does not automatically apply to your own manuscripts or equations. Citation in a manuscript is appreciated and is not required merely for using the tool. Attribution conditions still apply when sharing licensed material. See [CITATION.cff](CITATION.cff).
-
-The citation title is **EquWord: Equation Conversion and Formatting for Microsoft Word**. The GitHub integration cannot reserve a DOI before its first release. After the author-approved first release, the actual version DOI will be checked and added to current citation metadata. A Concept DOI can identify the software across versions. The archived tag and released ZIP will be preserved; any later guide revision will be identified explicitly.
-
-### Acknowledgment examples
-
-If EquWord contributed to equation preparation in your manuscript, please consider citing the software in the Acknowledgments or another appropriate section. Cite the version you actually used.
+Citation in a manuscript is appreciated but is not required merely for using the tool. Attribution conditions still apply when sharing licensed material. See [CITATION.cff](CITATION.cff). Cite the version actually used in the Acknowledgments or another appropriate section.
 
 > Equations were prepared in Microsoft Word using EquWord (Version 1.0.0; Cho, 2026).
 
@@ -59,16 +69,12 @@ If you also used ChatGPT for drafting and revision, this optional combined examp
 
 > ChatGPT (OpenAI) assisted with drafting and revision. The authors reviewed the AI-assisted content and take responsibility for the final manuscript. Equations were prepared in Microsoft Word using EquWord (Version 1.0.0; Cho, 2026).
 
-Use only statements that reflect your actual use. Adjust the tools, tasks, software version, and singular or plural author wording as needed.
-
-### Suggested reference
+Use only statements that reflect your actual use. Adjust the tasks, tools, version and singular or plural author wording as needed.
 
 Cho, G. (2026). *EquWord: Equation conversion and formatting for Microsoft Word* (Version 1.0.0) [Computer software]. https://github.com/PsycheMatrica/EquWord
 
-Use the released version's DOI when available.
+Use the released version's verified DOI when available. After an author-approved GitHub release is archived by Zenodo, verify the actual version and Concept DOIs before updating citation or website metadata. Preserve released tags and assets.
 
-Microsoft interface elements and product names in screenshots remain the property of Microsoft.
+## Maintenance
 
-## Release procedure
-
-See [CHANGELOG.md](CHANGELOG.md) and [RELEASING.md](RELEASING.md). Build a review ZIP with `python scripts/build_release.py --output-dir <absolute-new-directory>`. The builder reports pending platform verification. `--publication-check` refuses a candidate without matching native PASS evidence on both platforms, and never publishes anything. Every actual release requires the author's explicit final approval of the exact commit, artifacts, checksums, release notes and tests.
+The public checkout is separate from private development; see [WORKFLOW.md](WORKFLOW.md). [RELEASING.md](RELEASING.md) describes preparation and final author approval. The packaging helper checks the exact seven members, recorded platform evidence and approved archive identity; it never executes Word or publishes anything.

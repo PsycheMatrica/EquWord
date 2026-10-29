@@ -2,3 +2,11 @@
 /package/** -text
 /CITATION.cff -text
 /LICENSE.txt -text
+
+# Public prose and helpers use portable LF; approved package bytes stay exact.
+/*.md text eol=lf
+/scripts/*.py text eol=lf
+/RELEASE_MANIFEST.json text eol=lf
+*.dotm binary
+*.docx binary
+*.pdf binary

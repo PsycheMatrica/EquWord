@@ -1,4 +1,4 @@
-Research Equation Formatter 0.9.27
+EquWord 1.0.0
 Copyright (c) 2026 Gyeongcheol Cho.
 
 This distribution, including its template's embedded VBA code and accompanying

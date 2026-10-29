@@ -14,7 +14,7 @@ from pathlib import Path
 import re
 import stat
 import sys
-from zipfile import ZipFile, ZipInfo, ZIP_STORED
+from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
 
 RELEASE_VERSION = "1.0.0"
@@ -23,8 +23,8 @@ PACKAGE_FILES = {
     "CITATION.cff",
     "LICENSE.txt",
     "README.txt",
-    "ResearchEquationFormatter.dotm",
-    "Tutorial/REF_Practice.docx",
+    "EquWord.dotm",
+    "Tutorial/EquWord_Practice.docx",
     "Tutorial/EquWord_Quick_Start_Windows.pdf",
     "Tutorial/EquWord_Quick_Start_Mac.pdf",
 }
@@ -123,7 +123,7 @@ def verify_package(root):
     # Keep the historical key for a small schema migration. In schema 2 it
     # identifies byte-verified candidate content, not a claim of native testing.
     candidate = manifest["verified_template"]
-    require(candidate["filename"] == "ResearchEquationFormatter.dotm",
+    require(candidate["filename"] == "EquWord.dotm",
             "Unexpected verified template filename.")
     require(candidate["version"] == version, "Verified template version differs from release version.")
     template_hash = sha256(files[candidate["filename"]])
@@ -138,13 +138,13 @@ def verify_package(root):
 
 def make_archive(files, timestamp):
     buffer = io.BytesIO()
-    with ZipFile(buffer, "w", compression=ZIP_STORED) as archive:
+    with ZipFile(buffer, "w", compression=ZIP_DEFLATED, compresslevel=6) as archive:
         for name, data in sorted(files.items()):
             entry = ZipInfo(name, timestamp)
-            entry.compress_type = ZIP_STORED
+            entry.compress_type = ZIP_DEFLATED
             entry.create_system = 3
             entry.external_attr = 0o100644 << 16
-            archive.writestr(entry, data)
+            archive.writestr(entry, data, compresslevel=6)
     result = buffer.getvalue()
     with ZipFile(io.BytesIO(result)) as archive:
         require(archive.testzip() is None, "Generated ZIP failed CRC verification.")
@@ -194,6 +194,15 @@ def main():
                 "Publication check refused: exact-candidate Windows and Mac PASS are required; final author approval remains required.")
     archive_bytes = make_archive(files, timestamp)
     checksum = sha256(archive_bytes)
+    expected_archive = manifest["archive"]
+    require(expected_archive.get("filename") == "EquWord.zip"
+            and expected_archive.get("compression") == "deflated"
+            and expected_archive.get("compression_level") == 6,
+            "Unexpected approved archive format.")
+    require(expected_archive.get("bytes") == len(archive_bytes)
+            and expected_archive.get("sha256") == checksum,
+            "Generated ZIP differs from the deliberately recorded review archive. "
+            "Preserve the existing asset and investigate before changing its approved identity.")
     state = "DRAFT" if readiness["status"] == "draft" else "READY FOR AUTHOR REVIEW"
     print("{} EquWord {}: seven byte-verified package files; candidate {}"
           .format(state, manifest["version"], manifest["verified_template"]["sha256"]))

@@ -11,100 +11,131 @@
     0,
     0
   ],
+  "archive": {
+    "filename": "EquWord.zip",
+    "bytes": 2265627,
+    "sha256": "7445ce7810992905ba826db6540eb87f57aa32d1e3b80303e50bff989e97d98d",
+    "compression": "deflated",
+    "compression_level": 6
+  },
   "verified_template": {
-    "filename": "ResearchEquationFormatter.dotm",
+    "filename": "EquWord.dotm",
     "version": "1.0.0",
-    "candidate_label": "1.0.0 version update built in native Word",
-    "sha256": "60f3ccc2182b3d8a570796eb535ced40fb94946304233b57c9f9bec1491c4755",
-    "meaning": "Candidate byte identity; native verification status is recorded separately."
+    "candidate_label": "Branded EquWord 1.0.0 native Word candidate",
+    "sha256": "3e876985b016db8e0bb242b57a2036aeb80ebc720201410e0e32698ece583a13",
+    "meaning": "Byte identity of the recorded candidate; platform verification has the explicit scope below."
   },
   "files": {
     "CITATION.cff": {
-      "bytes": 899,
-      "sha256": "0d40ed1e8e55b51e530faa504a3f5da53066428479c56ac2b3c7e319fce109f0"
+      "bytes": 918,
+      "sha256": "471aa28882b9393c0b6d3315b3052ba2ffc86282a9a4b6c94b7cd406f52f1bdf"
+    },
+    "EquWord.dotm": {
+      "bytes": 939155,
+      "sha256": "3e876985b016db8e0bb242b57a2036aeb80ebc720201410e0e32698ece583a13"
     },
     "LICENSE.txt": {
-      "bytes": 21976,
-      "sha256": "2423ecdb6d3448eb2589131c3bfe9d89c94d7252a293e51db1d8b1fb08dca068"
+      "bytes": 21955,
+      "sha256": "f02951f93c9c689576f6688bc62b19f3153f9b66c972663773709f4dc0e3515c"
     },
     "README.txt": {
-      "bytes": 9812,
-      "sha256": "e9c0c561a45a538b4b8b5dd9838765b46ef24656b5523db132b9ed5d7907463c"
+      "bytes": 7428,
+      "sha256": "a9d078a06879ecb47f19a3fbff2866c3f6227d99de5126a28ef16a1368708b54"
     },
-    "ResearchEquationFormatter.dotm": {
-      "bytes": 542178,
-      "sha256": "60f3ccc2182b3d8a570796eb535ced40fb94946304233b57c9f9bec1491c4755"
+    "Tutorial/EquWord_Practice.docx": {
+      "bytes": 39527,
+      "sha256": "cd5e73ff57f88b0600d910ff4db91c112ab5894999e489d8303cb493f485e8d6"
     },
     "Tutorial/EquWord_Quick_Start_Mac.pdf": {
-      "bytes": 144665,
-      "sha256": "85dd8402d8effb584c11068ede79e26c3c733dc680a5b0c335505fa034bd0d89"
+      "bytes": 967475,
+      "sha256": "cdf85a08e1c198b08abb147dfd380feed329767f83d15b6e02c2bdadaa5982bb"
     },
     "Tutorial/EquWord_Quick_Start_Windows.pdf": {
-      "bytes": 424462,
-      "sha256": "e90c4c71ff80f9091bbd8911e107b04c0e3c46e29f1b07d6b4e4b380bf60e1de"
-    },
-    "Tutorial/REF_Practice.docx": {
-      "bytes": 39531,
-      "sha256": "2a64124d71f59067c61fbb09458c05788f1ef099f93a86e026335ce2b1818c6b"
+      "bytes": 560958,
+      "sha256": "70ceee3c0f45f5561a766ebf728045e3f3bfc80dbee37e4d900f7c342570a9ab"
     }
   },
-  "manifest_update_policy": "Deliberately update accepted file hashes and actual native evidence. Draft packaging does not establish native compatibility. Both platform PASS results for this exact hash/version and final author approval are required before publication.",
-  "baseline_native_test_summary": {
-    "version": "0.9.27",
-    "candidate_label": "V5",
-    "sha256": "70ca15d170dc48f93b3ea13b99bff3bd0f19728456c8927138ba6c416de3b35e",
-    "mac": {
-      "environment": "Word 16.113.4 (16.113.26100421), macOS 26.7.2, Apple silicon",
-      "scope": "Supplied selection and whole-body LaTeX conversion fixtures, native fractions/Greek symbols/inner brackets, eligible multiline merge, saved mathematical/field/bookmark preservation, save/reopen formatting, reload and About after Word restart."
-    },
-    "windows": {
-      "environment": "Word 16.0.20430.20180, 64-bit, Windows 11 build 26300",
-      "scope": "Supplied conversion, native format and selective-reformat fixtures; saved native equation edit, document-specific settings, preservation, save/reopen and repeat formatting after test Word-process restart."
-    },
-    "limits": [
-      "Exact binary, supplied fixtures and recorded installations only.",
-      "Every Word build, manuscript, notation/geometry option and Mac command was not exhaustively tested.",
-      "Large-document performance and forced over-height/page-boundary stress cases remain unverified."
-    ]
-  },
+  "manifest_update_policy": "Deliberately update accepted member/archive hashes and actual native evidence together. The builder checks recorded evidence and bytes; it does not execute Word or authorize publication. Final author confirmation is required for every release.",
   "release_readiness": {
-    "status": "draft",
+    "status": "ready_for_author_review",
     "requires_final_author_approval": true,
     "native_tests": {
       "windows": {
         "status": "PASS",
         "version": "1.0.0",
-        "template_sha256": "60f3ccc2182b3d8a570796eb535ced40fb94946304233b57c9f9bec1491c4755",
-        "evidence": [
-          "Actual Word for Windows recheck 2026-10-28: seven processing runs and two About executions across two fresh Word processes.",
-          "Private Windows_Test_Summary_1.0.0.json SHA256 13d045dbca123e236886f812800e947e3fcd3eb5aa34588621f4b47339eaa5d0",
-          "58 saved-file/XML preservation support checks; 37 frozen source and installed-template files unchanged."
-        ],
+        "template_sha256": "3e876985b016db8e0bb242b57a2036aeb80ebc720201410e0e32698ece583a13",
+        "scope": "Seven settings/processing commands in actual Word, save/close/reopen; About verified in the native interface. Supplied conversion, native-format and Selective Reformat cases; mathematical/prose/SEQ/REF/bookmark/PAGE support checks.",
         "environment": {
-          "Windows": "Microsoft Windows 11 Home",
-          "OSVersion": "10.0.26300",
-          "OSBuild": "26300",
-          "OSArchitecture": "64-bit",
-          "WordVersion": "16.0",
-          "WordBuild": "16.0.20430",
-          "WordFileVersion": "16.0.20430.20180",
-          "WordBitness": "64-bit"
+          "word": "16.0.20430.20180",
+          "word_architecture": "64-bit",
+          "os": "Windows 11 Home",
+          "os_build": "26300"
         },
-        "processing_runs": 7
+        "evidence": [
+          "Private recorded Windows branding verification report; SHA-256 a7005682a2732bf47619e09aa83bd9f26892caacf8068e813578cb78c89c9522",
+          "All seven settings/processing commands completed native execution and save/close/reopen on the recorded fixtures; About was native UI only."
+        ],
+        "limits": [
+          "About has no separate save/reopen snapshot.",
+          "No fresh Windows Startup autoload/restart check is claimed for this branded candidate.",
+          "Every document, Word build, option combination, workload and page-height case was not tested."
+        ]
       },
       "mac": {
-        "status": "PENDING",
+        "status": "PASS",
         "version": "1.0.0",
-        "template_sha256": "60f3ccc2182b3d8a570796eb535ced40fb94946304233b57c9f9bec1491c4755",
-        "evidence": []
+        "template_sha256": "3e876985b016db8e0bb242b57a2036aeb80ebc720201410e0e32698ece583a13",
+        "scope": "Focused Selection and All Selective Reformat, all six categories (mask 63), two-row merge, 1.5-line spacing, preservation and native save/close/reopen; reference navigation, Startup automatic loading after restart, About and Settings.",
+        "environment": {
+          "word": "16.114.3 (26102720)",
+          "os": "macOS 26.7.2",
+          "os_build": "25G332",
+          "architecture": "arm64"
+        },
+        "evidence": [
+          "Private recorded branded Mac focused verification report; SHA-256 a02022d9252e126e19b5a0ac58358ae3090a18fe734e8323c738ac65d5e68e08",
+          "Actual completion summaries: Selection 80.9 seconds and All 135.5 seconds; complete fallback notes pages 1–18 and 1–20 retained privately."
+        ],
+        "ancillary_full_log_saving": {
+          "status": "BLOCKED",
+          "alternative": "All native paged review notes retained in private evidence."
+        },
+        "full_branded_regression_status": "UNVERIFIED",
+        "limits": [
+          "Other four processing commands were listed, not rerun in this focused Mac check.",
+          "Native equation controls were selected without character edits.",
+          "Windows-style Esc polling is unavailable on Mac.",
+          "Earlier broader conversion/editing tests are predecessor evidence, not a full regression suite on this binary.",
+          "Every document, Word build, option combination, workload and page-height case was not tested."
+        ]
       }
     }
   },
-  "source_review": {
-    "processing_logic": "Visible executable source matches V5 except REF_VERSION; main version comment also updated.",
-    "native_rebuild_deltas": "Word regenerated the form VB_Base GUIDs/project identifier and omitted an explicit default BackColor property. Initial strict byte audit and supplementary review are preserved privately.",
-    "acceptance": "Actual selective-form behavior and saved choices must be checked on both platforms; Mac pending.",
-    "windows_form_runtime": "PASS: both selective commands, control events, accepted choices, reload and remembered choices after Word restart.",
-    "mac_form_runtime": "PENDING; native host-generated identifier portability is not inferred as a Mac runtime pass."
+  "documentation": {
+    "revision_date": "2026-10-29",
+    "windows_pages": 10,
+    "mac_pages": 14,
+    "example_figures_per_platform": 3,
+    "example_subjects": [
+      "Fraction and Greek alpha",
+      "Merged numbered block",
+      "Selective Reformat categories"
+    ],
+    "privacy": "Account identifiers in instructional screenshots are anonymized as userID; screenshots are disclosed privacy-edited derivatives.",
+    "windows_equation_examples": "Cropped native Word PDF exports of saved results, not screenshots of editing controls. Fraction example is predecessor V5 evidence; merged example is the exact branded candidate result.",
+    "software_changed_for_document_revision": false,
+    "editable_guide_sources_and_private_evidence_in_package": false
+  },
+  "source_packaging": {
+    "separate_source_exports_included": false,
+    "VBA_embedded_in_DOTM": true,
+    "template_or_guards_changed_during_promotion": false
+  },
+  "publication": {
+    "status": "unpublished",
+    "doi": null,
+    "publication_date": null,
+    "release_target_commit": null,
+    "final_author_confirmation_required": true
   }
 }
