@@ -13,8 +13,8 @@
   ],
   "archive": {
     "filename": "EquWord.zip",
-    "bytes": 2255555,
-    "sha256": "3d960e5f10262f7155a6f34e2f7d88943cdf153782aba82a5726ab1e666e5ab5",
+    "bytes": 2268037,
+    "sha256": "df881361ddec44491c1baef8046f3daf781eb056975bc9dfaa38ef8d4ff78d78",
     "compression": "deflated",
     "compression_level": 6
   },
@@ -47,12 +47,12 @@
       "sha256": "8384725f2e576d76a18faf7587a84c02d7aa019267eb76506641b749d5eb5c7c"
     },
     "Tutorial/EquWord_Quick_Start_Mac.pdf": {
-      "bytes": 967475,
-      "sha256": "cdf85a08e1c198b08abb147dfd380feed329767f83d15b6e02c2bdadaa5982bb"
+      "bytes": 965460,
+      "sha256": "50609b770d6276fab0f0beb7b6363f4734823d6abeb85dc96b8550955cbe81c0"
     },
     "Tutorial/EquWord_Quick_Start_Windows.pdf": {
-      "bytes": 560958,
-      "sha256": "70ceee3c0f45f5561a766ebf728045e3f3bfc80dbee37e4d900f7c342570a9ab"
+      "bytes": 574181,
+      "sha256": "ae2c035c60d9c1af95f2b9bb5f6331c9f094a3fe3af6168f6b702ae8558322ef"
     }
   },
   "manifest_update_policy": "Deliberately update accepted member/archive hashes and actual native evidence together. The builder checks recorded evidence and bytes; it does not execute Word or authorize publication. Final author confirmation is required for every release.",
@@ -113,7 +113,7 @@
   },
   "documentation": {
     "revision_date": "2026-10-29",
-    "windows_pages": 10,
+    "windows_pages": 11,
     "mac_pages": 14,
     "example_figures_per_platform": 3,
     "example_subjects": [
@@ -121,7 +121,7 @@
       "Merged numbered block",
       "Selective Reformat categories"
     ],
-    "privacy": "Account identifiers in instructional screenshots are anonymized as userID; screenshots are disclosed privacy-edited derivatives.",
+    "privacy": "Earlier screenshot account identifiers remain anonymized as userID. The added Windows Ribbon/QAT example is an unchanged user-supplied screenshot with no account path visible.",
     "windows_equation_examples": "Cropped native Word PDF exports of saved results, not screenshots of editing controls. Fraction example is predecessor V5 evidence; merged example is the exact branded candidate result.",
     "software_changed_for_document_revision": false,
     "editable_guide_sources_and_private_evidence_in_package": false,
@@ -134,6 +134,12 @@
       "preservation": "Exercise wording, literal source, native equations, SEQ/REF fields, bookmarks and header PAGE preserved.",
       "native_macro_rerun_for_document_revision": false,
       "mac_document_layout_recheck": "not_performed_for_this_layout_only_revision"
+    },
+    "command_buttons": {
+      "ribbon_and_quick_access_toolbar": "Both guides describe optional personal Word customizations and distinguish display labels from EquWord_* macro names.",
+      "windows_figure4": "Two panels: existing native setup dialog and unchanged user-supplied completed Ribbon/QAT screenshot.",
+      "mac_screenshots": "Existing genuine Mac screenshots retained; no new Mac screenshot or runtime check claimed.",
+      "validation": "All 25 pages inspected after read-only native Windows Word PDF export; procedure/figure numbering and original fonts preserved."
     }
   },
   "source_packaging": {
