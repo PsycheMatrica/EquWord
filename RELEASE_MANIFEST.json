@@ -13,8 +13,8 @@
   ],
   "archive": {
     "filename": "EquWord.zip",
-    "bytes": 2265627,
-    "sha256": "7445ce7810992905ba826db6540eb87f57aa32d1e3b80303e50bff989e97d98d",
+    "bytes": 2255555,
+    "sha256": "3d960e5f10262f7155a6f34e2f7d88943cdf153782aba82a5726ab1e666e5ab5",
     "compression": "deflated",
     "compression_level": 6
   },
@@ -43,8 +43,8 @@
       "sha256": "a9d078a06879ecb47f19a3fbff2866c3f6227d99de5126a28ef16a1368708b54"
     },
     "Tutorial/EquWord_Practice.docx": {
-      "bytes": 39527,
-      "sha256": "cd5e73ff57f88b0600d910ff4db91c112ab5894999e489d8303cb493f485e8d6"
+      "bytes": 28854,
+      "sha256": "8384725f2e576d76a18faf7587a84c02d7aa019267eb76506641b749d5eb5c7c"
     },
     "Tutorial/EquWord_Quick_Start_Mac.pdf": {
       "bytes": 967475,
@@ -124,7 +124,17 @@
     "privacy": "Account identifiers in instructional screenshots are anonymized as userID; screenshots are disclosed privacy-edited derivatives.",
     "windows_equation_examples": "Cropped native Word PDF exports of saved results, not screenshots of editing controls. Fraction example is predecessor V5 evidence; merged example is the exact branded candidate result.",
     "software_changed_for_document_revision": false,
-    "editable_guide_sources_and_private_evidence_in_package": false
+    "editable_guide_sources_and_private_evidence_in_package": false,
+    "practice_document": {
+      "revision_date": "2026-10-29",
+      "author_reviewed_layout": true,
+      "native_word_windows_pages_verified": 2,
+      "editable_equations": 3,
+      "copyright": "Right-aligned conditional last-page footer; no blank body paragraphs used for positioning.",
+      "preservation": "Exercise wording, literal source, native equations, SEQ/REF fields, bookmarks and header PAGE preserved.",
+      "native_macro_rerun_for_document_revision": false,
+      "mac_document_layout_recheck": "not_performed_for_this_layout_only_revision"
+    }
   },
   "source_packaging": {
     "separate_source_exports_included": false,

@@ -11,6 +11,7 @@ No public release date or DOI is assigned by this preparation.
 - State that four other Mac processing commands were listed, not rerun; separate automatic full-log saving was unavailable, with fallback notes retained. Earlier broader conversion/editing tests remain predecessor evidence, not a full regression suite on the branded binary.
 - Refine the Windows 10-page and Mac 14-page manuals with common structure, Times New Roman 12 pt body text, compact Notes, editable-source examples and three core example illustrations per platform. Anonymize screenshot account identifiers. Use actual native Word result excerpts for the Windows fraction/alpha and merged-number examples without manufacturing editing controls.
 - Update the license product heading to EquWord 1.0.0 while preserving the subsequent CC BY-NC-SA 4.0 legal text. Retain author attribution, GPT-6.1 Sol development acknowledgment and optional software/AI manuscript acknowledgment examples.
+- Adopt the author-reviewed Practice layout, center the literal source correctly and keep the copyright on the final page without blank-paragraph positioning. Preserve exercises, editable equations, numbering and references.
 - Keep the seven-member review archive identity explicit and preserve all prior packets. No GitHub/Zenodo publication is authorized by preparation; final author confirmation remains required.
 
 ## Earlier 0.9.27 V5 preparation history
