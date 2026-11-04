@@ -14,8 +14,8 @@
   ],
   "archive": {
     "filename": "EquWord.zip",
-    "bytes": 2318794,
-    "sha256": "06272693b5e17a31f55bc6d8834928f15703105fd238ecf6855540374c558752",
+    "bytes": 2319174,
+    "sha256": "8888d3703267435150b1aac4a2431d241ff0938330178733514baed91fcc67bf",
     "compression": "deflated",
     "compression_level": 6,
     "zip_timestamp_meaning": "Fixed reproducible entry timestamp retained from the existing release builder, not the date of publication."
@@ -39,10 +39,6 @@
       "bytes": 21955,
       "sha256": "f02951f93c9c689576f6688bc62b19f3153f9b66c972663773709f4dc0e3515c"
     },
-    "README.txt": {
-      "bytes": 10061,
-      "sha256": "b401125ff376ce2e3f5b178f966638b7bb1e49297aec8c916fa80b528f79db30"
-    },
     "Tutorial/EquWord_Practice.docx": {
       "bytes": 28854,
       "sha256": "8384725f2e576d76a18faf7587a84c02d7aa019267eb76506641b749d5eb5c7c"
@@ -54,6 +50,10 @@
     "Tutorial/EquWord_Quick_Start_Windows.pdf": {
       "bytes": 574494,
       "sha256": "96be41e6ce4754c3325067a160f59df6423b865ae95c72616b58f0002a145739"
+    },
+    "README.md": {
+      "bytes": 11598,
+      "sha256": "857c8e0971f624cd66d0e099817e23ac3c2a88aafd3c3aff8d61241fd6a0f892"
     }
   },
   "release_readiness": {
@@ -153,7 +153,12 @@
       "No-command control reproduced particular mathFont/unselected-equation changes; not every difference or rendered font.",
       "Five unobtained protected-report typography measurements remain blocked/unverified as recorded."
     ],
-    "publication_approved": false
+    "publication_approved": true,
+    "author_approval": {
+      "date": "2026-11-03",
+      "scope": "First EquWord 1.0.0 release after the requested README.md consolidation; template, guides and other package payloads unchanged.",
+      "source": "Explicit author request to make this README change and release the first version."
+    }
   },
   "documentation": {
     "Windows_pdf_pages": 11,
@@ -175,10 +180,12 @@
   "DOI": null,
   "metadata_revision": {
     "date": "2026-11-03",
-    "reason": "Integrate author-revised Mac guide, synchronize current reporting/progress guidance, and update Windows cover date.",
-    "previous_review_archive_sha256": "a64f4047025965b8e5f08a3a4fc9bf096ce5b87a82a20d46b533c8955301e087",
+    "reason": "Unify root README.md and its byte-identical Markdown distribution copy for the first 1.0.0 release.",
+    "previous_review_archive_sha256": "06272693b5e17a31f55bc6d8834928f15703105fd238ecf6855540374c558752",
     "software_unchanged": true,
-    "guides_updated": true,
-    "no_new_software_runtime_claim": true
+    "guides_unchanged": true,
+    "no_new_software_runtime_claim": true,
+    "README_source": "README.md",
+    "README_distribution_copy": "package/README.md"
   }
 }

@@ -13,7 +13,7 @@ From the intended parent directory, clone `https://github.com/PsycheMatrica/EquW
 1. Read `AGENTS.md` and check `git status --short --branch`.
 2. Preserve and resolve existing work before pulling or editing. Never automatically stash, discard, reset or clean it.
 3. Run the start helper. It validates the public remote/branch/upstream, fetches and pulls with `--ff-only`. It does not reconcile divergence or local commits automatically.
-4. Make the authorized changes, run relevant checks, and inspect the actual staged contents for private material. Keep package/root citation and license files identical and verify the manifest.
+4. Make the authorized changes, run relevant checks, and inspect the actual staged contents for private material. Edit README content only in the root `README.md`, then explicitly run `python scripts/build_release.py --sync-readme` to generate its package copy. Review and update the resulting manifest and archive identities separately. Keep package/root README, citation and license files identical and verify the manifest.
 5. Commit and push when authorized for the public repository. A local preview stays local. Preserve rejected pushes and resolve them deliberately.
 6. Confirm the final working state and report the commit and checks. Begin on the next computer by checking and pulling before editing.
 

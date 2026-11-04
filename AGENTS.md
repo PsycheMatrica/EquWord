@@ -15,7 +15,8 @@ A workspace preview without `.git` is not the actual checkout. A request for pre
 
 ## Public files and protected assets
 
-- Keep exactly the seven approved members in `package/`: `EquWord.dotm`, `README.txt`, `CITATION.cff`, `LICENSE.txt`, `Tutorial/EquWord_Practice.docx` and the Windows/Mac Quick Start PDFs.
+- Keep exactly the seven approved members in `package/`: `EquWord.dotm`, `README.md`, `CITATION.cff`, `LICENSE.txt`, `Tutorial/EquWord_Practice.docx` and the Windows/Mac Quick Start PDFs.
+- Maintain only the repository-root `README.md`. `package/README.md` is a generated, byte-identical distribution copy. Run `python scripts/build_release.py --sync-readme` explicitly after editing the source; then review and update the README and archive identities in the manifest. Verification never repairs a stale copy or changes the manifest automatically.
 - Keep the root and package citation files identical, and the two license files identical. The current license heading is `EquWord 1.0.0` with CC BY-NC-SA 4.0 terms.
 - The recorded candidate is `package/EquWord.dotm`, SHA-256 `b7fc3290227b244647fc15a548f683a443f064aa812e0288bdc82ea3d4383a76`. Preserve it unless a task explicitly authorizes a new candidate and its checks.
 - Preserve all mathematical-structure, number-field, bookmark, selection and native-equation guards. Never remove or relax a guard to make a test pass.

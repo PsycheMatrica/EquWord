@@ -2,16 +2,20 @@
 
 EquWord converts supported LaTeX into editable native Word equations and applies notation, font and equation-layout settings saved with a manuscript. It is a macro-enabled template for desktop Microsoft Word on Windows and Mac.
 
-Version **1.0.0** is prepared for final author review. No public release or Zenodo DOI is assigned by this preparation. Every release requires the author's explicit final confirmation of the exact commit, files, checksums, notes and recorded test scope.
+Version **1.0.0**.
 
 ## Get started
 
-1. When the approved release is available, download `EquWord.zip` from [GitHub Releases](https://github.com/PsycheMatrica/EquWord/releases) and extract it.
-2. Read [README.txt](package/README.txt) and choose the [Windows Quick Start](package/Tutorial/EquWord_Quick_Start_Windows.pdf) or [Mac Quick Start](package/Tutorial/EquWord_Quick_Start_Mac.pdf).
-3. Follow that guide to find Word's actual **Startup** folder. Close Word completely and copy only `EquWord.dotm` there. Preserve older formatter templates outside Startup; leave `Normal.dotm` and unrelated add-ins unchanged.
-4. Start Word, run `EquWord_About` and confirm version 1.0.0. Save a working copy of [EquWord_Practice.docx](package/Tutorial/EquWord_Practice.docx), then review its profile with `EquWord_Settings`.
+1. Download `EquWord.zip` from [GitHub Releases](https://github.com/PsycheMatrica/EquWord/releases) and extract it to a folder you will keep.
+2. Read the Quick Start PDF for your operating system. The extracted files are `Tutorial/EquWord_Quick_Start_Windows.pdf` and `Tutorial/EquWord_Quick_Start_Mac.pdf`; online copies are available in the [Windows guide](https://github.com/PsycheMatrica/EquWord/blob/v1.0.0/package/Tutorial/EquWord_Quick_Start_Windows.pdf) and [Mac guide](https://github.com/PsycheMatrica/EquWord/blob/v1.0.0/package/Tutorial/EquWord_Quick_Start_Mac.pdf).
+3. Follow the guide to find your Word installation's actual **Startup** folder. Close Word completely, then copy only `EquWord.dotm` there. Keep the guides and practice document in the extracted folder. Preserve older formatter templates outside Startup to avoid duplicate commands; leave `Normal.dotm` and unrelated add-ins unchanged.
+4. Start Word, run `EquWord_About` and confirm version 1.0.0. Save a working copy of `Tutorial/EquWord_Practice.docx`, then review its profile with `EquWord_Settings`. An [online practice copy](https://github.com/PsycheMatrica/EquWord/blob/v1.0.0/package/Tutorial/EquWord_Practice.docx) is also available.
 
-Startup installation makes the commands available automatically when Word starts. Templates and Add-ins remains an optional current-session loading method. No separate BAS, CLS or UserForm import is needed. Use your normal macro policy; do not enable all macros or change VBA-project access settings. Word for the web cannot execute this template.
+On **Windows**, Alt+F8 opens the Macros dialog. Windows may block downloaded templates. If you trust this release and your organization permits it, use the extracted DOTM's Properties > Unblock option, if shown, then load it again. Otherwise consult IT; do not lower Word security.
+
+On **Mac**, choose Tools > Macro > Macros or press Option+F8; Fn may be needed. The guide uses Word > Preferences > File Locations and shows a read-only fallback when Startup is blank. Other Word builds may call Preferences Settings. Use the folder reported by your installation; paths vary by user and computer. Quit Word completely before replacing its template.
+
+Startup installation makes the commands available automatically when Word starts, including for other documents in that session. Templates and Add-ins remains an optional current-session method: add `EquWord.dotm` and keep it checked. Loading from outside Startup normally needs repeating after Word restarts. Your manuscript can remain DOCX. No separate BAS, CLS, FRM or UserForm import is needed. Use your normal macro policy; do not enable all macros or change VBA-project access settings. Word for the web cannot execute this template. Reassign older formatter toolbar or Ribbon buttons to the `EquWord_` commands below.
 
 ## Features and commands
 
@@ -20,9 +24,9 @@ Startup installation makes the commands available automatically when Word starts
 - Merge eligible adjacent derivation rows, align their main relations and set internal row spacing.
 - Apply equation-number placement and keep eligible numbered blocks together.
 - Check mathematical structure, number fields and bookmarks during processing.
-- On Mac, show task/count/time in a progress window with safe-checkpoint Stop and close controls, followed by one compact result; open detailed notes only when `EquWord_LastReport` is requested.
+- On Mac, show task, count and time in a progress window with safe-checkpoint Stop and close controls, followed by one compact result. Open detailed notes only when `EquWord_LastReport` is requested.
 
-New profiles use eligible multiline merging, 1.5-line internal spacing and a 12 pt number offset. Equation paragraphs follow body spacing; existing manuscript profiles retain their choices. Selective Reformat offers six categories, Select all/Deselect all and remembered choices. Follow current equation is separate. EquWord does not determine mathematical correctness, perform statistical analysis or support every LaTeX command. Work on copies and review results before saving.
+New profiles use eligible multiline merging, 1.5-line internal spacing and a 12 pt number offset. Equation paragraphs follow body spacing; existing manuscript profiles retain their choices. Select the complete group of equation rows to merge it; a cursor in one row requests single-equation work. Selective Reformat offers six categories, Select all/Deselect all and remembered choices. Multiline layout also applies line spacing; Follow current equation is independent. EquWord does not determine mathematical correctness, perform statistical analysis or support every LaTeX command. Work on copies and review results before saving.
 
 | Macro | Use |
 | --- | --- |
@@ -36,9 +40,17 @@ New profiles use eligible multiline merging, 1.5-line internal spacing and a 12 
 | `EquWord_SelectiveReformatSelection` | Apply selected categories to the selected equations. |
 | `EquWord_SelectiveReformatAll` | Apply selected categories throughout the main body. |
 
+## Progress and reports
+
+On Mac, the progress window shows the current task, item count and elapsed processing time. Stop, or the window's close button, requests a stop at an existing safe checkpoint. A native Word operation may delay updates or stopping. Earlier edits remain in the working copy. Switching to another document pauses processing; return to the original document to resume. Follow current equation is a separate view preference.
+
+Each Mac run ends with one compact result dialog. Detailed timing and review notes do not open automatically. Run `EquWord_LastReport` for the full report, which opens as a protected, unsaved Word document and can be closed without saving. It belongs to the current Word session; the next run replaces it. Before the first run, the command shows a short no-report message. Native Esc polling and automatic standalone log-file saving remain unavailable on Mac.
+
+On Windows, the title bar shows progress and Esc requests a stop at the next safe checkpoint. The current Word operation may delay the response. Review every result before saving.
+
 ## Recorded verification
 
-The final review template SHA-256 is `b7fc3290227b244647fc15a548f683a443f064aa812e0288bdc82ea3d4383a76`. The Mac progress-window caption is **EquWord - Progress**. Its complete main code, Windows branch and all 49 identified runtime preservation-check procedures match the tested R2 predecessor; the eight form-designer streams are exact. Native identifier changes and two empty EOF lines have a separate bounded disposition. Literal raw audit FAILs remain recorded; no executable or designer defect was identified in those differences, and no runtime guard was weakened.
+The template SHA-256 is `b7fc3290227b244647fc15a548f683a443f064aa812e0288bdc82ea3d4383a76`. The Mac progress-window caption is **EquWord - Progress**. Its complete main code, Windows branch and all 49 identified runtime preservation-check procedures match the tested R2 predecessor; the eight form-designer streams are exact. Native identifier changes and two empty EOF lines have a separate bounded disposition. Literal raw audit FAILs remain recorded; no executable or designer defect was identified in those differences, and no runtime guard was weakened.
 
 | Platform | Recorded scope |
 | --- | --- |
@@ -47,13 +59,13 @@ The final review template SHA-256 is `b7fc3290227b244647fc15a548f683a443f064aa81
 | Mac, R2 predecessor | One Format All/Stop check: one complete stopped dialog with no duplicated/trimmed summary; one explicit full LastReport; saved partial reopened with working references. |
 | Mac, exact final bytes | Word 16.114.3 (26102720), macOS 26.7.2 (25G332): one Selective Reformat Selection category form opened and Cancel closed it; zero processing, results or reports. Source/template state restored and 926 file identities recorded unchanged. No fresh processing or category-toggle regression. |
 
-The unchanged packaging helper now accepts the recorded exact-candidate Windows build and Mac form-only checks. Its publication check validates this limited evidence and package identity; it does not publish anything or grant the author's required final approval. Processing results on earlier binaries remain predecessor evidence.
+The packaging helper verifies the recorded exact-candidate Windows build and Mac form-only checks. Its publication check validates this limited evidence and package identity; it does not execute Word or publish anything. Processing results on earlier binaries remain predecessor evidence.
 
-Recorded processed-document font/style/identifier/PAGE/package differences remain disclosed. A no-command save/reopen control reproduced specific math-font and unselected-equation changes; it does not explain every difference or establish every rendered glyph's font. Unobtained protected-report typography measurements remain unverified or blocked as recorded. Mac automatic standalone log saving and native Esc polling remain unavailable. See the sanitized [release manifest](RELEASE_MANIFEST.json) for identities and scope.
+Recorded processed-document font/style/identifier/PAGE/package differences remain disclosed. A no-command save/reopen control reproduced specific math-font and unselected-equation changes; it does not explain every difference or establish every rendered glyph's font. Unobtained protected-report typography measurements remain unverified or blocked as recorded. Original files and personal customizations were unchanged in the recorded checks. Results cover supplied fixtures and installations; every Word build, manuscript, option, workload and error path has not been exhaustively tested. See the sanitized [release manifest](https://github.com/PsycheMatrica/EquWord/blob/v1.0.0/RELEASE_MANIFEST.json) for identities and scope.
 
 ## Download contents
 
-The ZIP contains exactly seven files: `EquWord.dotm`, `README.txt`, `LICENSE.txt`, `CITATION.cff`, two operating-system Quick Start PDFs, and `Tutorial/EquWord_Practice.docx`. The guides contain three core example illustrations per platform. Screenshot account names are anonymized; Windows equation examples are native Word document excerpts, not screenshots of editing controls.
+The ZIP contains exactly seven files: `EquWord.dotm`, `README.md`, `LICENSE.txt`, `CITATION.cff`, two operating-system Quick Start PDFs, and `Tutorial/EquWord_Practice.docx`. The guides contain three core example illustrations per platform. Screenshot account names are anonymized; Windows equation examples are native Word document excerpts, not screenshots of editing controls.
 
 VBA remains embedded in the DOTM. Separate source exports, editable guide masters, private test files, raw screenshots and logs are outside this distribution and public repository.
 
@@ -77,8 +89,8 @@ Use only statements that reflect your actual use. Adjust the tasks, tools, versi
 
 Cho, G. (2026). *EquWord: Equation conversion and formatting for Microsoft Word* (Version 1.0.0) [Computer software]. https://github.com/PsycheMatrica/EquWord
 
-Use the released version's verified DOI when available. After an author-approved GitHub release is archived by Zenodo, verify the actual version and Concept DOIs before updating citation or website metadata. Preserve released tags and assets.
+Use the released version's verified DOI when available. After a GitHub release is archived by Zenodo, its verified DOI can be added to the repository citation information and release description. Released tags and assets remain unchanged.
 
 ## Maintenance
 
-The public checkout is separate from private development; see [WORKFLOW.md](WORKFLOW.md). [RELEASING.md](RELEASING.md) describes preparation and final author approval. The packaging helper checks the exact seven members, recorded platform evidence and approved archive identity; it never executes Word or publishes anything.
+The repository-root `README.md` is the single maintained source for this document. The package contains an automatically synchronized copy. See the [development workflow](https://github.com/PsycheMatrica/EquWord/blob/v1.0.0/WORKFLOW.md) and [release procedure](https://github.com/PsycheMatrica/EquWord/blob/v1.0.0/RELEASING.md). The packaging helper checks the exact seven members, README/source equality, recorded platform evidence and archive identity; it never executes Word or publishes anything.

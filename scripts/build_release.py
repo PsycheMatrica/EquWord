@@ -22,7 +22,7 @@ ZIP_TIMESTAMP = (2026, 10, 28, 0, 0, 0)
 PACKAGE_FILES = {
     "CITATION.cff",
     "LICENSE.txt",
-    "README.txt",
+    "README.md",
     "EquWord.dotm",
     "Tutorial/EquWord_Practice.docx",
     "Tutorial/EquWord_Quick_Start_Windows.pdf",
@@ -109,6 +109,8 @@ def verify_package(root):
         entry = expected[name]
         require(len(data) == entry["bytes"], "Size mismatch: " + name)
         require(sha256(data) == entry["sha256"], "SHA-256 mismatch: " + name)
+    require((root / "README.md").read_bytes() == files["README.md"],
+            "Package README.md differs from its repository-root source. Run --sync-readme explicitly, then review and refresh the manifest/archive identities.")
     require((root / "CITATION.cff").read_bytes() == files["CITATION.cff"],
             "Root and package CITATION.cff must be identical.")
     require((root / "LICENSE.txt").read_bytes() == files["LICENSE.txt"],
@@ -176,15 +178,44 @@ def write_new_or_identical(output_dir, outputs):
         require(path.read_bytes() == data, "Output verification failed: " + str(path))
 
 
+def sync_readme(root):
+    """Copy the single maintained README source; never change approval metadata."""
+    source = root / "README.md"
+    package = root / "package"
+    target = package / "README.md"
+    require(source.is_file() and not is_link_or_reparse_point(source),
+            "README.md source must be a regular file, not a link or reparse point.")
+    require(package.is_dir() and not is_link_or_reparse_point(package),
+            "package/ must be a real directory, without a link or reparse point.")
+    require(not target.is_symlink()
+            and (not target.exists() or (target.is_file() and not is_link_or_reparse_point(target))),
+            "Refusing linked or non-file README output.")
+    content = source.read_bytes()
+    require(content and content.decode("utf-8").startswith("# EquWord"),
+            "README.md source must be a nonempty UTF-8 EquWord document.")
+    if not target.exists() or target.read_bytes() != content:
+        target.write_bytes(content)
+    require(target.read_bytes() == content, "README synchronization failed.")
+    print("Synchronized package/README.md from the repository-root README.md.")
+    print("Manifest and archive identities were not changed. Review and refresh them before verification/building. Nothing was published.")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path,
                         help="Absolute output directory; default: the ignored dist/ directory.")
+    parser.add_argument("--sync-readme", action="store_true",
+                        help="Explicitly copy root README.md into package/README.md, then exit without changing the manifest or publishing.")
     parser.add_argument("--verify-only", action="store_true", help="Verify package bytes without writing files.")
     parser.add_argument("--publication-check", action="store_true",
                         help="Require recorded Windows and Mac PASS for these candidate bytes; does not publish or replace final author approval.")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
+    if args.sync_readme:
+        require(not args.verify_only and not args.publication_check and args.output_dir is None,
+                "--sync-readme is a separate preparation operation; do not combine it with verification or build options.")
+        sync_readme(root)
+        return
     manifest, files, timestamp = verify_package(root)
     readiness = manifest["release_readiness"]
     statuses = readiness["native_tests"]

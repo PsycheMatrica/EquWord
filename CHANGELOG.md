@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0 — November 3, 2026
+
+- First release of EquWord for desktop Microsoft Word on Windows and Mac.
+- Use one maintained `README.md` source for the repository and the identical copy in the seven-file distribution ZIP.
+- Retain the tested template, Quick Starts, Practice, license and recorded validation scope. No equation-processing or preservation-guard change accompanies the README conversion.
+
 ## Prepared 1.0.0 final file review November 3 2026
 
 - Integrate the author-revised Mac Quick Start, anonymize its replacement template-path screenshot, and synchronize compact-result, LastReport and progress/Stop instructions with the editable master.
