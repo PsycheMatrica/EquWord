@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.1 — Unreleased draft
+
+- Prepare a seven-file `EquWord.zip` installation attachment from `package/` only. Exclude repository administration files and scripts from future automatic repository archives.
+- Use the all-version Concept DOI `10.5281/zenodo.23935877` consistently in current citation metadata and documentation. Keep the 1.0.0 tag, release assets, publication receipt and Zenodo record unchanged.
+- Update internal software-version declarations and current documentation to 1.0.1. The equation-processing procedures, mathematical-structure checks, number-field checks and bookmark checks remain unchanged.
+- Record the scoped Windows compile/About/reopen verification and retain exact-candidate Mac runtime status UNVERIFIED. For this version-only candidate, record the author’s acceptance of predecessor Mac evidence plus the matching source-preservation audit without a rerun. The packaging helper validates that exact bounded decision; equation/runtime preservation guards are unchanged.
+- Retain the pre-existing, nonblocking About wording that names README.txt; the supplied README.md contains the current instructions.
+- Prepare a GitHub draft only; final publication requires the author’s separate approval of the exact files, checksums, notes and verification scope.
+
 ## Published 1.0.0 — November 3, 2026
 
 - First public release: `v1.0.0`, commit `1d65ded4043917767bcffa11bac20bb6acce8386`.

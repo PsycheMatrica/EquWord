@@ -10,3 +10,8 @@
 *.dotm binary
 *.docx binary
 *.pdf binary
+
+# Repository archives include package contents only; release assets are built separately.
+/* export-ignore
+/package -export-ignore
+/package/** -export-ignore

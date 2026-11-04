@@ -2,14 +2,14 @@
 
 EquWord converts supported LaTeX into editable native Word equations and applies notation, font and equation-layout settings saved with a manuscript. It is a macro-enabled template for desktop Microsoft Word on Windows and Mac.
 
-Version **1.0.0**. [Download](https://github.com/PsycheMatrica/EquWord/releases/tag/v1.0.0) · [Version DOI](https://doi.org/10.5281/zenodo.23935878).
+Version **1.0.1**. [Downloads](https://github.com/PsycheMatrica/EquWord/releases). Preferred citation identifier: [all-version Concept DOI](https://doi.org/10.5281/zenodo.23935877).
 
 ## Get started
 
-1. Download `EquWord.zip` from [GitHub Releases](https://github.com/PsycheMatrica/EquWord/releases) and extract it to a folder you will keep.
-2. Read the Quick Start PDF for your operating system. The extracted files are `Tutorial/EquWord_Quick_Start_Windows.pdf` and `Tutorial/EquWord_Quick_Start_Mac.pdf`; online copies are available in the [Windows guide](https://github.com/PsycheMatrica/EquWord/blob/v1.0.0/package/Tutorial/EquWord_Quick_Start_Windows.pdf) and [Mac guide](https://github.com/PsycheMatrica/EquWord/blob/v1.0.0/package/Tutorial/EquWord_Quick_Start_Mac.pdf).
+1. Download the **`EquWord.zip` release attachment** from [GitHub Releases](https://github.com/PsycheMatrica/EquWord/releases) and extract it to a folder you will keep. This installation bundle contains only the seven distribution files. The automatically generated **Source code (zip)** is a repository archive, not the installation download.
+2. Read the Quick Start PDF for your operating system. The extracted files are `Tutorial/EquWord_Quick_Start_Windows.pdf` and `Tutorial/EquWord_Quick_Start_Mac.pdf`; online copies are available in the [Windows guide](https://github.com/PsycheMatrica/EquWord/blob/main/package/Tutorial/EquWord_Quick_Start_Windows.pdf) and [Mac guide](https://github.com/PsycheMatrica/EquWord/blob/main/package/Tutorial/EquWord_Quick_Start_Mac.pdf).
 3. Follow the guide to find your Word installation's actual **Startup** folder. Close Word completely, then copy only `EquWord.dotm` there. Keep the guides and practice document in the extracted folder. Preserve older formatter templates outside Startup to avoid duplicate commands; leave `Normal.dotm` and unrelated add-ins unchanged.
-4. Start Word, run `EquWord_About` and confirm version 1.0.0. Save a working copy of `Tutorial/EquWord_Practice.docx`, then review its profile with `EquWord_Settings`. An [online practice copy](https://github.com/PsycheMatrica/EquWord/blob/v1.0.0/package/Tutorial/EquWord_Practice.docx) is also available.
+4. Start Word, run `EquWord_About` and confirm version 1.0.1. Save a working copy of `Tutorial/EquWord_Practice.docx`, then review its profile with `EquWord_Settings`. An [online practice copy](https://github.com/PsycheMatrica/EquWord/blob/main/package/Tutorial/EquWord_Practice.docx) is also available.
 
 On **Windows**, Alt+F8 opens the Macros dialog. Windows may block downloaded templates. If you trust this release and your organization permits it, use the extracted DOTM's Properties > Unblock option, if shown, then load it again. Otherwise consult IT; do not lower Word security.
 
@@ -50,18 +50,21 @@ On Windows, the title bar shows progress and Esc requests a stop at the next saf
 
 ## Recorded verification
 
-The template SHA-256 is `b7fc3290227b244647fc15a548f683a443f064aa812e0288bdc82ea3d4383a76`. The Mac progress-window caption is **EquWord - Progress**. Its complete main code, Windows branch and all 49 identified runtime preservation-check procedures match the tested R2 predecessor; the eight form-designer streams are exact. Native identifier changes and two empty EOF lines have a separate bounded disposition. Literal raw audit FAILs remain recorded; no executable or designer defect was identified in those differences, and no runtime guard was weakened.
+The 1.0.1 template SHA-256 is `a4b8c22f5fb99ce02fd667978f48b57f0e950a8822250465c957f66eab35aa55`. This version updates the two software-version declarations and distribution metadata. The equation-processing procedures and all 49 identified runtime preservation-check procedures remain unchanged. Static comparison found all eight form-designer streams and all 15 non-VBA template parts preserved. Four strict raw source comparisons still fail because Word regenerated form identifiers; these differences are disclosed separately and are not relabeled PASS. Static comparison does not replace native testing.
 
 | Platform | Recorded scope |
 | --- | --- |
-| Windows, exact final bytes | Word 16.0.20430.20180 x64, Windows build 26300: native compile, save, close and reopen. No fresh equation-processing or form-interaction regression. |
-| Mac, integrated R1 predecessor | Word 16.114.3 (26102720), macOS 26.7.2 (25G332), Apple silicon: five focused runs covering selective merging/spacing, Format All, document pause/resume, Stop, progress-window close and selected editable LaTeX conversion; saved-reference checks within those cases. |
-| Mac, R2 predecessor | One Format All/Stop check: one complete stopped dialog with no duplicated/trimmed summary; one explicit full LastReport; saved partial reopened with working references. |
-| Mac, exact final bytes | Word 16.114.3 (26102720), macOS 26.7.2 (25G332): one Selective Reformat Selection category form opened and Cancel closed it; zero processing, results or reports. Source/template state restored and 926 file identities recorded unchanged. No fresh processing or category-toggle regression. |
+| Windows, 1.0.1 candidate | Word 16.0.20430.20180 x64, Windows build 26300: native compilation of the VBA retained byte-for-byte in the final container, final-template About showing 1.0.1, read-only reopen and close with the final hash unchanged. No equation-processing regression or Startup installation test. |
+| Mac, 1.0.1 candidate | **UNVERIFIED**: this binary has not been executed on Mac. For this version-only change, the author accepted the recorded predecessor Mac evidence and matching source-preservation audit without a further Mac rerun. This decision does not turn the new binary’s Mac status into PASS. |
+| Mac, 1.0.0 integrated R1 predecessor | Word 16.114.3 (26102720), macOS 26.7.2 (25G332), Apple silicon: five focused runs covering selective merging/spacing, Format All, document pause/resume, Stop, progress-window close and selected editable LaTeX conversion; saved-reference checks within those cases. |
+| Mac, 1.0.0 R2 predecessor | One Format All/Stop check: one complete stopped dialog with no duplicated/trimmed summary; one explicit full LastReport; saved partial reopened with working references. |
+| Mac, published 1.0.0 template | One Selective Reformat Selection category form opened and Cancel closed it; zero processing, results or reports. Source/template state restored and 926 file identities recorded unchanged. No fresh processing or category-toggle regression. |
 
-The packaging helper verifies the recorded exact-candidate Windows build and Mac form-only checks. Its publication check validates this limited evidence and package identity; it does not execute Word or publish anything. Processing results on earlier binaries remain predecessor evidence.
+The packaging helper verifies recorded identities and candidate-specific statuses. It recognizes the author’s narrowly scoped decision for this exact 1.0.1 candidate, baseline and source audit; it cannot reuse that decision for changed bytes or override failed native evidence. Mac runtime remains UNVERIFIED. Release readiness and final author approval are recorded separately from these technical checks. The helper does not execute Word or publish anything.
 
-Recorded processed-document font/style/identifier/PAGE/package differences remain disclosed. A no-command save/reopen control reproduced specific math-font and unselected-equation changes; it does not explain every difference or establish every rendered glyph's font. Unobtained protected-report typography measurements remain unverified or blocked as recorded. Original files and personal customizations were unchanged in the recorded checks. Results cover supplied fixtures and installations; every Word build, manuscript, option, workload and error path has not been exhaustively tested. See the sanitized [release manifest](https://github.com/PsycheMatrica/EquWord/blob/v1.0.0/RELEASE_MANIFEST.json) for identities and scope.
+About retains a pre-existing minor wording discrepancy: it refers to `README.txt`, whereas the distribution contains `README.md`. Open the supplied `README.md` for the current instructions. This does not affect processing or require another VBA change for this version.
+
+Recorded predecessor processed-document font/style/identifier/PAGE/package differences remain disclosed. A no-command save/reopen control reproduced specific math-font and unselected-equation changes; it does not explain every difference or establish every rendered glyph's font. Unobtained protected-report typography measurements remain unverified or blocked as recorded. Original files and personal customizations were unchanged in those recorded checks. Results cover supplied fixtures and installations; every Word build, manuscript, option, workload and error path has not been exhaustively tested. See the sanitized [release manifest](https://github.com/PsycheMatrica/EquWord/blob/main/RELEASE_MANIFEST.json) for identities and scope.
 
 ## Download contents
 
@@ -77,20 +80,22 @@ GPT-6.1 Sol (OpenAI) assisted with developing EquWord and preparing its accompan
 
 Copyright (c) 2026 Gyeongcheol Cho. The software and accompanying original documentation are licensed under **CC BY-NC-SA 4.0**; see [LICENSE.txt](LICENSE.txt). Using the tool does not by itself apply that license to your manuscripts or equations. Microsoft interface elements and product names in screenshots retain their existing rights.
 
-Citation in a manuscript is appreciated but is not required merely for using the tool. Attribution conditions still apply when sharing licensed material. See [CITATION.cff](CITATION.cff). Cite the version actually used in the Acknowledgments or another appropriate section.
+You are not required to cite EquWord simply for using it, but a citation would be appreciated. If you choose to cite it, you can include a brief statement in your manuscript’s Acknowledgments section, for example:
 
-> Equations were prepared in Microsoft Word using EquWord (Version 1.0.0; Cho, 2026).
+> Equations were prepared in Microsoft Word using EquWord (Version 1.0.1; Cho, 2026).
 
 If you also used ChatGPT for drafting and revision, this optional combined example may be appropriate:
 
-> ChatGPT (OpenAI) assisted with drafting and revision. The authors reviewed the AI-assisted content and take responsibility for the final manuscript. Equations were prepared in Microsoft Word using EquWord (Version 1.0.0; Cho, 2026).
+> ChatGPT (OpenAI) assisted with drafting and revision. The authors reviewed the AI-assisted content and take responsibility for the final manuscript. Equations were prepared in Microsoft Word using EquWord (Version 1.0.1; Cho, 2026).
 
-Use only statements that reflect your actual use. Adjust the tasks, tools, version and singular or plural author wording as needed.
+Use only statements that reflect your actual use. Adjust the tasks, tools, version and singular or plural author wording as needed. Cite the version actually used; see [CITATION.cff](CITATION.cff) for citation metadata.
 
-Cho, G. (2026). *EquWord: Equation conversion and formatting for Microsoft Word* (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23935878
+Attribution conditions still apply when sharing licensed material; see [LICENSE.txt](LICENSE.txt).
 
-The version DOI above identifies 1.0.0. The [Concept DOI](https://doi.org/10.5281/zenodo.23935877) represents all versions. These identifiers were verified against the published Zenodo record. DOI metadata was added to the repository after publication; the original 1.0.0 tag and ZIP remain unchanged. See the [publication receipt](https://github.com/PsycheMatrica/EquWord/blob/main/RELEASE_RECEIPT.json).
+Cho, G. (2026). *EquWord: Equation conversion and formatting for Microsoft Word* (Version 1.0.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23935877
+
+Use the [Concept DOI](https://doi.org/10.5281/zenodo.23935877) for citations across releases, while stating the version actually used. The published 1.0.0 tag, ZIP and Zenodo record remain unchanged; their historical identities are retained in the [publication receipt](https://github.com/PsycheMatrica/EquWord/blob/main/RELEASE_RECEIPT.json).
 
 ## Maintenance
 
-The repository-root `README.md` is the single maintained source for this document. The package contains an automatically synchronized copy. See the [development workflow](https://github.com/PsycheMatrica/EquWord/blob/v1.0.0/WORKFLOW.md) and [release procedure](https://github.com/PsycheMatrica/EquWord/blob/v1.0.0/RELEASING.md). The packaging helper checks the exact seven members, README/source equality, recorded platform evidence and archive identity; it never executes Word or publishes anything.
+The repository-root `README.md` is the single maintained source for this document. The package contains an automatically synchronized copy. See the [development workflow](https://github.com/PsycheMatrica/EquWord/blob/main/WORKFLOW.md) and [release procedure](https://github.com/PsycheMatrica/EquWord/blob/main/RELEASING.md). The packaging helper checks the exact seven members, README/source equality, recorded platform evidence and archive identity; it never executes Word or publishes anything.

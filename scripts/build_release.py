@@ -17,7 +17,7 @@ import sys
 from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
 
-RELEASE_VERSION = "1.0.0"
+RELEASE_VERSION = "1.0.1"
 ZIP_TIMESTAMP = (2026, 10, 28, 0, 0, 0)
 PACKAGE_FILES = {
     "CITATION.cff",
@@ -29,6 +29,25 @@ PACKAGE_FILES = {
     "Tutorial/EquWord_Quick_Start_Mac.pdf",
 }
 NATIVE_STATUSES = {"PASS", "PENDING", "FAIL", "BLOCKED", "UNVERIFIED"}
+
+# This is one recorded author decision, not a general test-skip switch. A changed
+# candidate, baseline or audit needs its own review and deliberate policy update.
+MAC_VERSION_ONLY_ACCEPTANCE = {
+    "platform": "mac",
+    "reason": "version_declarations_only",
+    "candidate_version": "1.0.1",
+    "candidate_sha256": "a4b8c22f5fb99ce02fd667978f48b57f0e950a8822250465c957f66eab35aa55",
+    "baseline_version": "1.0.0",
+    "baseline_sha256": "b7fc3290227b244647fc15a548f683a443f064aa812e0288bdc82ea3d4383a76",
+    "audit_sha256": "7d318196d9a5aad52e920a0ee47ce627bae3aed3e4800ea5b72799a84d2dc2f8",
+}
+MAC_VERSION_ONLY_PRESERVATION = (
+    "only_version_declarations_changed",
+    "all_535_identified_procedures_unchanged",
+    "all_49_identified_runtime_guards_unchanged",
+    "all_eight_form_designer_streams_unchanged",
+    "all_15_non_VBA_parts_baseline_exact",
+)
 
 
 def sha256(data):
@@ -64,6 +83,75 @@ def package_paths(package):
     return paths
 
 
+
+def accepted_mac_version_only_basis(manifest, template_hash):
+    """Validate this exact author's version-only acceptance without claiming PASS."""
+    readiness = manifest["release_readiness"]
+    acceptance = readiness.get("mac_version_only_acceptance")
+    if acceptance is None:
+        return False
+    require(isinstance(acceptance, dict), "Mac version-only acceptance must be an object.")
+    require(all(acceptance.get(key) == value
+                for key, value in MAC_VERSION_ONLY_ACCEPTANCE.items()),
+            "Mac version-only acceptance differs from the reviewed candidate/baseline/audit.")
+    require(manifest["version"] == acceptance["candidate_version"]
+            and template_hash == acceptance["candidate_sha256"],
+            "Mac acceptance cannot be reused for different candidate bytes or versions.")
+    native = readiness["native_tests"]
+    require(native["windows"]["status"] == "PASS"
+            and native["mac"]["status"] == "UNVERIFIED",
+            "Mac acceptance requires Windows PASS and honest Mac UNVERIFIED; it cannot override FAIL or BLOCKED.")
+    decision = acceptance.get("author_decision", {})
+    require(isinstance(decision, dict)
+            and decision.get("accepted") is True
+            and decision.get("mac_rerun_not_required_for_this_candidate") is True
+            and isinstance(decision.get("record"), str) and decision["record"].strip()
+            and isinstance(decision.get("date"), str)
+            and re.fullmatch(r"\d{4}-\d{2}-\d{2}", decision["date"]) is not None,
+            "Mac acceptance must record the explicit scoped author decision.")
+    predecessor = readiness.get("predecessor_tests", {}).get("Final_1_0_0", {})
+    prior_mac = predecessor.get("native_tests", {}).get("mac", {})
+    require(prior_mac.get("status") == "PASS"
+            and prior_mac.get("version") == acceptance["baseline_version"]
+            and prior_mac.get("template_sha256") == acceptance["baseline_sha256"]
+            and isinstance(prior_mac.get("evidence"), list) and prior_mac["evidence"]
+            and all(isinstance(item, str) and item.strip() for item in prior_mac["evidence"]),
+            "Mac acceptance requires matching recorded predecessor native evidence.")
+    audit = readiness.get("source_audit", {})
+    preservation = acceptance.get("preservation", {})
+    require(audit.get("status") == "PASS_BOUNDED_CHECKS_WITH_RETAINED_RAW_FAILURES"
+            and audit.get("audit_sha256") == acceptance["audit_sha256"]
+            and audit.get("baseline_sha256") == acceptance["baseline_sha256"]
+            and audit.get("candidate_sha256") == template_hash
+            and audit.get("audit_or_runtime_guards_weakened") is False
+            and audit.get("strict_counts") == {"PASS": 74, "FAIL": 4}
+            and audit.get("strict_raw_failures_retained") is True
+            and audit.get("raw_failure_classification") == "native_form_VB_Base_identifiers_only"
+            and isinstance(preservation, dict)
+            and all(audit.get(key) is True and preservation.get(key) is True
+                    for key in MAC_VERSION_ONLY_PRESERVATION),
+            "Mac acceptance requires the matching bounded audit and every source-preservation check; raw failures stay disclosed.")
+    return True
+
+
+def native_evidence_eligible(manifest, template_hash):
+    """Recorded native PASS or the single validated Mac acceptance, not approval."""
+    native = manifest["release_readiness"]["native_tests"]
+    accepted_mac = accepted_mac_version_only_basis(manifest, template_hash)
+    return (native["windows"]["status"] == "PASS"
+            and (native["mac"]["status"] == "PASS" or accepted_mac))
+
+
+def verify_publication_readiness(manifest, template_hash):
+    # A draft remains a draft even when the recorded evidence basis is accepted.
+    require(manifest["release_readiness"]["requires_final_author_approval"] is True,
+            "Final author approval remains required.")
+    require(native_evidence_eligible(manifest, template_hash),
+            "Publication check refused: recorded candidate-specific evidence or the exact reviewed Mac acceptance is required.")
+    require(manifest["release_readiness"]["status"] == "ready_for_author_review",
+            "Publication check refused: candidate remains a draft; final author approval is still required.")
+
+
 def verify_readiness(manifest, template_hash):
     readiness = manifest["release_readiness"]
     require(isinstance(readiness, dict), "release_readiness must be an object.")
@@ -86,9 +174,9 @@ def verify_readiness(manifest, template_hash):
             require(isinstance(evidence, list) and evidence
                     and all(isinstance(item, str) and item.strip() for item in evidence),
                     "A PASS must identify actual native test evidence: " + platform)
-    all_pass = all(test["status"] == "PASS" for test in native.values())
-    require(readiness["status"] != "ready_for_author_review" or all_pass,
-            "Readiness conflicts with native tests: Windows and Mac must both PASS for author review.")
+    eligible = native_evidence_eligible(manifest, template_hash)
+    require(readiness["status"] != "ready_for_author_review" or eligible,
+            "Readiness conflicts with recorded native evidence or the narrowly accepted Mac basis.")
     return readiness
 
 
@@ -208,7 +296,7 @@ def main():
                         help="Explicitly copy root README.md into package/README.md, then exit without changing the manifest or publishing.")
     parser.add_argument("--verify-only", action="store_true", help="Verify package bytes without writing files.")
     parser.add_argument("--publication-check", action="store_true",
-                        help="Require recorded Windows and Mac PASS for these candidate bytes; does not publish or replace final author approval.")
+                        help="Require author-review readiness and recorded native evidence or the exact accepted Mac version-only basis; never publishes or replaces final author approval.")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     if args.sync_readme:
@@ -220,9 +308,7 @@ def main():
     readiness = manifest["release_readiness"]
     statuses = readiness["native_tests"]
     if args.publication_check:
-        require(readiness["status"] == "ready_for_author_review"
-                and all(test["status"] == "PASS" for test in statuses.values()),
-                "Publication check refused: exact-candidate Windows and Mac PASS are required; final author approval remains required.")
+        verify_publication_readiness(manifest, manifest["verified_template"]["sha256"])
     archive_bytes = make_archive(files, timestamp)
     checksum = sha256(archive_bytes)
     expected_archive = manifest["archive"]
@@ -239,6 +325,8 @@ def main():
           .format(state, manifest["version"], manifest["verified_template"]["sha256"]))
     print("Recorded exact-candidate native tests: Windows {}; Mac {}. Final author approval REQUIRED."
           .format(statuses["windows"]["status"], statuses["mac"]["status"]))
+    if readiness.get("mac_version_only_acceptance") is not None:
+        print("Recorded author decision accepts predecessor Mac evidence for this exact version-only candidate; Mac runtime remains UNVERIFIED.")
     print("This builder does not execute Microsoft Word or publish releases.")
     if args.verify_only:
         print("ZIP SHA-256 " + checksum)
