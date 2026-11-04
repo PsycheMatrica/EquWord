@@ -1,0 +1,75 @@
+{
+  "version": "1.0.1",
+  "tag": "v1.0.1",
+  "commit": "6768e3395c97b8dbea4815fdc87b26a83367d719",
+  "github_release": "https://github.com/PsycheMatrica/EquWord/releases/tag/v1.0.1",
+  "github_release_id": 433506847,
+  "published_at_utc": "2026-11-04T04:20:42Z",
+  "publication_date_author_timezone": "2026-11-03 (America/New_York)",
+  "assets": [
+    {
+      "name": "EquWord.zip",
+      "size": 2301395,
+      "digest": "sha256:2ffab151523106a09595997bc6f3bcab44a713658952c7bd9ee2c28a5868af53",
+      "browser_download_url": "https://github.com/PsycheMatrica/EquWord/releases/download/v1.0.1/EquWord.zip"
+    },
+    {
+      "name": "EquWord.zip.sha256",
+      "size": 78,
+      "digest": "sha256:b327e027034e5e3f43746a5f7c8d35eb58baf2314b88fe1880b7a1093f3e3c23",
+      "browser_download_url": "https://github.com/PsycheMatrica/EquWord/releases/download/v1.0.1/EquWord.zip.sha256"
+    }
+  ],
+  "assets_download_verified": true,
+  "public_tag_matches": true,
+  "zenodo_record": "https://zenodo.org/records/23936929",
+  "version_doi": "10.5281/zenodo.23936929",
+  "concept_doi": "10.5281/zenodo.23935877",
+  "preferred_citation_doi": "10.5281/zenodo.23935877",
+  "zenodo_repository_archive": {
+    "name": "PsycheMatrica/EquWord-v1.0.1.zip",
+    "sha256": "a97e249f18b26d9f25172523c172b57c3b60c69ccfeb4087d5fe04f87c7dfe18",
+    "bytes": 2302605,
+    "seven_package_files_match": true,
+    "layout_note": "Zenodo automatic archive retains outer repository/package folders; no maintenance files are included."
+  },
+  "released_package_files": {
+    "CITATION.cff": {
+      "bytes": 979,
+      "sha256": "546f5e5fc590b659c21ba01674aefd7f684fa5b1bb0c8481b0470812d513ca95"
+    },
+    "EquWord.dotm": {
+      "bytes": 952715,
+      "sha256": "a4b8c22f5fb99ce02fd667978f48b57f0e950a8822250465c957f66eab35aa55"
+    },
+    "LICENSE.txt": {
+      "bytes": 21955,
+      "sha256": "2033dafb41fee72f3cd99823c31bbad9841364d28b37e43f0a7f8f4de4f06fb7"
+    },
+    "README.md": {
+      "bytes": 13114,
+      "sha256": "11eac71e541a08ad822903bf75b719702d113b31d8442837c49411277cd77c51"
+    },
+    "Tutorial/EquWord_Practice.docx": {
+      "bytes": 28853,
+      "sha256": "a3ced47550f2e74ebec020ffe5273e82fc4ace90c1157eb87ef05e1ee9edfdc5"
+    },
+    "Tutorial/EquWord_Quick_Start_Mac.pdf": {
+      "bytes": 944950,
+      "sha256": "182ba5b358721fd0d10617fea1fdbb9179b875d413ea0fc6f361e61bf5e58575"
+    },
+    "Tutorial/EquWord_Quick_Start_Windows.pdf": {
+      "bytes": 576872,
+      "sha256": "a4477c14df2b01ad57a363f51f42a37f3e91bdfd9018e6a7e41285dd48e0150a"
+    }
+  },
+  "preservation_guards_unchanged": true,
+  "previous_published_1_0_0_unchanged": true,
+  "verification_evidence": {
+    "github_public_verification_sha256": "8060b6c9158fe4fd806a63e044bbd0f30dece6ea63617ee9328340a06e01515b",
+    "zenodo_archive_verification_sha256": "c6035607722002d84c7ed500b2c430ec0bae10500a3017094dc386226e0cfd4d"
+  },
+  "approval": "Published after the author explicitly approved the exact 1.0.1 release. The version-only Mac decision is distinct from publication approval.",
+  "native_scope": "Windows compile/About/reopen evidence is limited to the recorded candidate. Exact-candidate Mac execution remains UNVERIFIED; the author accepted predecessor Mac evidence plus the matching version-only preservation audit without another run. Publication does not change those test facts.",
+  "immutability": "Published v1.0.1 and v1.0.0 tags, release assets and Zenodo records remain unchanged. This receipt and post-publication repository metadata do not change the seven-file distribution."
+}

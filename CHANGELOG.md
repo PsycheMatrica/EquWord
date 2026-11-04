@@ -1,13 +1,14 @@
 # Changelog
 
-## 1.0.1 — Unreleased draft
+## Published 1.0.1 — November 3, 2026
 
-- Prepare a seven-file `EquWord.zip` installation attachment from `package/` only. Exclude repository administration files and scripts from future automatic repository archives.
+- Publish a seven-file `EquWord.zip` installation attachment from `package/` only. Exclude repository administration files and scripts from future automatic repository archives.
 - Use the all-version Concept DOI `10.5281/zenodo.23935877` consistently in current citation metadata and documentation. Keep the 1.0.0 tag, release assets, publication receipt and Zenodo record unchanged.
 - Update internal software-version declarations and current documentation to 1.0.1. The equation-processing procedures, mathematical-structure checks, number-field checks and bookmark checks remain unchanged.
 - Record the scoped Windows compile/About/reopen verification and retain exact-candidate Mac runtime status UNVERIFIED. For this version-only candidate, record the author’s acceptance of predecessor Mac evidence plus the matching source-preservation audit without a rerun. The packaging helper validates that exact bounded decision; equation/runtime preservation guards are unchanged.
 - Retain the pre-existing, nonblocking About wording that names README.txt; the supplied README.md contains the current instructions.
-- Prepare a GitHub draft only; final publication requires the author’s separate approval of the exact files, checksums, notes and verification scope.
+- Publish after explicit author approval: tag `v1.0.1`, commit `6768e3395c97b8dbea4815fdc87b26a83367d719`, ZIP SHA-256 `2ffab151523106a09595997bc6f3bcab44a713658952c7bd9ee2c28a5868af53`. Zenodo archived the same seven package files. The preferred citation identifier remains the all-version Concept DOI `10.5281/zenodo.23935877`.
+- Record publication in `RELEASE_RECEIPT_1.0.1.json`; retain all test qualifications, previous receipts, frozen release assets and unchanged package bytes.
 
 ## Published 1.0.0 — November 3, 2026
 

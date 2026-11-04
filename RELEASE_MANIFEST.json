@@ -19,7 +19,7 @@
     "compression": "deflated",
     "compression_level": 6,
     "zip_timestamp_meaning": "Fixed reproducible entry timestamp retained from the existing release builder, not the date of publication.",
-    "publication_status": "Unpublished 1.0.1 draft; package contents only. Not a replacement for the v1.0.0 asset."
+    "publication_status": "Published v1.0.1 EquWord.zip release asset; exact seven-file installation bundle."
   },
   "verified_template": {
     "filename": "EquWord.dotm",
@@ -58,10 +58,10 @@
     }
   },
   "release_readiness": {
-    "status": "draft",
+    "status": "ready_for_author_review",
     "final_files_ready_for_author_inspection": true,
     "requires_final_author_approval": true,
-    "meaning": "Prepared 1.0.1 package for author inspection and GitHub draft only. Scoped Windows native verification is recorded. Mac execution remains UNVERIFIED; the author accepted predecessor native evidence plus the exact version-only source audit for this candidate without a further Mac rerun. Final publication approval is still required.",
+    "meaning": "The exact 1.0.1 files and recorded verification scope received final author approval and were published. This schema retains the completed author-review readiness state; published flags and the release receipt record publication. Exact-candidate Mac runtime remains UNVERIFIED under the recorded version-only acceptance.",
     "native_tests": {
       "windows": {
         "status": "PASS",
@@ -217,7 +217,7 @@
       "No-command control reproduced particular mathFont/unselected-equation changes; not every difference or rendered font.",
       "Five unobtained protected-report typography measurements remain blocked/unverified as recorded."
     ],
-    "publication_approved": false,
+    "publication_approved": true,
     "open_findings": [
       {
         "status": "UNVERIFIED_AUTHOR_ACCEPTED_VERSION_ONLY_BASIS",
@@ -256,6 +256,13 @@
         "Four strict raw identifier failures remain disclosed; no executable/form-designer difference or relaxed runtime guard is accepted.",
         "This decision applies only to the stated candidate, baseline and audit; it cannot authorize any later code change or publication."
       ]
+    },
+    "author_approval": {
+      "date": "2026-11-03",
+      "scope": "Publish the exact reviewed 1.0.1 release and its seven-file ZIP from commit 6768e3395c97b8dbea4815fdc87b26a83367d719.",
+      "source": "Explicit author final publication approval after review; no further VBA or package changes.",
+      "archive_sha256": "2ffab151523106a09595997bc6f3bcab44a713658952c7bd9ee2c28a5868af53",
+      "template_sha256": "a4b8c22f5fb99ce02fd667978f48b57f0e950a8822250465c957f66eab35aa55"
     }
   },
   "documentation": {
@@ -274,12 +281,48 @@
     "Windows_editable_master_synchronized": true,
     "PDF_source": "Both PDFs exported from synchronized editable DOCX masters using Word for Windows in private read-only rendering. Mac screenshots remain genuine Mac captures.",
     "license_original_bytes_preserved": false,
-    "citation_update": "Concept DOI preferred across versions; no unpublished 1.0.1 release date or version DOI.",
+    "citation_update": "Concept DOI remains preferred across versions. Released README/CFF/package bytes are unchanged; the publication date and version DOI are recorded only in repository metadata and the publication receipt.",
     "license_legal_body_preserved": true
   },
-  "published": false,
-  "DOI": null,
+  "published": true,
+  "DOI": "10.5281/zenodo.23936929",
   "metadata_revision": {
+    "date": "2026-11-03",
+    "reason": "Record authorized 1.0.1 GitHub publication and verified Zenodo archival; update repository-only maintenance metadata.",
+    "publication_authorized": true,
+    "README_source": "README.md",
+    "README_distribution_copy": "package/README.md",
+    "published_assets_unchanged": true,
+    "package_files_unchanged": true,
+    "README_and_CFF_unchanged": true,
+    "preferred_citation_doi": "10.5281/zenodo.23935877",
+    "native_test_facts_unchanged": true
+  },
+  "published_release": {
+    "tag": "v1.0.1",
+    "commit": "6768e3395c97b8dbea4815fdc87b26a83367d719",
+    "github_release": "https://github.com/PsycheMatrica/EquWord/releases/tag/v1.0.1",
+    "github_release_id": 433506847,
+    "published_at_utc": "2026-11-04T04:20:42Z",
+    "publication_date_author_timezone": "2026-11-03 (America/New_York)",
+    "archive_sha256": "2ffab151523106a09595997bc6f3bcab44a713658952c7bd9ee2c28a5868af53",
+    "archive_bytes": 2301395,
+    "receipt": "RELEASE_RECEIPT_1.0.1.json",
+    "zenodo_record": "https://zenodo.org/records/23936929",
+    "version_doi": "10.5281/zenodo.23936929",
+    "concept_doi": "10.5281/zenodo.23935877",
+    "meaning": "Published 1.0.1 seven-file distribution; current package bytes match the frozen public release."
+  },
+  "concept_doi": "10.5281/zenodo.23935877",
+  "previous_published_release": {
+    "tag": "v1.0.0",
+    "commit": "1d65ded4043917767bcffa11bac20bb6acce8386",
+    "archive_sha256": "8888d3703267435150b1aac4a2431d241ff0938330178733514baed91fcc67bf",
+    "archive_bytes": 2319174,
+    "receipt": "RELEASE_RECEIPT.json",
+    "meaning": "Published software version; current repository package has later citation metadata only."
+  },
+  "previous_metadata_revision": {
     "date": "2026-11-03",
     "reason": "Prepare 1.0.1 draft with internal version display, package-only release asset, archive export exclusions and preferred Concept DOI.",
     "publication_authorized": false,
@@ -289,14 +332,5 @@
     "published_assets_unchanged": true,
     "mac_version_only_author_decision_recorded": true,
     "README_and_CFF_durable_version_text": true
-  },
-  "published_release": {
-    "tag": "v1.0.0",
-    "commit": "1d65ded4043917767bcffa11bac20bb6acce8386",
-    "archive_sha256": "8888d3703267435150b1aac4a2431d241ff0938330178733514baed91fcc67bf",
-    "archive_bytes": 2319174,
-    "receipt": "RELEASE_RECEIPT.json",
-    "meaning": "Published software version; current repository package has later citation metadata only."
-  },
-  "concept_doi": "10.5281/zenodo.23935877"
+  }
 }
