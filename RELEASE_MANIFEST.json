@@ -14,8 +14,8 @@
   ],
   "archive": {
     "filename": "EquWord.zip",
-    "bytes": 11525749,
-    "sha256": "a64f4047025965b8e5f08a3a4fc9bf096ce5b87a82a20d46b533c8955301e087",
+    "bytes": 2318794,
+    "sha256": "06272693b5e17a31f55bc6d8834928f15703105fd238ecf6855540374c558752",
     "compression": "deflated",
     "compression_level": 6,
     "zip_timestamp_meaning": "Fixed reproducible entry timestamp retained from the existing release builder, not the date of publication."
@@ -48,12 +48,12 @@
       "sha256": "8384725f2e576d76a18faf7587a84c02d7aa019267eb76506641b749d5eb5c7c"
     },
     "Tutorial/EquWord_Quick_Start_Mac.pdf": {
-      "bytes": 9467213,
-      "sha256": "4004dab128d17450d4ab4117ca1cdfd86c8db720444c73765f48fe7f30a46b30"
+      "bytes": 942852,
+      "sha256": "0ac715eb7fb985d7a94ae30c0dbf275a11e1b275325fa1344d14d74a5e3794a3"
     },
     "Tutorial/EquWord_Quick_Start_Windows.pdf": {
-      "bytes": 1934787,
-      "sha256": "ebf627f2c3108b885d2705e689aeb03a73c8e90a78db3fde7c20d86c38045e13"
+      "bytes": 574494,
+      "sha256": "96be41e6ce4754c3325067a160f59df6423b865ae95c72616b58f0002a145739"
     }
   },
   "release_readiness": {
@@ -157,19 +157,28 @@
   },
   "documentation": {
     "Windows_pdf_pages": 11,
-    "Mac_pdf_pages": 16,
-    "cover_version": "Version 1.0.0",
-    "Mac_progress_note_page": 10,
-    "screenshots": "Existing approved genuine/privacy-edited images preserved; no new manufactured Mac screenshot.",
+    "Mac_pdf_pages": 15,
+    "cover_version": {
+      "Windows": "Version 1.0.0",
+      "Mac": "Software version 1.0.0"
+    },
+    "Mac_progress_note_page": 9,
+    "screenshots": "Author-revised Mac screenshots retained; Figure 3 username replaced by userID within a verified exact pixel rectangle. No generated screenshot.",
     "practice_sha256": "8384725f2e576d76a18faf7587a84c02d7aa019267eb76506641b749d5eb5c7c",
-    "license_and_citation_original_bytes_preserved": true
+    "license_and_citation_original_bytes_preserved": true,
+    "cover_date": "November 3, 2026",
+    "Mac_editable_master_synchronized": true,
+    "Windows_editable_master_synchronized": true,
+    "PDF_source": "Both PDFs exported from synchronized editable DOCX masters using Word for Windows in private read-only rendering. Mac screenshots remain genuine Mac captures."
   },
   "published": false,
   "DOI": null,
   "metadata_revision": {
     "date": "2026-11-03",
-    "reason": "Add completed exact-final Mac form/Cancel evidence; only package README changed",
-    "previous_review_archive_sha256": "5e1ef5cf2e80b473bc7899f7e1b5c9b3e755c26f6de18188657dc8951b639074",
-    "software_and_guides_unchanged": true
+    "reason": "Integrate author-revised Mac guide, synchronize current reporting/progress guidance, and update Windows cover date.",
+    "previous_review_archive_sha256": "a64f4047025965b8e5f08a3a4fc9bf096ce5b87a82a20d46b533c8955301e087",
+    "software_unchanged": true,
+    "guides_updated": true,
+    "no_new_software_runtime_claim": true
   }
 }

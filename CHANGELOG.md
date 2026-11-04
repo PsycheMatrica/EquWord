@@ -2,6 +2,9 @@
 
 ## Prepared 1.0.0 final file review November 3 2026
 
+- Integrate the author-revised Mac Quick Start, anonymize its replacement template-path screenshot, and synchronize compact-result, LastReport and progress/Stop instructions with the editable master.
+- Set both Quick Start dates to November 3, 2026; retain version 1.0.0, the tested template and all preservation guards.
+
 - Add Mac task/count/time progress and safe Stop/close controls; preserve Windows behavior and all runtime guards.
 - Correct duplicated/truncated Mac stopped summaries; retain explicit full LastReport.
 - Use the progress caption EquWord - Progress.

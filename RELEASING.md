@@ -1,6 +1,6 @@
 # EquWord final author review
 
-Version 1.0.0. Prepared November 3, 2026. Template SHA-256 `b7fc3290227b244647fc15a548f683a443f064aa812e0288bdc82ea3d4383a76`; EquWord.zip SHA-256 `a64f4047025965b8e5f08a3a4fc9bf096ce5b87a82a20d46b533c8955301e087`.
+Version 1.0.0. Prepared November 3, 2026. Template SHA-256 `b7fc3290227b244647fc15a548f683a443f064aa812e0288bdc82ea3d4383a76`; EquWord.zip SHA-256 `06272693b5e17a31f55bc6d8834928f15703105fd238ecf6855540374c558752`.
 
 The unchanged helper verifies the exact seven members, root/package license and citation pairs, reproducible archive identity and recorded candidate-specific native checks. Both `--verify-only` and `--publication-check --verify-only` now pass for their declared scope. Neither command publishes anything or grants final author approval.
 

@@ -32,17 +32,13 @@ Never merge a Publish snapshot wholesale over the public checkout. Transfer only
 
 ## Current package and recorded scope
 
-The candidate is `package/EquWord.dotm`, version 1.0.0, SHA-256:
+Read `RELEASE_MANIFEST.json` for the current version, exact template identity, seven package files, reproducible archive checksum and candidate-specific validation scope. Historical candidate and archive hashes are not the current release target.
 
-```text
-3e876985b016db8e0bb242b57a2036aeb80ebc720201410e0e32698ece583a13
-```
+The current final candidate has Windows native compile/save/close/reopen evidence and a focused Mac category-form opening/Cancel check. Processing tests on predecessor binaries remain identified separately. Preserve the recorded limitations and all mathematical-structure, number-field and bookmark guards.
 
-Windows native command checks and focused Mac Selective Reformat/Startup/About/Settings checks passed for these bytes on the recorded installations. Mac's other four processing commands were listed rather than rerun; separate automatic full-log saving was unavailable. Read `RELEASE_MANIFEST.json` for the complete scope and limitations. Preserve the candidate and safety guards unless the task expressly authorizes their revision.
+Documentation revisions change the archive identity while leaving the template identity and its recorded tests unchanged. Use the current manifest and final author approval packet together. Preserve previous archives and do not silently replace approved assets.
 
-The reviewed 1.0.0 archive is `EquWord.zip`, SHA-256 `7445ce7810992905ba826db6540eb87f57aa32d1e3b80303e50bff989e97d98d`. A different build must not silently replace that reviewed identity.
-
-Repository work never implies a GitHub release, asset upload, Zenodo publication, website release announcement or installed-template replacement. Each release requires final author confirmation of its exact commit, files, checksums, notes and actual test scope. See [RELEASING.md](RELEASING.md).
+Repository work never implies a GitHub release, asset upload, Zenodo publication, website release announcement or installed-template replacement. Each release requires final author confirmation of its exact commit, files, checksums, notes and actual test scope. See `RELEASING.md`.
 
 ## Other software projects
 
