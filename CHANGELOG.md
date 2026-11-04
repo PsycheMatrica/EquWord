@@ -1,5 +1,12 @@
 # Changelog
 
+## Published 1.0.0 — November 3, 2026
+
+- First public release: `v1.0.0`, commit `1d65ded4043917767bcffa11bac20bb6acce8386`.
+- Zenodo version DOI: https://doi.org/10.5281/zenodo.23935878.
+- Add verified DOI metadata to `main` and the release description after publication; keep the released tag/ZIP and software version unchanged.
+- Earlier preparation entries below are historical and do not describe the current publication state.
+
 ## 1.0.0 — November 3, 2026
 
 - First release of EquWord for desktop Microsoft Word on Windows and Mac.

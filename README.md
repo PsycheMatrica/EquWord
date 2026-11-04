@@ -2,7 +2,7 @@
 
 EquWord converts supported LaTeX into editable native Word equations and applies notation, font and equation-layout settings saved with a manuscript. It is a macro-enabled template for desktop Microsoft Word on Windows and Mac.
 
-Version **1.0.0**.
+Version **1.0.0**. [Download](https://github.com/PsycheMatrica/EquWord/releases/tag/v1.0.0) · [Version DOI](https://doi.org/10.5281/zenodo.23935878).
 
 ## Get started
 
@@ -87,9 +87,9 @@ If you also used ChatGPT for drafting and revision, this optional combined examp
 
 Use only statements that reflect your actual use. Adjust the tasks, tools, version and singular or plural author wording as needed.
 
-Cho, G. (2026). *EquWord: Equation conversion and formatting for Microsoft Word* (Version 1.0.0) [Computer software]. https://github.com/PsycheMatrica/EquWord
+Cho, G. (2026). *EquWord: Equation conversion and formatting for Microsoft Word* (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23935878
 
-Use the released version's verified DOI when available. After a GitHub release is archived by Zenodo, its verified DOI can be added to the repository citation information and release description. Released tags and assets remain unchanged.
+The version DOI above identifies 1.0.0. The [Concept DOI](https://doi.org/10.5281/zenodo.23935877) represents all versions. These identifiers were verified against the published Zenodo record. DOI metadata was added to the repository after publication; the original 1.0.0 tag and ZIP remain unchanged. See the [publication receipt](https://github.com/PsycheMatrica/EquWord/blob/main/RELEASE_RECEIPT.json).
 
 ## Maintenance
 

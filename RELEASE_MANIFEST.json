@@ -14,11 +14,12 @@
   ],
   "archive": {
     "filename": "EquWord.zip",
-    "bytes": 2319174,
-    "sha256": "8888d3703267435150b1aac4a2431d241ff0938330178733514baed91fcc67bf",
+    "bytes": 2319291,
+    "sha256": "66f2daec6343fa5f68cd6d3b3430efc7cbfe6b69740b8f831cec15d2d5abd2fd",
     "compression": "deflated",
     "compression_level": 6,
-    "zip_timestamp_meaning": "Fixed reproducible entry timestamp retained from the existing release builder, not the date of publication."
+    "zip_timestamp_meaning": "Fixed reproducible entry timestamp retained from the existing release builder, not the date of publication.",
+    "publication_status": "Unreleased repository metadata snapshot; not a replacement for the frozen v1.0.0 release asset."
   },
   "verified_template": {
     "filename": "EquWord.dotm",
@@ -28,8 +29,8 @@
   },
   "files": {
     "CITATION.cff": {
-      "bytes": 971,
-      "sha256": "17543614c087e11fa20e0c9e06210e9e087fd1522d6411f0ebdef50f52f2ce7f"
+      "bytes": 964,
+      "sha256": "da547a8a6a4f44c4a4ff5ee91a0b253a31924b2aa0c9b5a7c70864c9d1bac9ec"
     },
     "EquWord.dotm": {
       "bytes": 974161,
@@ -52,8 +53,8 @@
       "sha256": "96be41e6ce4754c3325067a160f59df6423b865ae95c72616b58f0002a145739"
     },
     "README.md": {
-      "bytes": 11598,
-      "sha256": "857c8e0971f624cd66d0e099817e23ac3c2a88aafd3c3aff8d61241fd6a0f892"
+      "bytes": 11904,
+      "sha256": "9d5823281080483b53a8eb45fd322d94ba1cba6a9d32c2183303e7698f333f42"
     }
   },
   "release_readiness": {
@@ -170,22 +171,32 @@
     "Mac_progress_note_page": 9,
     "screenshots": "Author-revised Mac screenshots retained; Figure 3 username replaced by userID within a verified exact pixel rectangle. No generated screenshot.",
     "practice_sha256": "8384725f2e576d76a18faf7587a84c02d7aa019267eb76506641b749d5eb5c7c",
-    "license_and_citation_original_bytes_preserved": true,
+    "license_and_citation_original_bytes_preserved": false,
     "cover_date": "November 3, 2026",
     "Mac_editable_master_synchronized": true,
     "Windows_editable_master_synchronized": true,
-    "PDF_source": "Both PDFs exported from synchronized editable DOCX masters using Word for Windows in private read-only rendering. Mac screenshots remain genuine Mac captures."
+    "PDF_source": "Both PDFs exported from synchronized editable DOCX masters using Word for Windows in private read-only rendering. Mac screenshots remain genuine Mac captures.",
+    "license_original_bytes_preserved": true,
+    "citation_update": "Verified DOI and UTC release date added after publication; frozen release asset unchanged."
   },
-  "published": false,
-  "DOI": null,
+  "published": true,
+  "DOI": "10.5281/zenodo.23935878",
   "metadata_revision": {
     "date": "2026-11-03",
-    "reason": "Unify root README.md and its byte-identical Markdown distribution copy for the first 1.0.0 release.",
-    "previous_review_archive_sha256": "06272693b5e17a31f55bc6d8834928f15703105fd238ecf6855540374c558752",
+    "reason": "Record publication and add verified DOI citation metadata; retain software version 1.0.0.",
     "software_unchanged": true,
     "guides_unchanged": true,
     "no_new_software_runtime_claim": true,
     "README_source": "README.md",
-    "README_distribution_copy": "package/README.md"
+    "README_distribution_copy": "package/README.md",
+    "published_assets_unchanged": true
+  },
+  "published_release": {
+    "tag": "v1.0.0",
+    "commit": "1d65ded4043917767bcffa11bac20bb6acce8386",
+    "archive_sha256": "8888d3703267435150b1aac4a2431d241ff0938330178733514baed91fcc67bf",
+    "archive_bytes": 2319174,
+    "receipt": "RELEASE_RECEIPT.json",
+    "meaning": "Published software version; current repository package has later citation metadata only."
   }
 }

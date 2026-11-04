@@ -1,0 +1,58 @@
+{
+  "version": "1.0.0",
+  "tag": "v1.0.0",
+  "commit": "1d65ded4043917767bcffa11bac20bb6acce8386",
+  "github_release": "https://github.com/PsycheMatrica/EquWord/releases/tag/v1.0.0",
+  "published_at_utc": "2026-11-04T03:20:47Z",
+  "publication_date_author_timezone": "2026-11-03 (America/New_York)",
+  "assets": [
+    {
+      "name": "EquWord.zip",
+      "size": 2319174,
+      "digest": "sha256:8888d3703267435150b1aac4a2431d241ff0938330178733514baed91fcc67bf",
+      "browser_download_url": "https://github.com/PsycheMatrica/EquWord/releases/download/v1.0.0/EquWord.zip"
+    },
+    {
+      "name": "EquWord.zip.sha256",
+      "size": 78,
+      "digest": "sha256:b460ed06bf19668dfc52f88a8856a27b1f4a4993d521d045d3878e36a024da58",
+      "browser_download_url": "https://github.com/PsycheMatrica/EquWord/releases/download/v1.0.0/EquWord.zip.sha256"
+    }
+  ],
+  "zenodo_record": "https://zenodo.org/records/23935878",
+  "version_doi": "10.5281/zenodo.23935878",
+  "concept_doi": "10.5281/zenodo.23935877",
+  "zenodo_repository_archive_sha256": "f50b633206c0b215d1471104f0f7c8defdde47e150564c43f83884c505591f0c",
+  "zenodo_tagged_files_exact": 19,
+  "released_package_files": {
+    "CITATION.cff": {
+      "bytes": 971,
+      "sha256": "17543614c087e11fa20e0c9e06210e9e087fd1522d6411f0ebdef50f52f2ce7f"
+    },
+    "EquWord.dotm": {
+      "bytes": 974161,
+      "sha256": "b7fc3290227b244647fc15a548f683a443f064aa812e0288bdc82ea3d4383a76"
+    },
+    "LICENSE.txt": {
+      "bytes": 21955,
+      "sha256": "f02951f93c9c689576f6688bc62b19f3153f9b66c972663773709f4dc0e3515c"
+    },
+    "Tutorial/EquWord_Practice.docx": {
+      "bytes": 28854,
+      "sha256": "8384725f2e576d76a18faf7587a84c02d7aa019267eb76506641b749d5eb5c7c"
+    },
+    "Tutorial/EquWord_Quick_Start_Mac.pdf": {
+      "bytes": 942852,
+      "sha256": "0ac715eb7fb985d7a94ae30c0dbf275a11e1b275325fa1344d14d74a5e3794a3"
+    },
+    "Tutorial/EquWord_Quick_Start_Windows.pdf": {
+      "bytes": 574494,
+      "sha256": "96be41e6ce4754c3325067a160f59df6423b865ae95c72616b58f0002a145739"
+    },
+    "README.md": {
+      "bytes": 11598,
+      "sha256": "857c8e0971f624cd66d0e099817e23ac3c2a88aafd3c3aff8d61241fd6a0f892"
+    }
+  },
+  "immutability": "Published tag and assets remain unchanged. Later main-branch citation metadata does not create a new software release."
+}

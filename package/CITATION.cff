@@ -3,13 +3,15 @@ message: >-
   Please cite EquWord when referring to this software. Citation in a manuscript
   is appreciated but is not required merely for using the tool. Sharing the
   licensed software remains subject to the attribution conditions of
-  CC BY-NC-SA 4.0; see LICENSE.txt. A version DOI will be added when available.
+  CC BY-NC-SA 4.0; see LICENSE.txt.
 title: "EquWord: Equation Conversion and Formatting for Microsoft Word"
 type: software
 authors:
   - family-names: Cho
     given-names: Gyeongcheol
 version: 1.0.0
+date-released: 2026-11-04
+doi: "10.5281/zenodo.23935878"
 license: CC-BY-NC-SA-4.0
 url: "https://github.com/PsycheMatrica/EquWord"
 abstract: >-
