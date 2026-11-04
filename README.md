@@ -20,6 +20,7 @@ Startup installation makes the commands available automatically when Word starts
 - Merge eligible adjacent derivation rows, align their main relations and set internal row spacing.
 - Apply equation-number placement and keep eligible numbered blocks together.
 - Check mathematical structure, number fields and bookmarks during processing.
+- On Mac, show task/count/time in a progress window with safe-checkpoint Stop and close controls, followed by one compact result; open detailed notes only when `EquWord_LastReport` is requested.
 
 New profiles use eligible multiline merging, 1.5-line internal spacing and a 12 pt number offset. Equation paragraphs follow body spacing; existing manuscript profiles retain their choices. Selective Reformat offers six categories, Select all/Deselect all and remembered choices. Follow current equation is separate. EquWord does not determine mathematical correctness, perform statistical analysis or support every LaTeX command. Work on copies and review results before saving.
 
@@ -27,6 +28,7 @@ New profiles use eligible multiline merging, 1.5-line internal spacing and a 12 
 | --- | --- |
 | `EquWord_Settings` | Review and save the current manuscript's settings. |
 | `EquWord_About` | Show the loaded version and active settings. |
+| `EquWord_LastReport` | On Mac, open the last run report on request; on Windows, show reporting guidance. |
 | `EquWord_FormatSelection` | Format selected native equations, or one at the cursor. |
 | `EquWord_FormatAll` | Format native equations in the main document body. |
 | `EquWord_ConvertLaTeXSelection` | Convert supported selected source, then format. |
@@ -36,16 +38,18 @@ New profiles use eligible multiline merging, 1.5-line internal spacing and a 12 
 
 ## Recorded verification
 
-The exact template SHA-256 is `3e876985b016db8e0bb242b57a2036aeb80ebc720201410e0e32698ece583a13`.
+The final review template SHA-256 is `b7fc3290227b244647fc15a548f683a443f064aa812e0288bdc82ea3d4383a76`. The Mac progress-window caption is **EquWord - Progress**. Its complete main code, Windows branch and all 49 identified runtime preservation-check procedures match the tested R2 predecessor; the eight form-designer streams are exact. Native identifier changes and two empty EOF lines have a separate bounded disposition. Literal raw audit FAILs remain recorded; no executable or designer defect was identified in those differences, and no runtime guard was weakened.
 
-| Platform | Recorded environment | Verification of these candidate bytes |
-| --- | --- | --- |
-| Windows | Word 16.0.20430.20180, 64-bit; Windows 11 build 26300 | Seven settings/processing commands completed native runs with save, close and reopen. About was confirmed in the native interface. |
-| Mac | Word 16.114.3 (26102720); macOS 26.7.2 (25G332), Apple silicon | Focused Selection and All Selective Reformat runs with all six categories passed, with merging, 1.5-line spacing, preservation and save/close/reopen. Startup loading after restart, About, Settings and reference navigation were also checked. |
+| Platform | Recorded scope |
+| --- | --- |
+| Windows, exact final bytes | Word 16.0.20430.20180 x64, Windows build 26300: native compile, save, close and reopen. No fresh equation-processing or form-interaction regression. |
+| Mac, integrated R1 predecessor | Word 16.114.3 (26102720), macOS 26.7.2 (25G332), Apple silicon: five focused runs covering selective merging/spacing, Format All, document pause/resume, Stop, progress-window close and selected editable LaTeX conversion; saved-reference checks within those cases. |
+| Mac, R2 predecessor | One Format All/Stop check: one complete stopped dialog with no duplicated/trimmed summary; one explicit full LastReport; saved partial reopened with working references. |
+| Mac, exact final bytes | Word 16.114.3 (26102720), macOS 26.7.2 (25G332): one Selective Reformat Selection category form opened and Cancel closed it; zero processing, results or reports. Source/template state restored and 926 file identities recorded unchanged. No fresh processing or category-toggle regression. |
 
-The focused Mac runs took 80.9 and 135.5 seconds. The other four processing commands were listed, not rerun in that check. Separate automatic full-log saving was unavailable; all 18/20 pages of fallback review notes were retained privately. Mac does not provide Windows-style Esc polling. No fresh Windows Startup autoload/restart check is claimed for this branded candidate.
+The unchanged packaging helper now accepts the recorded exact-candidate Windows build and Mac form-only checks. Its publication check validates this limited evidence and package identity; it does not publish anything or grant the author's required final approval. Processing results on earlier binaries remain predecessor evidence.
 
-Earlier broader conversion/editing tests are predecessor evidence, not a full regression suite on every later binary. These results cover supplied fixtures and recorded installations; every Word build, manuscript, setting combination, large-document workload and over-height page case has not been tested. See the sanitized [release manifest](RELEASE_MANIFEST.json) for exact identities and scope.
+Recorded processed-document font/style/identifier/PAGE/package differences remain disclosed. A no-command save/reopen control reproduced specific math-font and unselected-equation changes; it does not explain every difference or establish every rendered glyph's font. Unobtained protected-report typography measurements remain unverified or blocked as recorded. Mac automatic standalone log saving and native Esc polling remain unavailable. See the sanitized [release manifest](RELEASE_MANIFEST.json) for identities and scope.
 
 ## Download contents
 

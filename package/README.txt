@@ -10,7 +10,7 @@ Work on a copy of your manuscript and review results before saving.
 START HERE
 Read the Quick Start PDF for your operating system in Tutorial/, then save a
 working copy of Tutorial/EquWord_Practice.docx. The template is EquWord.dotm;
-its eight public commands begin with EquWord_. No separate BAS, CLS, FRM or
+its nine public commands begin with EquWord_. No separate BAS, CLS, FRM or
 UserForm import is required. VBA source remains embedded in the template.
 
 INSTALL ON WINDOWS - AUTOMATIC STARTUP LOADING
@@ -49,6 +49,8 @@ formatter toolbar/ribbon buttons to the EquWord_ commands below.
 COMMANDS
 EquWord_Settings                    Review and save this manuscript's settings.
 EquWord_About                       Show the loaded version and settings.
+EquWord_LastReport                  On Mac, open the last run report on request;
+                                   on Windows, show reporting guidance.
 EquWord_FormatSelection             Format selected native equations, or one at the cursor.
 EquWord_FormatAll                   Format native equations in the main body.
 EquWord_ConvertLaTeXSelection        Convert supported selected LaTeX, then format.
@@ -64,36 +66,73 @@ Selective Reformat provides six categories, Select all/Deselect all and
 remembered choices. Multiline layout also applies line spacing; Follow current
 equation is independent. Structure, number-field and bookmark guards remain on.
 
-Review every result and note before saving. On Mac, review notes can span
-several dialogs when a separate full-log file cannot be saved; native Esc
-polling is unavailable. On Windows, Esc requests a stop at the next safe
-checkpoint, which the current Word operation may delay.
+Review every result before saving. On Mac, a small progress window shows the
+current task, item count and elapsed processing time. Stop, or the progress
+window's close button, requests a stop at an existing safe checkpoint. A native
+Word operation may delay updates or the stop response. Earlier edits remain in
+the working copy. Switching to another document pauses processing; return to
+the original document to resume. Follow current equation is a separate view
+preference.
+
+Each Mac run ends with one compact results dialog. Detailed timing and review
+notes do not open automatically. Run EquWord_LastReport when you want the full
+report; it opens as a protected, unsaved Word document and can be closed without
+saving. The report belongs to the current Word session; the next run replaces
+it. Before the first run, the command shows a short no-report message. Native
+Esc polling and automatic standalone log-file saving remain unavailable on Mac.
+On Windows, the title bar shows progress and Esc requests a stop at the next
+safe checkpoint; the current Word operation may delay the response.
 
 RECORDED VERIFICATION
 Exact EquWord.dotm SHA-256:
-3e876985b016db8e0bb242b57a2036aeb80ebc720201410e0e32698ece583a13
+b7fc3290227b244647fc15a548f683a443f064aa812e0288bdc82ea3d4383a76
 
-Windows: Word 16.0.20430.20180, 64-bit; Windows 11 build 26300. All seven
-settings/processing commands completed native runs on supplied fixtures and
-were saved, closed and reopened. About was confirmed in the native interface.
-These checks covered both conversion commands, native formatting and Selective
-Reformat, with mathematical/prose/SEQ/REF/bookmark/PAGE preservation checks.
+This final author-review build changes the Mac progress-window caption to
+EquWord - Progress. Its complete main code, Windows processing code and all
+49 identified runtime preservation-check procedures match the tested R2
+predecessor. The eight form-designer streams also match. Native-generated
+form identifiers and two empty source lines were reviewed separately; the
+literal audit differences remain recorded, with no executable or designer
+defect identified in those bounded differences. No preservation guard was
+removed, disabled or relaxed.
 
-Mac: Word 16.114.3 (26102720); macOS 26.7.2, Apple silicon. The exact branded
-candidate passed focused Selection and All Selective Reformat runs with all
-six categories (80.9 s and 135.5 s). Both passed two-row merging, 1.5-line
-internal spacing, preservation and native save-close-reopen; reference-link
-navigation worked. Startup automatic loading after Word restart, About and
-Settings were also checked. Separate automatic full-log saving was unavailable;
-all 18/20 pages of fallback review notes were retained in the private evidence.
-The other four processing commands were listed, not rerun in that focused Mac
-check. Earlier broader conversion/editing tests are predecessor evidence,
-not a full regression suite on this later binary.
+Windows: Word 16.0.20430.20180, 64-bit; Windows build 26300. The exact final
+template was compiled, saved, closed and reopened in an isolated desktop Word
+instance. No fresh equation-processing or form-interaction regression was
+performed on these final bytes.
 
-Results apply to the supplied fixtures and recorded installations. Every
-Word build, manuscript, setting combination, large-document workload and
-over-height page case has not been exhaustively tested. EquWord does not
-assess mathematical correctness or implement every LaTeX command.
+Mac: Word 16.114.3 (26102720); macOS 26.7.2 (25G332), Apple silicon. On the
+exact final template, one EquWord_SelectiveReformatSelection invocation opened
+the category form with readable controls. Cancel closed it cleanly. Run was
+not selected: no equation processing, progress, result or report began. The
+owned input closed without saving; the private template was unloaded and the
+prior Word/template/source-filter state restored. The Mac evidence recorded
+926 unchanged file identities. This was a form-opening/cancellation check,
+not a new equation-processing, category-toggle, Startup or full regression.
+
+Earlier Mac processing evidence is kept separate. The integrated R1 predecessor
+completed five focused runs covering Selective Reformat Selection, Format All
+with document-switch pause/resume, Stop and progress-window close cancellation,
+and selected LaTeX conversion with an editable fraction and Greek alpha.
+Completed outputs supported merging, alignment, 1.5-line internal spacing and
+saved-reference checks within those cases. The R2 predecessor then passed one
+Format All/Stop check: one complete result dialog, no repeated or trimmed
+summary, one explicit full LastReport, and a saved partial that reopened with
+working references. Those processing results remain tied to their predecessor
+hashes; they are not a full processing regression of the final template.
+
+Processed-document raw font, style, identifier, field-representation and
+package differences remain documented. A separate no-command Word save/reopen
+control reproduced specific math-font and unselected-equation changes. It
+does not explain every difference or establish the displayed font of every
+glyph. Unobtained report typography measurements remain unverified. Original
+files and personal customizations were unchanged in the recorded checks.
+
+Results cover supplied fixtures and recorded installations. Every Word build,
+manuscript, option, workload and error path has not been exhaustively tested.
+EquWord does not assess mathematical correctness or support every LaTeX command.
+This package is for the author's final file review; it does not authorize a
+release. The repository release manifest records identities and test limits.
 
 DEVELOPMENT ACKNOWLEDGMENT
 GPT-6.1 Sol (OpenAI) assisted with developing EquWord and preparing its

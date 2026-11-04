@@ -15,5 +15,6 @@ url: "https://github.com/PsycheMatrica/EquWord"
 abstract: >-
   A Microsoft Word VBA template for converting supported LaTeX to editable
   native equations and applying document-specific notation and equation-layout
-  choices. EquWord.dotm provides eight EquWord_ commands for desktop Word on
-  Windows and Mac, including native equation formatting and selective reformatting.
+  choices. EquWord.dotm provides nine EquWord_ commands for desktop Word on
+  Windows and Mac, including native equation formatting, selective reformatting
+  and platform-specific access to reporting information.
