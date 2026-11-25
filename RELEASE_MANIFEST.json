@@ -19,7 +19,7 @@
     "compression": "deflated",
     "compression_level": 6,
     "zip_timestamp_meaning": "Fixed reproducible entry timestamp selected for the 1.0.2 preparation on November 25, 2026; not a claim of publication time.",
-    "publication_status": "Ready for final author review; not published"
+    "publication_status": "Published GitHub v1.0.2; frozen release asset"
   },
   "verified_template": {
     "filename": "EquWord.dotm",
@@ -61,7 +61,7 @@
     "status": "ready_for_author_review",
     "final_files_ready_for_author_inspection": true,
     "requires_final_author_approval": true,
-    "publication_approved": false,
+    "publication_approved": true,
     "native_tests": {
       "windows": {
         "status": "PASS",
@@ -384,7 +384,16 @@
         "scope": "Mac execution of exact 1.0.2 binary",
         "disposition": "Candidate-specific author waiver dated November 25, 2026; native status remains UNVERIFIED."
       }
-    ]
+    ],
+    "final_author_approval": {
+      "approved": true,
+      "date": "2026-11-25",
+      "version": "1.0.2",
+      "commit": "86e7330071a89d27e403a7bdf1b056e8ae35bc5b",
+      "archive_sha256": "1a03b5b21596715e31eb8763058de37df3b2ac54dcf466fd190da57c04a3b8bd",
+      "template_sha256": "7ea66ceed0cf4d9b61de189e7f64d161b52e5fc97b70210414503f0fa80ba24f",
+      "record": "The author explicitly approved publication of this exact EquWord 1.0.2 version, target commit and artifact checksums after the final review. The approval retains the disclosed verification limits and the candidate-specific Mac-rerun waiver. It is limited to this release and grants no approval for later releases."
+    }
   },
   "documentation": {
     "Windows_pdf_pages": 11,
@@ -409,14 +418,15 @@
     "native_export_receipt_sha256": "7302cac98a51052295a22958cc1a11a3e912a9a2a9fa61dcb6d2768725aa832c",
     "visual_qa_scope": "All 11 Windows guide pages, 15 Mac guide pages and two Practice preview pages; screenshots and unchanged page rasters retained. No new clipping, overlap, orphan captions or pagination changes."
   },
-  "published": false,
+  "published": true,
   "metadata_revision": {
     "date": "2026-11-25",
-    "reason": "Prepare 1.0.2 with guarded A3 manual breaks and upright script-token support.",
-    "publication_authorized": false,
+    "reason": "Record author-approved GitHub 1.0.2 publication and verified Zenodo automatic archive without changing frozen package bytes.",
+    "publication_authorized": true,
+    "package_bytes_unchanged": true,
     "preferred_citation_doi": "10.5281/zenodo.23935877",
-    "current_candidate_final_identity_pending": false,
-    "final_visual_qa_pending": false
+    "historical_receipts_and_policies_preserved": true,
+    "zenodo_verified": true
   },
   "concept_doi": "10.5281/zenodo.23935877",
   "previous_published_release": {
@@ -444,5 +454,33 @@
     "published_assets_unchanged": true,
     "mac_version_only_author_decision_recorded": true,
     "README_and_CFF_durable_version_text": true
+  },
+  "published_release": {
+    "tag": "v1.0.2",
+    "commit": "86e7330071a89d27e403a7bdf1b056e8ae35bc5b",
+    "github_release": "https://github.com/PsycheMatrica/EquWord/releases/tag/v1.0.2",
+    "github_release_id": 458479588,
+    "published_at_utc": "2026-11-25T18:20:53Z",
+    "publication_date_author_timezone": "2026-11-25 (America/New_York)",
+    "archive_sha256": "1a03b5b21596715e31eb8763058de37df3b2ac54dcf466fd190da57c04a3b8bd",
+    "archive_bytes": 2329735,
+    "template_sha256": "7ea66ceed0cf4d9b61de189e7f64d161b52e5fc97b70210414503f0fa80ba24f",
+    "receipt": "RELEASE_RECEIPT_1.0.2.json",
+    "concept_doi": "10.5281/zenodo.23935877",
+    "zenodo_verification_status": "PASS_SEVEN_PAYLOADS_EXACT",
+    "meaning": "Published frozen 1.0.2 installation package. Repository-only publication metadata changes no package bytes or native-test statuses.",
+    "zenodo_record": "https://zenodo.org/records/24540565",
+    "version_doi": "10.5281/zenodo.24540565",
+    "zenodo_archive_bytes": 2330945,
+    "zenodo_archive_sha256": "663e6c8fd3f9cfd11b4742017c8e8927e2ad08f27064ac832219d5f5c4ac1b6e",
+    "zenodo_verification": "The automatic archive contains exactly seven package payloads matching the frozen released package bytes; no repository administration files or separate source exports. Archive-container bytes differ from the named GitHub installation ZIP."
+  },
+  "previous_preparation_metadata_revision": {
+    "date": "2026-11-25",
+    "reason": "Prepare 1.0.2 with guarded A3 manual breaks and upright script-token support.",
+    "publication_authorized": false,
+    "preferred_citation_doi": "10.5281/zenodo.23935877",
+    "current_candidate_final_identity_pending": false,
+    "final_visual_qa_pending": false
   }
 }

@@ -1,0 +1,89 @@
+{
+  "version": "1.0.2",
+  "tag": "v1.0.2",
+  "commit": "86e7330071a89d27e403a7bdf1b056e8ae35bc5b",
+  "github_release": "https://github.com/PsycheMatrica/EquWord/releases/tag/v1.0.2",
+  "github_release_id": 458479588,
+  "published_at_utc": "2026-11-25T18:20:53Z",
+  "publication_date_author_timezone": "2026-11-25 (America/New_York)",
+  "assets": [
+    {
+      "name": "EquWord.zip",
+      "size": 2329735,
+      "digest": "sha256:1a03b5b21596715e31eb8763058de37df3b2ac54dcf466fd190da57c04a3b8bd",
+      "browser_download_url": "https://github.com/PsycheMatrica/EquWord/releases/download/v1.0.2/EquWord.zip"
+    },
+    {
+      "name": "EquWord.zip.sha256",
+      "size": 78,
+      "digest": "sha256:cb1951fbebfd002286faa37c667a03be11c66d115dea1cb2bea1a862640f6e0a",
+      "browser_download_url": "https://github.com/PsycheMatrica/EquWord/releases/download/v1.0.2/EquWord.zip.sha256"
+    }
+  ],
+  "assets_download_verified": true,
+  "public_latest_download_verified": true,
+  "public_tag_matches": true,
+  "zenodo_record": "https://zenodo.org/records/24540565",
+  "version_doi": "10.5281/zenodo.24540565",
+  "concept_doi": "10.5281/zenodo.23935877",
+  "preferred_citation_doi": "10.5281/zenodo.23935877",
+  "zenodo_repository_archive": {
+    "name": "PsycheMatrica/EquWord-v1.0.2.zip",
+    "sha256": "663e6c8fd3f9cfd11b4742017c8e8927e2ad08f27064ac832219d5f5c4ac1b6e",
+    "bytes": 2330945,
+    "seven_package_files_match": true,
+    "layout_note": "Zenodo automatic GitHub archive retains repository/package wrappers and contains only the same seven payloads; no administration files or separate source exports."
+  },
+  "released_package_files": {
+    "CITATION.cff": {
+      "bytes": 979,
+      "sha256": "d8226f18268fac3b0a89d37ffb942501da687a107fada121b1b5c0cc47bd45db"
+    },
+    "EquWord.dotm": {
+      "bytes": 979963,
+      "sha256": "7ea66ceed0cf4d9b61de189e7f64d161b52e5fc97b70210414503f0fa80ba24f"
+    },
+    "LICENSE.txt": {
+      "bytes": 21955,
+      "sha256": "e9bb034192522fbe4937fce619914a57923785295f900c304558ea8f8efd32fc"
+    },
+    "README.md": {
+      "bytes": 13719,
+      "sha256": "d053cb3cf30157d8664381ebfb4fd30ed54adfd942aa414bbede94b113a99bd9"
+    },
+    "Tutorial/EquWord_Practice.docx": {
+      "bytes": 28854,
+      "sha256": "7ebeae9ce502425040a85662f28db0d51c81ca0317f8a40e418c068cd81e3f0f"
+    },
+    "Tutorial/EquWord_Quick_Start_Mac.pdf": {
+      "bytes": 945112,
+      "sha256": "0a53ccb4dcba476cada83846efffaf100fb7626f0fbc88d38e3c85bc6b798843"
+    },
+    "Tutorial/EquWord_Quick_Start_Windows.pdf": {
+      "bytes": 577611,
+      "sha256": "1335e1aa0e8ffd6c7ed352ecd3cd8c975170f7fa1f927b183a9d1356dfa840a6"
+    }
+  },
+  "preservation_guards_enabled": true,
+  "runtime_guards_weakened": false,
+  "final_version_rebuild_guard_procedures_unchanged_from_focused_predecessor": true,
+  "previous_published_releases_unchanged": true,
+  "protected_historical_receipts_sha256": {
+    "RELEASE_RECEIPT.json": "80af68c8a136bba3577f36208a776ce874be6a7b6343a197beb87d393ac6ba66",
+    "RELEASE_RECEIPT_1.0.1.json": "2eb6c3c4406229c98368c87fb5549b9461038ae8841784dcf9a7261c8e20dcf9"
+  },
+  "verification_evidence": {
+    "github_public_verification_sha256": "d195cd6e92ce268983f82bd12799fa411a29e16fd7f8b4e63eeef94504bc509e",
+    "zenodo_archive_verification_sha256": "ddef76acb02170701ceb081618a7ee9fd4657503b14b51368871b5ef67422ef3",
+    "native_version_receipt_sha256": "cf7d357eae05f187027f2d5f631eba0580a3f0a403931d40f10fe5d864ce3129",
+    "version_source_audit_sha256": "38d3279598931430aebb1b0651dd3ea4b7ded66edf5fc15740494962a85d0005",
+    "guide_visual_qa_sha256": "e27a667cde3284f8903ad1f83bed04f773f29a826674c7757c4a830752aa3ae0",
+    "final_author_approval_record_sha256": "fbb97cb8b08c27c595a389e5490ad13c61591987668e77d35ad8edad43b8755e"
+  },
+  "approval": "The author explicitly approved this exact 1.0.2 version, commit, artifact checksums, release notes and verification scope before GitHub publication and Zenodo automatic archiving. The separate Mac-rerun waiver does not assert Mac execution.",
+  "native_scope": "Focused Windows processing on the identified private predecessor covered 22 examples, 33 notation probes, save/reopen and authored math/prose/field/bookmark/link preservation. The A3 predecessor separately passed its three-row merge and preservation checks. Exact 1.0.2 native compilation, About display and read-only reopen passed. All 414 procedure bodies, 63 guard procedures and eight designer streams match that focused predecessor; only two version declarations changed. No fresh full regression is claimed.",
+  "mac_status": "UNVERIFIED",
+  "mac_author_decision": "A further Mac run for this candidate was expressly waived by the author on November 25, 2026. Earlier Mac results remain predecessor evidence.",
+  "qualifications": "Strict raw serialization and regenerated hidden form identities remain disclosed in the frozen release manifest and private evidence; qualified authored-content checks are not described as raw byte-identity passes.",
+  "immutability": "The v1.0.2 tag, ZIP, seven payloads and Zenodo record are frozen. Repository-only publication metadata does not replace the released package. Earlier 1.0.0 and 1.0.1 tags, assets and receipts remain unchanged."
+}

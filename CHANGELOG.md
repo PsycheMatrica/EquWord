@@ -1,12 +1,14 @@
 # Changelog
 
-## 1.0.2 — November 25, 2026
+## Published 1.0.2 — November 25, 2026
 
 - Apply the configured nonbold upright notation tokens in native superscripts as well as subscripts, including combined scripts, prescripts and nested scripts. Retain whole-token/case matching, bold and Preserved-token precedence, saved profiles and operator-limit handling.
 - Safely retain the proved plain-run/manual-break native projection encountered in A3. Keep mathematical-structure, number-field, bookmark and surrounding-document preservation checks.
 - Record Windows focused tests on 22 examples and 33 style probes, plus the earlier A3 merge/preservation test. Bind final 1.0.2 native version confirmation to its exact template identity.
 - Record the author's candidate-specific Mac-rerun waiver while retaining Mac runtime status UNVERIFIED and earlier Mac evidence as predecessor evidence.
 - Keep a seven-file installation ZIP, the CC BY-NC-SA 4.0 license and the all-version Concept DOI `10.5281/zenodo.23935877`.
+- Publish after explicit final author approval: tag `v1.0.2`, commit `86e7330071a89d27e403a7bdf1b056e8ae35bc5b`, ZIP SHA-256 `1a03b5b21596715e31eb8763058de37df3b2ac54dcf466fd190da57c04a3b8bd`, template SHA-256 `7ea66ceed0cf4d9b61de189e7f64d161b52e5fc97b70210414503f0fa80ba24f`. Keep package bytes, prior releases and the scoped Mac UNVERIFIED status unchanged.
+- Record publication in `RELEASE_RECEIPT_1.0.2.json`; retain historical receipts, the frozen 1.0.1 acceptance policy and every disclosed source/formatting qualification. Verify Zenodo record `24540565`: all seven payloads match the released package byte-for-byte. Keep the Concept DOI as the current citation identifier.
 
 ## Published 1.0.1 — November 3, 2026
 
