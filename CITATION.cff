@@ -9,7 +9,7 @@ type: software
 authors:
   - family-names: Cho
     given-names: Gyeongcheol
-version: 1.0.1
+version: 1.0.2
 doi: "10.5281/zenodo.23935877"
 license: CC-BY-NC-SA-4.0
 url: "https://github.com/PsycheMatrica/EquWord"

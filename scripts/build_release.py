@@ -17,8 +17,8 @@ import sys
 from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
 
-RELEASE_VERSION = "1.0.1"
-ZIP_TIMESTAMP = (2026, 10, 28, 0, 0, 0)
+RELEASE_VERSION = "1.0.2"
+ZIP_TIMESTAMP = (2026, 11, 25, 0, 0, 0)
 PACKAGE_FILES = {
     "CITATION.cff",
     "LICENSE.txt",
@@ -47,6 +47,32 @@ MAC_VERSION_ONLY_PRESERVATION = (
     "all_49_identified_runtime_guards_unchanged",
     "all_eight_form_designer_streams_unchanged",
     "all_15_non_VBA_parts_baseline_exact",
+)
+
+# The 1.0.1 decision above stays frozen. This separate decision covers the
+# explicitly reviewed focused-Windows predecessor and its final version-only
+# rebuild. It never turns unperformed Mac execution into PASS.
+MAC_FOCUSED_WINDOWS_ACCEPTANCE = {
+    "platform": "mac",
+    "reason": "focused_windows_and_author_waiver",
+    "candidate_version": "1.0.2",
+    "candidate_sha256": "7ea66ceed0cf4d9b61de189e7f64d161b52e5fc97b70210414503f0fa80ba24f",
+    "processing_baseline_version": "1.0.1",
+    "processing_baseline_sha256": "cd19218a6ee0c0d71e19ef53eb60e127cfa2cebf4709856b55e415582b4de159",
+    "audit_sha256": "38d3279598931430aebb1b0651dd3ea4b7ded66edf5fc15740494962a85d0005",
+    "native_receipt_sha256": "cf7d357eae05f187027f2d5f631eba0580a3f0a403931d40f10fe5d864ce3129",
+}
+FOCUSED_WINDOWS_EVIDENCE = {
+    "receipt_sha256": "41d1edef32840e304f82ddae81ccfb198b0f710f7c3c8f43a73b28c4e724fc7b",
+    "source_audit_sha256": "cc0def679abbc87f19e257466137ec38a6b527b16dbcf71b3373eccdded24bc8",
+    "saved_result_report_sha256": "dd16d541012bd498c23384860b50f9b0b14a4e74378d366acc18f39fb04aa727",
+}
+FOCUSED_WINDOWS_PRESERVATION = (
+    "only_version_declarations_changed",
+    "all_procedure_bodies_unchanged",
+    "all_63_runtime_guards_unchanged",
+    "all_eight_form_designer_streams_unchanged",
+    "nonmain_visible_code_and_attributes_match",
 )
 
 
@@ -134,12 +160,72 @@ def accepted_mac_version_only_basis(manifest, template_hash):
     return True
 
 
+def accepted_mac_focused_windows_basis(manifest, template_hash):
+    """Validate the exact 1.0.2 author decision and its bounded native evidence."""
+    readiness = manifest["release_readiness"]
+    acceptance = readiness.get("mac_focused_windows_acceptance")
+    if acceptance is None:
+        return False
+    require(isinstance(acceptance, dict), "Focused Windows Mac acceptance must be an object.")
+    require(all(acceptance.get(key) == value
+                for key, value in MAC_FOCUSED_WINDOWS_ACCEPTANCE.items())
+            and all(re.fullmatch(r"[0-9a-f]{64}", acceptance.get(key, "")) is not None
+                    for key in ("candidate_sha256", "processing_baseline_sha256", "audit_sha256", "native_receipt_sha256")),
+            "Focused Windows Mac acceptance differs from the reviewed candidate/baseline/audit, or has a pending identity.")
+    require(manifest["version"] == acceptance["candidate_version"]
+            and template_hash == acceptance["candidate_sha256"],
+            "Focused Windows acceptance cannot be reused for another candidate.")
+    native = readiness["native_tests"]
+    require(native["windows"]["status"] == "PASS"
+            and native["mac"]["status"] == "UNVERIFIED",
+            "Focused Windows acceptance requires Windows PASS and Mac UNVERIFIED; FAIL/BLOCKED cannot be overridden.")
+    for platform in ("windows", "mac"):
+        require(native[platform].get("version") == acceptance["candidate_version"]
+                and native[platform].get("template_sha256") == template_hash,
+                "Focused Windows acceptance requires exact final native-test identities.")
+    final_evidence = native["windows"].get("evidence")
+    require(isinstance(final_evidence, list) and final_evidence
+            and all(isinstance(item, str) and item.strip() for item in final_evidence)
+            and native["windows"].get("receipt_sha256") == acceptance["native_receipt_sha256"],
+            "Final Windows compile/About/reopen must identify its actual evidence.")
+    decision = acceptance.get("author_decision", {})
+    require(isinstance(decision, dict) and decision.get("accepted") is True
+            and decision.get("date") == "2026-11-25"
+            and decision.get("mac_rerun_not_required_for_this_candidate") is True
+            and isinstance(decision.get("record"), str) and decision["record"].strip(),
+            "Focused Windows acceptance requires this explicit scoped author decision.")
+    focused = readiness.get("predecessor_tests", {}).get("Focused_Script_Tokens", {})
+    require(focused.get("status") == "PASS"
+            and focused.get("version") == acceptance["processing_baseline_version"]
+            and focused.get("template_sha256") == acceptance["processing_baseline_sha256"]
+            and focused.get("cases") == 22 and focused.get("style_probes") == 33
+            and focused.get("source_guards_exact") == 63
+            and all(focused.get(key) is True for key in
+                    ("compile", "format_all", "save_reopen", "preservation", "form_designer_streams_exact"))
+            and all(focused.get(key) == value for key, value in FOCUSED_WINDOWS_EVIDENCE.items()),
+            "Focused Windows acceptance requires the fixed 22-case/33-probe native predecessor and preservation evidence.")
+    audit = readiness.get("source_audit", {})
+    preservation = acceptance.get("preservation", {})
+    require(audit.get("status") == "PASS_BOUNDED_CHECKS_WITH_RETAINED_RAW_FAILURES"
+            and audit.get("audit_sha256") == acceptance["audit_sha256"]
+            and audit.get("baseline_sha256") == acceptance["processing_baseline_sha256"]
+            and audit.get("candidate_sha256") == template_hash
+            and audit.get("audit_or_runtime_guards_weakened") is False
+            and audit.get("strict_raw_failures_retained") is True
+            and isinstance(preservation, dict)
+            and all(audit.get(key) is True and preservation.get(key) is True
+                    for key in FOCUSED_WINDOWS_PRESERVATION),
+            "Focused Windows acceptance requires its exact final version-only audit, all guards/designers preserved, and retained raw failures.")
+    return True
+
+
 def native_evidence_eligible(manifest, template_hash):
-    """Recorded native PASS or the single validated Mac acceptance, not approval."""
+    """Recorded native PASS or one validated scoped author decision, not approval."""
     native = manifest["release_readiness"]["native_tests"]
     accepted_mac = accepted_mac_version_only_basis(manifest, template_hash)
+    accepted_focused = accepted_mac_focused_windows_basis(manifest, template_hash)
     return (native["windows"]["status"] == "PASS"
-            and (native["mac"]["status"] == "PASS" or accepted_mac))
+            and (native["mac"]["status"] == "PASS" or accepted_mac or accepted_focused))
 
 
 def verify_publication_readiness(manifest, template_hash):
@@ -221,7 +307,7 @@ def verify_package(root):
             "Declared template candidate differs from the package template.")
     timestamp = tuple(manifest["zip_timestamp"])
     require(timestamp == ZIP_TIMESTAMP,
-            "The reproducible ZIP timestamp must remain 2026-10-28 00:00:00.")
+            "The reproducible ZIP timestamp must match this deliberately configured release date.")
     verify_readiness(manifest, template_hash)
     return manifest, files, timestamp
 
@@ -296,7 +382,7 @@ def main():
                         help="Explicitly copy root README.md into package/README.md, then exit without changing the manifest or publishing.")
     parser.add_argument("--verify-only", action="store_true", help="Verify package bytes without writing files.")
     parser.add_argument("--publication-check", action="store_true",
-                        help="Require author-review readiness and recorded native evidence or the exact accepted Mac version-only basis; never publishes or replaces final author approval.")
+                        help="Require author-review readiness and recorded native evidence or an exact scoped Mac author decision; never publishes or replaces final author approval.")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     if args.sync_readme:
@@ -327,6 +413,8 @@ def main():
           .format(statuses["windows"]["status"], statuses["mac"]["status"]))
     if readiness.get("mac_version_only_acceptance") is not None:
         print("Recorded author decision accepts predecessor Mac evidence for this exact version-only candidate; Mac runtime remains UNVERIFIED.")
+    if readiness.get("mac_focused_windows_acceptance") is not None:
+        print("Recorded author decision accepts the hash-bound focused Windows evidence and final version-only audit; exact-candidate Mac runtime remains UNVERIFIED.")
     print("This builder does not execute Microsoft Word or publish releases.")
     if args.verify_only:
         print("ZIP SHA-256 " + checksum)

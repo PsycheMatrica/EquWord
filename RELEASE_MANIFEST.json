@@ -1,100 +1,102 @@
 {
   "schema_version": 2,
   "title": "EquWord: Equation Conversion and Formatting for Microsoft Word",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "CC-BY-NC-SA-4.0",
-  "prepared_date": "2026-11-03",
+  "prepared_date": "2026-11-25",
   "zip_timestamp": [
     2026,
-    10,
-    28,
+    11,
+    25,
     0,
     0,
     0
   ],
   "archive": {
     "filename": "EquWord.zip",
-    "bytes": 2301395,
-    "sha256": "2ffab151523106a09595997bc6f3bcab44a713658952c7bd9ee2c28a5868af53",
+    "bytes": 2329735,
+    "sha256": "1a03b5b21596715e31eb8763058de37df3b2ac54dcf466fd190da57c04a3b8bd",
     "compression": "deflated",
     "compression_level": 6,
-    "zip_timestamp_meaning": "Fixed reproducible entry timestamp retained from the existing release builder, not the date of publication.",
-    "publication_status": "Published v1.0.1 EquWord.zip release asset; exact seven-file installation bundle."
+    "zip_timestamp_meaning": "Fixed reproducible entry timestamp selected for the 1.0.2 preparation on November 25, 2026; not a claim of publication time.",
+    "publication_status": "Ready for final author review; not published"
   },
   "verified_template": {
     "filename": "EquWord.dotm",
-    "version": "1.0.1",
-    "sha256": "a4b8c22f5fb99ce02fd667978f48b57f0e950a8822250465c957f66eab35aa55",
-    "candidate_label": "Version-only 1.0.1 successor; scoped Windows verification, Mac execution unverified"
+    "version": "1.0.2",
+    "sha256": "7ea66ceed0cf4d9b61de189e7f64d161b52e5fc97b70210414503f0fa80ba24f",
+    "candidate_label": "A3 manual-break and subscript/superscript notation fixes; focused Windows evidence and explicit scoped Mac waiver"
   },
   "files": {
     "CITATION.cff": {
       "bytes": 979,
-      "sha256": "546f5e5fc590b659c21ba01674aefd7f684fa5b1bb0c8481b0470812d513ca95"
+      "sha256": "d8226f18268fac3b0a89d37ffb942501da687a107fada121b1b5c0cc47bd45db"
     },
     "EquWord.dotm": {
-      "bytes": 952715,
-      "sha256": "a4b8c22f5fb99ce02fd667978f48b57f0e950a8822250465c957f66eab35aa55"
+      "bytes": 979963,
+      "sha256": "7ea66ceed0cf4d9b61de189e7f64d161b52e5fc97b70210414503f0fa80ba24f"
     },
     "LICENSE.txt": {
       "bytes": 21955,
-      "sha256": "2033dafb41fee72f3cd99823c31bbad9841364d28b37e43f0a7f8f4de4f06fb7"
+      "sha256": "e9bb034192522fbe4937fce619914a57923785295f900c304558ea8f8efd32fc"
     },
     "README.md": {
-      "bytes": 13114,
-      "sha256": "11eac71e541a08ad822903bf75b719702d113b31d8442837c49411277cd77c51"
+      "bytes": 13719,
+      "sha256": "d053cb3cf30157d8664381ebfb4fd30ed54adfd942aa414bbede94b113a99bd9"
     },
     "Tutorial/EquWord_Practice.docx": {
-      "bytes": 28853,
-      "sha256": "a3ced47550f2e74ebec020ffe5273e82fc4ace90c1157eb87ef05e1ee9edfdc5"
+      "bytes": 28854,
+      "sha256": "7ebeae9ce502425040a85662f28db0d51c81ca0317f8a40e418c068cd81e3f0f"
     },
     "Tutorial/EquWord_Quick_Start_Mac.pdf": {
-      "bytes": 944950,
-      "sha256": "182ba5b358721fd0d10617fea1fdbb9179b875d413ea0fc6f361e61bf5e58575"
+      "bytes": 945112,
+      "sha256": "0a53ccb4dcba476cada83846efffaf100fb7626f0fbc88d38e3c85bc6b798843"
     },
     "Tutorial/EquWord_Quick_Start_Windows.pdf": {
-      "bytes": 576872,
-      "sha256": "a4477c14df2b01ad57a363f51f42a37f3e91bdfd9018e6a7e41285dd48e0150a"
+      "bytes": 577611,
+      "sha256": "1335e1aa0e8ffd6c7ed352ecd3cd8c975170f7fa1f927b183a9d1356dfa840a6"
     }
   },
   "release_readiness": {
     "status": "ready_for_author_review",
     "final_files_ready_for_author_inspection": true,
     "requires_final_author_approval": true,
-    "meaning": "The exact 1.0.1 files and recorded verification scope received final author approval and were published. This schema retains the completed author-review readiness state; published flags and the release receipt record publication. Exact-candidate Mac runtime remains UNVERIFIED under the recorded version-only acceptance.",
+    "publication_approved": false,
     "native_tests": {
       "windows": {
         "status": "PASS",
-        "version": "1.0.1",
-        "template_sha256": "a4b8c22f5fb99ce02fd667978f48b57f0e950a8822250465c957f66eab35aa55",
-        "environment": "Word 16.0.20430.20180 x64; Windows build 26300",
+        "version": "1.0.2",
+        "template_sha256": "7ea66ceed0cf4d9b61de189e7f64d161b52e5fc97b70210414503f0fa80ba24f",
+        "receipt_sha256": "cf7d357eae05f187027f2d5f631eba0580a3f0a403931d40f10fe5d864ce3129",
+        "environment": "Word 16.0.20527; Windows build 26300.9974 (26H2)",
         "scope": [
-          "Native compilation of VBA retained byte-exact in final container",
-          "Final-template EquWord_About displays 1.0.1",
-          "Final-template read-only reopen and close; candidate checksum unchanged"
+          "Native VBA compilation; native Compile Project disabled afterward",
+          "Final preserved-container DOTM read-only reopen and actual EquWord_About showing 1.0.2",
+          "Close and unchanged exact final candidate identity"
         ],
         "evidence": [
-          "Native 1.0.1 receipt SHA-256 1031acee6738cb91aa0032e2d373a765a803e86974f89920d504d03004c53995",
-          "Native compile-menu evidence SHA-256 956e3ddc9134de3fbd912e0f62841f24f907cb94d3926b3b528d650b907572e6",
-          "Final About observation SHA-256 79ef3a5022a3d9bb4ff2c287ae7536e0017126cf6e96db30b3ba342636a7f005",
-          "Final reopen receipt SHA-256 e21481dd0151ed1f841903b14af3fb8372686fb99d5e06a5252bb34eef233544",
-          "Final cleanup receipt SHA-256 91cb79f3544ca280f030f99c6e3cbd43071261b65c5c395c6fe3b651059ca611"
+          "Native 1.0.2 receipt SHA-256 cf7d357eae05f187027f2d5f631eba0580a3f0a403931d40f10fe5d864ce3129",
+          "Native compile-menu evidence SHA-256 0a3d4acefd855d71b3a3d22e802b2e591b61ce743bc58d15a37fba4327ceccd1",
+          "Final About observation SHA-256 deae5b627129d3a13473faac0bc4214dbeaad6f526981e335579c30cc5584938",
+          "About/reopen return receipt SHA-256 424763b80def66d95acfcd7bab94615442473c4fb7d7bcd62d2fec70821b7a36",
+          "Owned Word cleanup receipt SHA-256 68eb8b43494b54a2cd7f28d3e360858dcb782cd65890ad4023a95b5da6fc8c17"
         ],
         "limits": [
-          "No 1.0.1 equation-processing regression, Startup installation/restart test or fresh form-interaction test.",
-          "Final package restores all 15 baseline non-VBA parts around unchanged native-compiled VBA; final container reopened in Word."
+          "Focused processing evidence belongs to the exact private predecessor; no duplicate full processing run solely for the two version declarations.",
+          "No final-binary Startup installation/restart, full regression or Mac runtime test.",
+          "All 15 baseline non-VBA parts surround the byte-exact native compiled VBA; final container reopened in Word."
         ]
       },
       "mac": {
         "status": "UNVERIFIED",
-        "version": "1.0.1",
-        "template_sha256": "a4b8c22f5fb99ce02fd667978f48b57f0e950a8822250465c957f66eab35aa55",
+        "version": "1.0.2",
+        "template_sha256": "7ea66ceed0cf4d9b61de189e7f64d161b52e5fc97b70210414503f0fa80ba24f",
         "scope": [
-          "No 1.0.1 execution performed on Mac"
+          "No exact-candidate Mac execution"
         ],
         "evidence": [],
         "limits": [
-          "Prior Mac evidence belongs to earlier binaries; it does not establish runtime compatibility for this candidate."
+          "Author explicitly waived a Mac rerun for this candidate; runtime remains UNVERIFIED."
         ]
       }
     },
@@ -186,119 +188,238 @@
           "audit_or_runtime_guards_weakened": false,
           "scope_limit": "Not a full compiled type-library validator; opaque native PROJECT metadata remains disclosed."
         }
+      },
+      "Published_1_0_1": {
+        "meaning": "Frozen historical 1.0.1 release; its version-only Mac acceptance applies only to its original bytes.",
+        "template_sha256": "a4b8c22f5fb99ce02fd667978f48b57f0e950a8822250465c957f66eab35aa55",
+        "native_tests": {
+          "windows": {
+            "status": "PASS",
+            "version": "1.0.1",
+            "template_sha256": "a4b8c22f5fb99ce02fd667978f48b57f0e950a8822250465c957f66eab35aa55",
+            "environment": "Word 16.0.20430.20180 x64; Windows build 26300",
+            "scope": [
+              "Native compilation of VBA retained byte-exact in final container",
+              "Final-template EquWord_About displays 1.0.1",
+              "Final-template read-only reopen and close; candidate checksum unchanged"
+            ],
+            "evidence": [
+              "Native 1.0.1 receipt SHA-256 1031acee6738cb91aa0032e2d373a765a803e86974f89920d504d03004c53995",
+              "Native compile-menu evidence SHA-256 956e3ddc9134de3fbd912e0f62841f24f907cb94d3926b3b528d650b907572e6",
+              "Final About observation SHA-256 79ef3a5022a3d9bb4ff2c287ae7536e0017126cf6e96db30b3ba342636a7f005",
+              "Final reopen receipt SHA-256 e21481dd0151ed1f841903b14af3fb8372686fb99d5e06a5252bb34eef233544",
+              "Final cleanup receipt SHA-256 91cb79f3544ca280f030f99c6e3cbd43071261b65c5c395c6fe3b651059ca611"
+            ],
+            "limits": [
+              "No 1.0.1 equation-processing regression, Startup installation/restart test or fresh form-interaction test.",
+              "Final package restores all 15 baseline non-VBA parts around unchanged native-compiled VBA; final container reopened in Word."
+            ]
+          },
+          "mac": {
+            "status": "UNVERIFIED",
+            "version": "1.0.1",
+            "template_sha256": "a4b8c22f5fb99ce02fd667978f48b57f0e950a8822250465c957f66eab35aa55",
+            "scope": [
+              "No 1.0.1 execution performed on Mac"
+            ],
+            "evidence": [],
+            "limits": [
+              "Prior Mac evidence belongs to earlier binaries; it does not establish runtime compatibility for this candidate."
+            ]
+          }
+        },
+        "source_audit": {
+          "status": "PASS_BOUNDED_CHECKS_WITH_RETAINED_RAW_FAILURES",
+          "strict_counts": {
+            "PASS": 74,
+            "FAIL": 4
+          },
+          "strict_raw_failures_retained": true,
+          "audit_sha256": "7d318196d9a5aad52e920a0ee47ce627bae3aed3e4800ea5b72799a84d2dc2f8",
+          "composition_receipt_sha256": "06787d549511f956fcba9799e34a10b1ec203aeb6a9d68b561b92b0f99c6bdb3",
+          "raw_failure_scope": "Native-regenerated VB_Base form identifiers in two form modules; four strict comparisons remain FAIL.",
+          "all_535_identified_procedures_unchanged": true,
+          "all_49_identified_runtime_guards_unchanged": true,
+          "all_eight_form_designer_streams_unchanged": true,
+          "all_15_non_VBA_parts_baseline_exact": true,
+          "only_intended_source_changes": "Two version declarations outside procedures changed from 1.0.0 to 1.0.1.",
+          "audit_or_runtime_guards_weakened": false,
+          "limits": [
+            "Static checks are not native runtime evidence or a complete compiled type-library validator."
+          ],
+          "baseline_sha256": "b7fc3290227b244647fc15a548f683a443f064aa812e0288bdc82ea3d4383a76",
+          "candidate_sha256": "a4b8c22f5fb99ce02fd667978f48b57f0e950a8822250465c957f66eab35aa55",
+          "only_version_declarations_changed": true,
+          "raw_failure_classification": "native_form_VB_Base_identifiers_only"
+        },
+        "mac_version_only_acceptance": {
+          "platform": "mac",
+          "reason": "version_declarations_only",
+          "candidate_version": "1.0.1",
+          "candidate_sha256": "a4b8c22f5fb99ce02fd667978f48b57f0e950a8822250465c957f66eab35aa55",
+          "baseline_version": "1.0.0",
+          "baseline_sha256": "b7fc3290227b244647fc15a548f683a443f064aa812e0288bdc82ea3d4383a76",
+          "audit_sha256": "7d318196d9a5aad52e920a0ee47ce627bae3aed3e4800ea5b72799a84d2dc2f8",
+          "author_decision": {
+            "accepted": true,
+            "date": "2026-11-03",
+            "mac_rerun_not_required_for_this_candidate": true,
+            "record": "The author explicitly declined a further Mac rerun for the version-only 1.0.1 change and accepted reliance on recorded predecessor Mac tests plus the exact source-preservation audit. This decision is not final publication approval."
+          },
+          "preservation": {
+            "only_version_declarations_changed": true,
+            "all_535_identified_procedures_unchanged": true,
+            "all_49_identified_runtime_guards_unchanged": true,
+            "all_eight_form_designer_streams_unchanged": true,
+            "all_15_non_VBA_parts_baseline_exact": true
+          },
+          "limits": [
+            "Mac runtime of this exact candidate remains UNVERIFIED, never PASS.",
+            "Four strict raw identifier failures remain disclosed; no executable/form-designer difference or relaxed runtime guard is accepted.",
+            "This decision applies only to the stated candidate, baseline and audit; it cannot authorize any later code change or publication."
+          ]
+        },
+        "receipt": "RELEASE_RECEIPT_1.0.1.json"
+      },
+      "Focused_Script_Tokens": {
+        "version": "1.0.1",
+        "template_sha256": "cd19218a6ee0c0d71e19ef53eb60e127cfa2cebf4709856b55e415582b4de159",
+        "status": "PASS",
+        "environment": "Windows Word 16.0.20527",
+        "cases": 22,
+        "style_probes": 33,
+        "seconds": 94.309,
+        "compile": true,
+        "format_all": true,
+        "save_reopen": true,
+        "preservation": true,
+        "source_guards_exact": 63,
+        "form_designer_streams_exact": true,
+        "receipt_sha256": "41d1edef32840e304f82ddae81ccfb198b0f710f7c3c8f43a73b28c4e724fc7b",
+        "source_audit_sha256": "cc0def679abbc87f19e257466137ec38a6b527b16dbcf71b3373eccdded24bc8",
+        "saved_result_report_sha256": "dd16d541012bd498c23384860b50f9b0b14a4e74378d366acc18f39fb04aa727",
+        "scope": "Focused native Format All; 22 examples/33 notation probes and saved math/prose/SEQ/REF/PAGE/bookmark/authored-link verification.",
+        "limits": "Mac runtime was not performed on this private predecessor. Initial strict serialization failures remain retained alongside qualified authored-content comparisons."
+      },
+      "A3_Manual_Break": {
+        "version": "1.0.1",
+        "template_sha256": "a347b26e6b2f118dbd526aaa413520bb735c28c910ede816ea0026021e5c6d55",
+        "status": "PASS",
+        "environment": "Windows Word 16.0.20430",
+        "seconds": 78.32,
+        "native_selection_format": true,
+        "three_row_merge": true,
+        "save_reopen": true,
+        "receipt_sha256": "2c2bdcdd2df1a05b820cdee3dcbcd1d8886b22e29a08511c73a51168a15e8597",
+        "saved_result_report_sha256": "5d2f757c1481fd9feaec0209a189255767875256676d7a91966103ca17809a6a",
+        "scope": "Original A3 padding retained; one editable three-row array; mathematical content, number/reference fields, bookmarks and adjacent content verified."
       }
     },
     "source_audit": {
       "status": "PASS_BOUNDED_CHECKS_WITH_RETAINED_RAW_FAILURES",
-      "strict_counts": {
-        "PASS": 74,
-        "FAIL": 4
-      },
-      "strict_raw_failures_retained": true,
-      "audit_sha256": "7d318196d9a5aad52e920a0ee47ce627bae3aed3e4800ea5b72799a84d2dc2f8",
-      "composition_receipt_sha256": "06787d549511f956fcba9799e34a10b1ec203aeb6a9d68b561b92b0f99c6bdb3",
-      "raw_failure_scope": "Native-regenerated VB_Base form identifiers in two form modules; four strict comparisons remain FAIL.",
-      "all_535_identified_procedures_unchanged": true,
-      "all_49_identified_runtime_guards_unchanged": true,
-      "all_eight_form_designer_streams_unchanged": true,
-      "all_15_non_VBA_parts_baseline_exact": true,
-      "only_intended_source_changes": "Two version declarations outside procedures changed from 1.0.0 to 1.0.1.",
-      "audit_or_runtime_guards_weakened": false,
-      "limits": [
-        "Static checks are not native runtime evidence or a complete compiled type-library validator."
-      ],
-      "baseline_sha256": "b7fc3290227b244647fc15a548f683a443f064aa812e0288bdc82ea3d4383a76",
-      "candidate_sha256": "a4b8c22f5fb99ce02fd667978f48b57f0e950a8822250465c957f66eab35aa55",
+      "baseline_sha256": "cd19218a6ee0c0d71e19ef53eb60e127cfa2cebf4709856b55e415582b4de159",
+      "candidate_sha256": "7ea66ceed0cf4d9b61de189e7f64d161b52e5fc97b70210414503f0fa80ba24f",
       "only_version_declarations_changed": true,
-      "raw_failure_classification": "native_form_VB_Base_identifiers_only"
+      "all_procedure_bodies_unchanged": true,
+      "all_63_runtime_guards_unchanged": true,
+      "all_eight_form_designer_streams_unchanged": true,
+      "nonmain_visible_code_and_attributes_match": true,
+      "strict_raw_failures_retained": true,
+      "audit_or_runtime_guards_weakened": false,
+      "procedure_count": 414,
+      "nonmain_raw_exact": {
+        "ThisDocument": true,
+        "REFXmlNodeList": true,
+        "REFSelectiveReformatForm": false,
+        "REFPlatform": true,
+        "REFXPath": true,
+        "REFDictionary": true,
+        "REFXmlAttributes": true,
+        "REFXmlDocument": true,
+        "REFXmlNode": true,
+        "REFMacProgressForm": false
+      },
+      "qualification": "Word regenerated the two UserForm VB_Base identities. Other hidden attributes, all visible non-main code and all form designer streams match.",
+      "non_vba_parts_changed_on_native_save": [],
+      "audit_sha256": "38d3279598931430aebb1b0651dd3ea4b7ded66edf5fc15740494962a85d0005",
+      "container_preservation_receipt_sha256": "df8827c3d4ab1c201b9796aad63cd1c5066e669d1f002334e9890c9c15f4234a",
+      "all_15_non_vba_parts_baseline_exact": true,
+      "native_compiled_vba_project_retained_exact": true,
+      "limits": [
+        "Raw UserForm VB_Base identifier differences remain disclosed; no designer stream or guard was changed.",
+        "Source comparisons are bounded checks rather than a complete compiled type-library validator."
+      ]
+    },
+    "mac_focused_windows_acceptance": {
+      "platform": "mac",
+      "reason": "focused_windows_and_author_waiver",
+      "candidate_version": "1.0.2",
+      "candidate_sha256": "7ea66ceed0cf4d9b61de189e7f64d161b52e5fc97b70210414503f0fa80ba24f",
+      "processing_baseline_version": "1.0.1",
+      "processing_baseline_sha256": "cd19218a6ee0c0d71e19ef53eb60e127cfa2cebf4709856b55e415582b4de159",
+      "audit_sha256": "38d3279598931430aebb1b0651dd3ea4b7ded66edf5fc15740494962a85d0005",
+      "author_decision": {
+        "accepted": true,
+        "date": "2026-11-25",
+        "mac_rerun_not_required_for_this_candidate": true,
+        "record": "The author selected 1.0.2 publication and explicitly waived a further Mac runtime test for these changes, accepting the focused Windows evidence and exact final-version source audit. Mac execution remains UNVERIFIED."
+      },
+      "preservation": {
+        "only_version_declarations_changed": true,
+        "all_procedure_bodies_unchanged": true,
+        "all_63_runtime_guards_unchanged": true,
+        "all_eight_form_designer_streams_unchanged": true,
+        "nonmain_visible_code_and_attributes_match": true
+      },
+      "native_receipt_sha256": "cf7d357eae05f187027f2d5f631eba0580a3f0a403931d40f10fe5d864ce3129"
     },
     "formatting_limits": [
       "Recorded processed-document raw formatting/serialization differences remain documented.",
       "No-command control reproduced particular mathFont/unselected-equation changes; not every difference or rendered font.",
       "Five unobtained protected-report typography measurements remain blocked/unverified as recorded."
     ],
-    "publication_approved": true,
     "open_findings": [
       {
-        "status": "UNVERIFIED_AUTHOR_ACCEPTED_VERSION_ONLY_BASIS",
-        "scope": "Mac execution of exact 1.0.1 binary",
-        "disposition": "No Mac rerun requested for this exact version-only candidate; recorded predecessor evidence and the matching source-preservation audit are accepted. Actual native status remains UNVERIFIED."
-      },
-      {
-        "status": "KNOWN_NONBLOCKING_WORDING",
-        "scope": "EquWord_About refers to README.txt; package correctly supplies README.md",
-        "disposition": "Pre-existing minor wording discrepancy. Open the supplied README.md. No further VBA change or recompilation is required for this draft/release on this account."
+        "status": "UNVERIFIED_AUTHOR_ACCEPTED",
+        "scope": "Mac execution of exact 1.0.2 binary",
+        "disposition": "Candidate-specific author waiver dated November 25, 2026; native status remains UNVERIFIED."
       }
-    ],
-    "mac_version_only_acceptance": {
-      "platform": "mac",
-      "reason": "version_declarations_only",
-      "candidate_version": "1.0.1",
-      "candidate_sha256": "a4b8c22f5fb99ce02fd667978f48b57f0e950a8822250465c957f66eab35aa55",
-      "baseline_version": "1.0.0",
-      "baseline_sha256": "b7fc3290227b244647fc15a548f683a443f064aa812e0288bdc82ea3d4383a76",
-      "audit_sha256": "7d318196d9a5aad52e920a0ee47ce627bae3aed3e4800ea5b72799a84d2dc2f8",
-      "author_decision": {
-        "accepted": true,
-        "date": "2026-11-03",
-        "mac_rerun_not_required_for_this_candidate": true,
-        "record": "The author explicitly declined a further Mac rerun for the version-only 1.0.1 change and accepted reliance on recorded predecessor Mac tests plus the exact source-preservation audit. This decision is not final publication approval."
-      },
-      "preservation": {
-        "only_version_declarations_changed": true,
-        "all_535_identified_procedures_unchanged": true,
-        "all_49_identified_runtime_guards_unchanged": true,
-        "all_eight_form_designer_streams_unchanged": true,
-        "all_15_non_VBA_parts_baseline_exact": true
-      },
-      "limits": [
-        "Mac runtime of this exact candidate remains UNVERIFIED, never PASS.",
-        "Four strict raw identifier failures remain disclosed; no executable/form-designer difference or relaxed runtime guard is accepted.",
-        "This decision applies only to the stated candidate, baseline and audit; it cannot authorize any later code change or publication."
-      ]
-    },
-    "author_approval": {
-      "date": "2026-11-03",
-      "scope": "Publish the exact reviewed 1.0.1 release and its seven-file ZIP from commit 6768e3395c97b8dbea4815fdc87b26a83367d719.",
-      "source": "Explicit author final publication approval after review; no further VBA or package changes.",
-      "archive_sha256": "2ffab151523106a09595997bc6f3bcab44a713658952c7bd9ee2c28a5868af53",
-      "template_sha256": "a4b8c22f5fb99ce02fd667978f48b57f0e950a8822250465c957f66eab35aa55"
-    }
+    ]
   },
   "documentation": {
     "Windows_pdf_pages": 11,
     "Mac_pdf_pages": 15,
     "cover_version": {
-      "Windows": "Version 1.0.1",
-      "Mac": "Version 1.0.1"
+      "Windows": "Version 1.0.2",
+      "Mac": "Version 1.0.2"
     },
     "Mac_progress_note_page": 9,
-    "screenshots": "Author-revised Mac screenshots retained; Figure 3 username replaced by userID within a verified exact pixel rectangle. No generated screenshot.",
-    "practice_sha256": "a3ced47550f2e74ebec020ffe5273e82fc4ace90c1157eb87ef05e1ee9edfdc5",
+    "screenshots": "Genuine prior installation captures retained with their historical interface/version labels; no manufactured screenshot. Existing privacy redactions preserved.",
+    "practice_sha256": "7ebeae9ce502425040a85662f28db0d51c81ca0317f8a40e418c068cd81e3f0f",
     "license_and_citation_original_bytes_preserved": false,
-    "cover_date": "November 3, 2026",
+    "cover_date": "November 25, 2026",
     "Mac_editable_master_synchronized": true,
     "Windows_editable_master_synchronized": true,
-    "PDF_source": "Both PDFs exported from synchronized editable DOCX masters using Word for Windows in private read-only rendering. Mac screenshots remain genuine Mac captures.",
+    "PDF_source": "Both updated DOCX masters exported with actual desktop Word for Windows; genuine screenshots unchanged.",
     "license_original_bytes_preserved": false,
-    "citation_update": "Concept DOI remains preferred across versions. Released README/CFF/package bytes are unchanged; the publication date and version DOI are recorded only in repository metadata and the publication receipt.",
-    "license_legal_body_preserved": true
+    "citation_update": "Current README, CFF, Quick Starts and Practice identify 1.0.2. Current citation information uses only the Concept DOI.",
+    "license_legal_body_preserved": true,
+    "final_visual_qa": "PASS_ALL_28_RENDERED_PAGES",
+    "final_visual_qa_receipt_sha256": "e27a667cde3284f8903ad1f83bed04f773f29a826674c7757c4a830752aa3ae0",
+    "native_export_receipt_sha256": "7302cac98a51052295a22958cc1a11a3e912a9a2a9fa61dcb6d2768725aa832c",
+    "visual_qa_scope": "All 11 Windows guide pages, 15 Mac guide pages and two Practice preview pages; screenshots and unchanged page rasters retained. No new clipping, overlap, orphan captions or pagination changes."
   },
-  "published": true,
-  "DOI": "10.5281/zenodo.23936929",
+  "published": false,
   "metadata_revision": {
-    "date": "2026-11-03",
-    "reason": "Record authorized 1.0.1 GitHub publication and verified Zenodo archival; update repository-only maintenance metadata.",
-    "publication_authorized": true,
-    "README_source": "README.md",
-    "README_distribution_copy": "package/README.md",
-    "published_assets_unchanged": true,
-    "package_files_unchanged": true,
-    "README_and_CFF_unchanged": true,
+    "date": "2026-11-25",
+    "reason": "Prepare 1.0.2 with guarded A3 manual breaks and upright script-token support.",
+    "publication_authorized": false,
     "preferred_citation_doi": "10.5281/zenodo.23935877",
-    "native_test_facts_unchanged": true
+    "current_candidate_final_identity_pending": false,
+    "final_visual_qa_pending": false
   },
-  "published_release": {
+  "concept_doi": "10.5281/zenodo.23935877",
+  "previous_published_release": {
     "tag": "v1.0.1",
     "commit": "6768e3395c97b8dbea4815fdc87b26a83367d719",
     "github_release": "https://github.com/PsycheMatrica/EquWord/releases/tag/v1.0.1",
@@ -311,16 +432,7 @@
     "zenodo_record": "https://zenodo.org/records/23936929",
     "version_doi": "10.5281/zenodo.23936929",
     "concept_doi": "10.5281/zenodo.23935877",
-    "meaning": "Published 1.0.1 seven-file distribution; current package bytes match the frozen public release."
-  },
-  "concept_doi": "10.5281/zenodo.23935877",
-  "previous_published_release": {
-    "tag": "v1.0.0",
-    "commit": "1d65ded4043917767bcffa11bac20bb6acce8386",
-    "archive_sha256": "8888d3703267435150b1aac4a2431d241ff0938330178733514baed91fcc67bf",
-    "archive_bytes": 2319174,
-    "receipt": "RELEASE_RECEIPT.json",
-    "meaning": "Published software version; current repository package has later citation metadata only."
+    "meaning": "Historical frozen 1.0.1 seven-file distribution; its package identities remain preserved in the prior release and receipt. It is not the current 1.0.2 package."
   },
   "previous_metadata_revision": {
     "date": "2026-11-03",

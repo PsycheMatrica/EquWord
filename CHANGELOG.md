@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.2 — November 25, 2026
+
+- Apply the configured nonbold upright notation tokens in native superscripts as well as subscripts, including combined scripts, prescripts and nested scripts. Retain whole-token/case matching, bold and Preserved-token precedence, saved profiles and operator-limit handling.
+- Safely retain the proved plain-run/manual-break native projection encountered in A3. Keep mathematical-structure, number-field, bookmark and surrounding-document preservation checks.
+- Record Windows focused tests on 22 examples and 33 style probes, plus the earlier A3 merge/preservation test. Bind final 1.0.2 native version confirmation to its exact template identity.
+- Record the author's candidate-specific Mac-rerun waiver while retaining Mac runtime status UNVERIFIED and earlier Mac evidence as predecessor evidence.
+- Keep a seven-file installation ZIP, the CC BY-NC-SA 4.0 license and the all-version Concept DOI `10.5281/zenodo.23935877`.
+
 ## Published 1.0.1 — November 3, 2026
 
 - Publish a seven-file `EquWord.zip` installation attachment from `package/` only. Exclude repository administration files and scripts from future automatic repository archives.

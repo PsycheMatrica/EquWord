@@ -1,5 +1,15 @@
 # EquWord release procedure
 
+## Current 1.0.2 preparation
+
+The 1.0.2 package adds the guarded A3 manual-break reader and upright notation tokens in native superscripts as well as subscripts. It retains the seven-member installation bundle, CC BY-NC-SA 4.0 terms and Concept DOI. Read the current manifest for the exact candidate and archive identities. Preserve the published 1.0.1 tag, assets and receipt unchanged.
+
+The focused private Windows predecessor passed native Format All on 22 examples, 33 notation probes, save/reopen and authored-content/field/bookmark/link preservation checks. The A3 predecessor passed its three-row selection merge and saved-file preservation checks. The final 1.0.2 rebuild changes only version declarations from the focused predecessor; its native compile/About/reopen evidence and source-preservation audit must be bound to its exact final hash before publication.
+
+The author explicitly waived a further Mac run for this candidate on November 25, 2026. Exact-candidate Mac execution stays **UNVERIFIED**. A separate hash-bound packaging policy checks this decision, fixed focused-Windows receipt/source-audit/saved-result identities, the final version-only audit, all 63 retained guards and both form designers. The older 1.0.1 policy remains unchanged. Neither policy changes runtime equation-preservation checks or overrides a recorded native FAIL/BLOCKED.
+
+The updated Quick Starts and Practice identify 1.0.2. Genuine installation screenshots may show earlier unchanged screens; do not manufacture new captures for a version label. Keep unresolved/raw serialization differences and verification limits disclosed. The public package must not contain private test documents, raw logs or source exports.
+
 ## Published 1.0.1
 
 The author approved the exact reviewed 1.0.1 release, published November 3, 2026 (America/New_York; November 4 UTC). See `RELEASE_RECEIPT_1.0.1.json` for the frozen GitHub tag, assets and verified Zenodo archive. The released ZIP contains only seven package files. No package bytes changed during this repository-only publication metadata update. Preserve the existing GitHub/Zenodo linkage; later releases require separate final author approval.
@@ -18,11 +28,11 @@ Use the preferred all-version identifier https://doi.org/10.5281/zenodo.23935877
 6. Inspect the public diff and staged files, then commit/push only when authorized. Create or update **only a draft** when draft preparation is authorized; do not trigger publication or Zenodo ingestion.
 7. Present the exact version, target commit, ZIP and DOTM checksums, filenames, notes, open findings and actual native scope to the author before requesting final publication approval.
 
-The author explicitly accepted the recorded predecessor Mac evidence plus the exact version-only source audit for this 1.0.1 candidate, without a further Mac rerun. Mac runtime remains **UNVERIFIED**, never PASS. The builder validates this narrow decision against fixed candidate, baseline and audit identities, explicit author-decision evidence and all required source-preservation facts. It refuses missing or mismatched acceptance evidence and cannot override native FAIL/BLOCKED or altered executable/form-designer/runtime-guard evidence. This policy does not change any equation-processing or preservation guard.
+For the historical 1.0.1 candidate, the author explicitly accepted the recorded predecessor Mac evidence plus its exact version-only source audit without a further Mac rerun. That frozen policy remains limited to its original candidate, baseline and audit. It does not authorize later candidates.
 
-`--publication-check --verify-only` requires completed author-review readiness. The current manifest records that completed state and the separate final approval/publication of 1.0.1. Its exact version-only acceptance satisfies the evidence gate without relabeling Mac execution PASS. This is historical approval of these bytes only; every future release still requires final author approval. Verification/building never executes Word or publishes anything.
+`--publication-check --verify-only` requires completed author-review readiness and the current candidate's own validated evidence. Historical approval does not grant approval to later bytes. Verification/building never executes Word or publishes anything.
 
-The Windows evidence covers compilation of the retained VBA, final About/version, read-only reopen and unchanged file identity, not a processing regression. About still refers to README.txt although the supplied file is README.md. This pre-existing minor wording discrepancy is nonblocking; use the supplied README.md. No additional VBA edit or recompilation is required on this account.
+The historical 1.0.1 Windows evidence covered native compilation, final About/version, read-only reopen and unchanged file identity; it was not a processing regression. About still refers to README.txt although the supplied file is README.md. This pre-existing minor wording discrepancy is nonblocking; use the supplied README.md.
 
 ## Frozen prior 1.0.0 release
 
