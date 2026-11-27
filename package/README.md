@@ -59,7 +59,8 @@ On Windows, the title bar shows progress and Esc requests a stop at the next saf
 ## Recorded verification
 
 - Exact 1.0.3 on Windows — **PASS**. Compiled the 1.0.3 VBA project in Word. The compiled VBA project was retained byte-for-byte in the exact release template. Reopened the exact release template read-only in Word; the native About command displayed 1.0.3 and returned. The hash matched after closing Word.
-- Exact 1.0.3 on Mac — **UNVERIFIED**. No exact 1.0.3 Mac execution is recorded in this package.
+- Exact 1.0.3 on Mac — **PASS**. The native About command displayed 1.0.3. Settings opened at 13 pt with readable Save and Cancel labels. Return at 14 pt kept the form open; after Cancel, reopening Settings showed the original 13 pt. The unsaved fixture closed with its original SHA-256, Word’s prior add-in state was restored, and 22 protected file hashes matched.
+  Settings Save, document save and reopen, Return in other fields, and equation processing remain unverified on this exact binary.
 - The private Settings predecessor (`77e085e1`) passed focused native Settings save/reopen checks on Windows and Mac. The recorded checks preserved the fixture’s native equations, prose, numbered and reference fields, and bookmarks. The Mac check used Word 16.115.2 in Light appearance and verified Save/Cancel legibility, Return in both tested numeric fields and a reopened reference jump. Word save produced documented XML differences. Exact rendered math-font equivalence on Mac remains unverified.
 - The separate confidence-interval and bracket predecessor completed six focused Windows runs and five focused Mac runs with save/reopen checks, including a Windows 22-equation Format All audit. The full original 428-equation manuscript remains unverified.
 

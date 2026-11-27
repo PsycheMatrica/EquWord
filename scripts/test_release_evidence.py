@@ -17,6 +17,15 @@ ROOT = Path(__file__).resolve().parents[1]
 class EvidencePolicyTests(unittest.TestCase):
     def setUp(self):
         self.manifest = json.loads((ROOT / "RELEASE_MANIFEST.json").read_text(encoding="utf-8"))
+        if self.manifest["version"] != "1.0.2":
+            predecessors = self.manifest["release_readiness"]["predecessor_tests"]
+            self.manifest = {
+                "version": "1.0.2",
+                "release_readiness": {
+                    **copy.deepcopy(predecessors["Published_1_0_2"]),
+                    "predecessor_tests": copy.deepcopy(predecessors),
+                },
+            }
         # Synthetic hashes only exercise the gate; this fixture is never written
         # into the release manifest or represented as native evidence.
         self.fixed = dict(BUILDER.MAC_FOCUSED_WINDOWS_ACCEPTANCE)

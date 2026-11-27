@@ -14,12 +14,12 @@
   ],
   "archive": {
     "filename": "EquWord.zip",
-    "bytes": 2269930,
-    "sha256": "8cd247dbd80f1689c141ca19a62f3b0fd49c48a02e68f696147c503d14130e0c",
+    "bytes": 2270063,
+    "sha256": "cf29e74f88d060cd64d90c879594ca5640c5c4c235f4ff6c2656b42f0b8d9150",
     "compression": "deflated",
     "compression_level": 6,
     "zip_timestamp_meaning": "Fixed reproducible preparation timestamp; publication time is recorded separately.",
-    "publication_status": "Local author-review candidate; unpublished."
+    "publication_status": "Final local author-review candidate; unpublished."
   },
   "verified_template": {
     "filename": "EquWord.dotm",
@@ -41,8 +41,8 @@
       "sha256": "c01917128d5364b3f41620a1b1537406a197a460fc14ec071fb7f66c86e07156"
     },
     "README.md": {
-      "bytes": 12234,
-      "sha256": "51c51b4dc20d0f89cc0f92bb1399c706297d153580063397f20a882d958c83bf"
+      "bytes": 12636,
+      "sha256": "9048ca77d7ac816ae5a031afe13e1f2c2df3c56b9ecfa710c1b2618345e7f42e"
     },
     "Tutorial/EquWord_Practice.docx": {
       "bytes": 28854,
@@ -58,7 +58,7 @@
     }
   },
   "release_readiness": {
-    "status": "draft",
+    "status": "ready_for_author_review",
     "final_files_ready_for_author_inspection": true,
     "requires_final_author_approval": true,
     "publication_approved": false,
@@ -87,16 +87,23 @@
         "receipt_sha256": "6fba158a593a50f36f7d0f4403dac1c19b55758e3e0845791dff32d0b1e09918"
       },
       "mac": {
-        "status": "UNVERIFIED",
+        "status": "PASS",
         "version": "1.0.3",
         "template_sha256": "a209d82db2afed7a05999f03f264058a0ca765cc6fc56619477ee0c5c3177cc0",
         "scope": [
-          "No exact 1.0.3 Mac execution is recorded in this package."
+          "The native About command displayed 1.0.3. Settings opened at 13 pt with readable Save and Cancel labels. Return at 14 pt kept the form open; after Cancel, reopening Settings showed the original 13 pt. The unsaved fixture closed with its original SHA-256, Word’s prior add-in state was restored, and 22 protected file hashes matched."
         ],
-        "evidence": [],
+        "evidence": [
+          "Mac focused results ZIP SHA-256 da3be564e77ac22d77bbf3c640fa77691022804cea7043d5e0da06f70a2fb40a",
+          "Mac check report SHA-256 6ce3be3f53b90b1d49d38019920883ba85b81292ad930d8ed76e6a1ea67e79cc",
+          "Native Word accessibility record SHA-256 ab6a14a2f6a1d665289dce4d6c369cf0d5dc7ecc9e9564dd7d233ea68b381a73",
+          "Four original screenshots (identity manifest SHA-256 7c042254d240ebb48cd28c63d1c56afa13d4cefaf5f3fc6d4458f95c91281b54)"
+        ],
         "limits": [
-          "The focused private predecessor runs are separate evidence."
-        ]
+          "Settings Save, document save and reopen, Return in other fields, and equation processing remain unverified on this exact binary."
+        ],
+        "environment": "macOS 26.7.2 (25G332); desktop Microsoft Word 16.115.2 (16.115.26112215)",
+        "receipt_sha256": "2f098c13eaf302f4d5c81c9763a9bf4d3af4d1571424600ca4d22942aaa730df"
       }
     },
     "source_audit": {
