@@ -17,8 +17,8 @@ import sys
 from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
 
-RELEASE_VERSION = "1.0.2"
-ZIP_TIMESTAMP = (2026, 11, 25, 0, 0, 0)
+RELEASE_VERSION = "1.0.3"
+ZIP_TIMESTAMP = (2026, 11, 26, 0, 0, 0)
 PACKAGE_FILES = {
     "CITATION.cff",
     "LICENSE.txt",

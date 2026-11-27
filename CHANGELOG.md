@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.3 — November 26, 2026
+
+- Put all 14 document options in one Settings window with four tabs, field help and fixed Save/Cancel buttons. Load saved profiles and allow restoring the built-in forced-upright token list.
+- Fix the reported inline confidence-interval comma-spacing hang and preserve the boundary spacing when brackets are ordinary Word text. Keep mathematical structure, number-field and bookmark safeguards.
+- Update both Quick Starts and the editable Practice document. Record exact-candidate native verification separately from the focused Settings and formatting predecessor runs.
+
 ## Published 1.0.2 — November 25, 2026
 
 - Apply the configured nonbold upright notation tokens in native superscripts as well as subscripts, including combined scripts, prescripts and nested scripts. Retain whole-token/case matching, bold and Preserved-token precedence, saved profiles and operator-limit handling.
